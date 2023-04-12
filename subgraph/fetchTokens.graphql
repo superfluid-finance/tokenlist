@@ -1,0 +1,20 @@
+query fetchTokens {
+  tokens(where: { isListed: true }) {
+    decimals
+    isListed
+    isNativeAssetSuperToken
+    isSuperToken
+    name
+    symbol
+    underlyingAddress
+    id
+    underlyingToken {
+      id
+      decimals
+      isNativeAssetSuperToken
+      isSuperToken
+      name
+      symbol
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "lib": ["es2019"],
+    "module": "CommonJS",
+    "rootDir": ".",
+    "resolveJsonModule": true,
+    "outDir": "./bin",
+    "preserveConstEnums": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitAny": true
+  }
+}
