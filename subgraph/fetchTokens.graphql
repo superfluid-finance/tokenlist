@@ -6,7 +6,6 @@ query fetchTokens {
     isSuperToken
     name
     symbol
-    underlyingAddress
     id
     underlyingToken {
       id

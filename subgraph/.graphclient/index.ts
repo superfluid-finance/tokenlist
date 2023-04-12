@@ -16957,7 +16957,7 @@ export type FetchTokensQueryVariables = Exact<{ [key: string]: never; }>;
 
 
 export type FetchTokensQuery = { tokens: Array<(
-    Pick<Token, 'decimals' | 'isListed' | 'isNativeAssetSuperToken' | 'isSuperToken' | 'name' | 'symbol' | 'underlyingAddress' | 'id'>
+    Pick<Token, 'decimals' | 'isListed' | 'isNativeAssetSuperToken' | 'isSuperToken' | 'name' | 'symbol' | 'id'>
     & { underlyingToken?: Maybe<Pick<Token, 'id' | 'decimals' | 'isNativeAssetSuperToken' | 'isSuperToken' | 'name' | 'symbol'>> }
   )> };
 
@@ -16971,7 +16971,6 @@ export const FetchTokensDocument = gql`
     isSuperToken
     name
     symbol
-    underlyingAddress
     id
     underlyingToken {
       id
