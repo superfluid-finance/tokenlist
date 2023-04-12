@@ -18,14 +18,14 @@ const listBContents = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../", listB), "utf8")
 );
 
-if (!fs.existsSync("./output")) {
-  fs.mkdirSync("./output");
+if (!fs.existsSync("./diff-output")) {
+  fs.mkdirSync("./diff-output");
 }
 const getFileName = (input: string) =>
   path.basename(input).replace(".json", "");
 
 fs.writeFileSync(
-  `./output/diff_${getFileName(listA)}<>${getFileName(listB)}.json`,
+  `./diff-output/diff_${getFileName(listA)}<>${getFileName(listB)}.json`,
   JSON.stringify(
     diffTokenLists(listAContents.tokens, listBContents.tokens),
     null,
