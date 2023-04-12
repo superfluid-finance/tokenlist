@@ -116,12 +116,12 @@ export const buildSuperfluidTokenList = async ({
       })
     );
 
+    const isValid = await validate(tokenList);
+
     fs.writeFileSync(
       `versions/token-list_v${packageJson.version}.json`,
       JSON.stringify(tokenList, null, 2)
     );
-
-    const isValid = await validate(tokenList);
 
     if (isValid && publishToIpfs && pinataApiKey && pinataSecret) {
       const pinata = new pinataSDK(pinataApiKey, pinataSecret);
