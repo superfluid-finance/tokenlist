@@ -395,24 +395,5 @@
       ]
     }
   },
-  "removed": [
-    {
-      "address": "0x1234756ccf0660e866305289267211823ae86eec",
-      "name": "Super USD//C on xDai",
-      "symbol": "USDCx",
-      "decimals": 18,
-      "chainId": 100,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingToken": {
-            "address": "0xddafbb505ad214d7b80b1f830fccc89b60fb7a83",
-            "name": "USD//C on xDai",
-            "symbol": "USDC",
-            "decimals": 6
-          }
-        }
-      }
-    }
-  ]
+  "removed": []
 }

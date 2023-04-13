@@ -20,9 +20,15 @@ const listBContents = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, "../", listB), "utf8")
 );
 
+if (!listAContents.tokens || !listBContents.tokens) {
+  console.error("Lists must have a 'tokens' property");
+  process.exit(1);
+}
+
 if (!fs.existsSync("./diff-output")) {
   fs.mkdirSync("./diff-output");
 }
+
 const getFileName = (input: string) =>
   path.basename(input).replace(".json", "");
 
