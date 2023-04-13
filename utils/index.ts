@@ -89,7 +89,7 @@ export const createTokenEntry = async (
       }
     } catch {
       console.error(
-        `logoURI not found for ${symbol} (${id}) in underlying token`
+        `logoURI not found for ${symbol} (${id}) using underlying token ${underlyingToken?.symbol}`
       );
     }
   }
