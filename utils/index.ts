@@ -70,7 +70,7 @@ export const createTokenEntry = async (
 
   try {
     const manifest: Manifest = await (
-      await fetch(`${tokenIconBaseUrl}tokens/${assetKey}/manifest.json`)
+      await fetch(`${tokenIconBaseUrl}/tokens/${assetKey}/manifest.json`)
     ).json();
 
     tokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
@@ -81,7 +81,7 @@ export const createTokenEntry = async (
       if (underlyingToken) {
         const manifest: Manifest = await (
           await fetch(
-            `${tokenIconBaseUrl}tokens/${underlyingToken.symbol.toLowerCase()}/manifest.json`
+            `${tokenIconBaseUrl}/tokens/${underlyingToken.symbol.toLowerCase()}/manifest.json`
           )
         ).json();
 
