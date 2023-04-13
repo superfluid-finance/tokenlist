@@ -30,14 +30,15 @@ let diff = diffTokenLists(listAContents.tokens, listBContents.tokens);
 
 if (ignoreExtensions == "--ignoreExtensions") {
   Object.entries(diff.changed).forEach(([network, changeData]) => {
+    const parsedNetwork = Number(network);
     Object.entries(changeData).forEach(([address, changes]) => {
       if (changes.length === 1 && changes[0] === "extensions") {
-        delete diff.changed[Number(network)][address];
+        delete diff.changed[parsedNetwork][address];
       }
     });
 
-    if (isEmpty(diff.changed[Number(network)])) {
-      delete diff.changed[Number(network)];
+    if (isEmpty(diff.changed[parsedNetwork])) {
+      delete diff.changed[parsedNetwork];
     }
   });
 } else if (ignoreExtensions) {
