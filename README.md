@@ -15,7 +15,9 @@ under the name `token-list_v{ma}.{mi}.{p}.json`
 
 - PINATA_API_KEY
 - PINATA_SECRET
-  without these it's not possible to publish on ipfs
+
+  ##### without these it's not possible to publish on ipfs
 
 - TOKEN_ICON_URL
-  this is necessary for the scripts to be able to fetch a logoURI for each token
+
+  ##### this is necessary for the scripts to be able to fetch a logoURI for each token
