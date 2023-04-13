@@ -1,5 +1,4 @@
 import fs from "fs";
-import packageJSON from "../package.json";
 import path from "path";
 import isEmpty from "lodash/isEmpty";
 import { execSync } from "child_process";
@@ -29,23 +28,18 @@ if (
   process.exit(0);
 }
 
-const version = packageJSON.version.split(".").map(Number);
-
 if (!isEmpty(diffContents.removed)) {
-  const nextVersion = `${version[0] + 1}.${version[1]}.${version[2]}`;
-  console.info(`writing: ${nextVersion} into package.json (major)`);
-  execSync(`npm version ${nextVersion} --no-git-tag-version`);
+  console.info(`bump version: major`);
+  execSync(`npm version major --no-git-tag-version`);
   process.exit(0);
 }
 
 if (!isEmpty(diffContents.added)) {
-  const nextVersion = `${version[0]}.${version[1] + 1}.${version[2]}`;
-  console.info(`writing: ${nextVersion} into package.json (minor)`);
-  execSync(`npm version ${nextVersion} --no-git-tag-version`);
+  console.info(`bump version: minor`);
+  execSync(`npm version minor --no-git-tag-version`);
   process.exit(0);
 }
 
-const nextVersion = `${version[0]}.${version[1]}.${version[2] + 1}`;
-console.info(`writing: \n${nextVersion} into package.json (patch)`);
-execSync(`npm version ${nextVersion} --no-git-tag-version`);
+console.info(`bump version: patch`);
+execSync(`npm version patch --no-git-tag-version`);
 process.exit(0);
