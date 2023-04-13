@@ -76,6 +76,9 @@
       ]
     },
     "100": {
+      "0x1234756ccf0660e866305289267211823ae86eec": [
+        "extensions"
+      ],
       "0x263647097a185ee0a9ded3e3e46d7eb931c23dda": [
         "extensions"
       ],
@@ -372,9 +375,6 @@
       ]
     },
     "43114": {
-      "0x288398f314d472b82c44855f3f6ff20b633c2a97": [
-        "extensions"
-      ],
       "0x6af916e2001bc4935e6d2f256363ed54eb8e20e0": [
         "extensions"
       ],
@@ -395,5 +395,36 @@
       ]
     }
   },
-  "removed": []
+  "removed": [
+    {
+      "address": "0x288398f314d472b82c44855f3f6ff20b633c2a97",
+      "name": "Super USD Coin",
+      "symbol": "USDCx",
+      "decimals": 18,
+      "chainId": 43114,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e"
+        },
+        "bridgeInfo": {
+          "1": {
+            "tokenAddress": "0x1ba8603da702602a8657980e825a6daa03dee93a"
+          },
+          "10": {
+            "tokenAddress": "0x8430f084b939208e2eded1584889c9a66b90562f"
+          },
+          "100": {
+            "tokenAddress": "0x1234756ccf0660e866305289267211823ae86eec"
+          },
+          "137": {
+            "tokenAddress": "0xcaa7349cea390f89641fe306d93591f87595dc1f"
+          },
+          "42161": {
+            "tokenAddress": "0x1dbc1809486460dcd189b8a15990bca3272ee04e"
+          }
+        }
+      }
+    }
+  ]
 }
