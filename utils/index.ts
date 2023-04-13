@@ -104,17 +104,19 @@ export const buildSuperfluidTokenList = async ({
   };
 
   try {
-    await Promise.all(
-      networks.map(async (network) => {
-        const query = await graphSDK[network].fetchTokens();
+    // this is slower than firing the requests in parallel, but guarantees the order is the same
+    await networks.reduce(async (prevQuery, network) => {
+      await prevQuery;
+      const query = await graphSDK[network].fetchTokens();
 
-        const tokenEntry = query.tokens.map((token, i) => {
-          return createTokenEntry(token, subgraphs[network].chainId);
-        });
+      const tokenEntry = query.tokens.map((token, i) => {
+        return createTokenEntry(token, subgraphs[network].chainId);
+      });
 
-        tokenList.tokens.push(...tokenEntry);
-      })
-    );
+      tokenList.tokens.push(...tokenEntry);
+
+      return;
+    }, Promise.resolve());
 
     const isValid = await validate(tokenList);
 
