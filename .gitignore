@@ -1,3 +1,4 @@
 node_modules
 .env
 .DS_Store
+versions/token-list_v[x.x.x].json

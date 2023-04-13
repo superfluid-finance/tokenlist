@@ -219,7 +219,7 @@ export const buildSuperfluidTokenList = async () => {
     validateUnderlyingTokens(tokenList);
 
     fs.writeFileSync(
-      `versions/token-list_v${packageJson.version}.json`,
+      `versions/token-list_v[x.x.x].json`,
       JSON.stringify(tokenList, null, 2)
     );
   } catch (e) {
