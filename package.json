@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "ipfs:publish": "ts-node scripts/build-and-publish.ts",
-    "diff-lists": "ts-node scripts/diff-lists.ts $1 $2",
+    "diff-lists": "ts-node scripts/diff-lists.ts $1 $2 $3",
     "superfluid-graphql-codegen": "graphclient build --dir ./subgraph"
   },
   "devDependencies": {
