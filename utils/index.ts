@@ -82,6 +82,37 @@ export const validate = async (builtList: Object) => {
   }
 };
 
+export const validateUnderlyingTokens = (tokenList: TokenList) => {
+  const errors: string[] = [];
+
+  tokenList.tokens.forEach((token) => {
+    if (token.extensions && token.extensions.superTokenInfo) {
+      const superTokenInfo = token.extensions.superTokenInfo as Record<
+        "type" | "underlyingAddress",
+        string
+      >;
+      if (superTokenInfo.underlyingAddress) {
+        const underlyingToken = tokenList.tokens.find(
+          (t) => t.address === superTokenInfo.underlyingAddress
+        );
+        if (!underlyingToken) {
+          errors.push(
+            `Underlying token ${superTokenInfo.underlyingAddress} not found in token-list.`
+          );
+        }
+      }
+    }
+  });
+
+  if (errors.length === 0) {
+    return true;
+  }
+
+  throw errors.map((error) => {
+    return error;
+  });
+};
+
 type BridgeInfo = Record<
   string,
   Record<number, Record<"tokenAddress", string>>
@@ -149,6 +180,7 @@ export const buildSuperfluidTokenList = async () => {
     };
 
     await validate(tokenList);
+    validateUnderlyingTokens(tokenList);
 
     fs.writeFileSync(
       `versions/token-list_v${packageJson.version}.json`,
