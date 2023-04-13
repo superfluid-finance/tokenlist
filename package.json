@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "ipfs:publish": "ts-node scripts/build-and-publish.ts",
+    "build": "ts-node scripts/build.ts",
+    "ipfs:publish": "ts-node scripts/publish.ts $1",
     "diff-lists": "ts-node scripts/diff-lists.ts $1 $2 $3",
     "get:version": "ts-node scripts/determine-next-version.ts $1",
     "superfluid-graphql-codegen": "graphclient build --dir ./subgraph"
