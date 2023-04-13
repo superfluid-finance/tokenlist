@@ -40,6 +40,10 @@ if (ignoreExtensions == "--ignoreExtensions") {
       delete diff.changed[Number(network)];
     }
   });
+} else if (ignoreExtensions) {
+  console.info(
+    `Received unknown argument: ${ignoreExtensions}, expected --ignoreExtensions`
+  );
 }
 
 fs.writeFileSync(
