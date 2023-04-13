@@ -1,13 +1,13 @@
 {
   "name": "token-list",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "build": "ts-node scripts/build.ts",
-    "ipfs:publish": "ts-node scripts/publish.ts $1",
     "diff-lists": "ts-node scripts/diff-lists.ts $1 $2 $3",
-    "update:version": "ts-node scripts/update-version.ts",
+    "update:version": "ts-node scripts/update-version.ts $1",
+    "ipfs:publish": "ts-node scripts/publish.ts $1",
     "superfluid-graphql-codegen": "graphclient build --dir ./subgraph"
   },
   "devDependencies": {

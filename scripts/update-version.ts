@@ -9,12 +9,12 @@ const tempFileName = "token-list_v[x.x.x].json";
 const updateTempList = async () => {
   const packageJson = await import(path.resolve(__dirname, "../package.json"));
 
-  const nextVersionContents = fs.readFileSync(
-    path.resolve(__dirname, "../versions", tempFileName),
-    "utf8"
-  );
-
   try {
+    const nextVersionContents = fs.readFileSync(
+      path.resolve(__dirname, "../versions", tempFileName),
+      "utf8"
+    );
+
     fs.writeFileSync(
       `./versions/${tempFileName.replace("[x.x.x]", packageJson.version)}`,
       nextVersionContents
@@ -25,6 +25,8 @@ const updateTempList = async () => {
     console.error(
       "Temporary tokenList file not found, have you run 'yarn build' yet?"
     );
+
+    process.exit(1);
   }
 };
 
