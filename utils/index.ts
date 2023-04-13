@@ -5,10 +5,14 @@ import packageJson from "../package.json";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
 import graphSDK, { networks, subgraphs } from "../subgraph/subgraphs";
-import pinataSDK from "@pinata/sdk";
 import fs from "fs";
 import omit from "lodash/omit";
 import isEmpty from "lodash/isEmpty";
+import dotenv from "dotenv";
+import fetch from "node-fetch";
+import { BridgeInfo, Manifest, Writeable } from "./types";
+
+dotenv.config();
 
 export const determineSuperTokenType = (
   tokenData: FetchTokensQuery["tokens"][number]
@@ -31,10 +35,12 @@ export const hasValidUnderlyingToken = (
   return false;
 };
 
-export const createTokenEntry = (
+const tokenIconBaseUrl = process.env.TOKEN_ICON_URL;
+
+export const createTokenEntry = async (
   tokenData: FetchTokensQuery["tokens"][number],
   chainId: number
-): TokenInfo => {
+): Promise<TokenInfo> => {
   const { id, name, symbol, decimals, underlyingToken } = tokenData;
 
   const extensions = {
@@ -48,7 +54,12 @@ export const createTokenEntry = (
     },
   };
 
-  return {
+  const assetKey =
+    symbol === "mStable USD (Polygon PoS)"
+      ? "mstable-usd-polygon-pos"
+      : symbol.toLowerCase();
+
+  const tokenInfo: Partial<Writeable<TokenInfo, keyof TokenInfo>> = {
     address: id,
     name: name.substring(0, 39),
     symbol: symbol.replace(/\s+/g, ""),
@@ -56,6 +67,34 @@ export const createTokenEntry = (
     chainId,
     extensions,
   };
+
+  try {
+    const manifest: Manifest = await (
+      await fetch(`${tokenIconBaseUrl}tokens/${assetKey}/manifest.json`)
+    ).json();
+
+    tokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
+  } catch {
+    console.error(`logoURI not found for ${symbol} (${id})`);
+
+    try {
+      if (underlyingToken) {
+        const manifest: Manifest = await (
+          await fetch(
+            `${tokenIconBaseUrl}tokens/${underlyingToken.symbol.toLowerCase()}/manifest.json`
+          )
+        ).json();
+
+        tokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
+      }
+    } catch {
+      console.error(
+        `logoURI not found for ${symbol} (${id}) in underlying token`
+      );
+    }
+  }
+
+  return tokenInfo as TokenInfo;
 };
 
 export const getVersion = (): Version =>
@@ -113,11 +152,6 @@ export const validateUnderlyingTokens = (tokenList: TokenList) => {
   });
 };
 
-type BridgeInfo = Record<
-  string,
-  Record<number, Record<"tokenAddress", string>>
->;
-
 const mergeWithBridgeData = (brigeData: BridgeInfo, tokenList: TokenList) => {
   return tokenList.tokens.map((token) => {
     if (brigeData[token.symbol]) {
@@ -158,14 +192,16 @@ export const buildSuperfluidTokenList = async () => {
       await prevQuery;
       const query = await graphSDK[network].fetchTokens();
 
-      const tokenEntry = query.tokens.map((token, i) => {
-        if (!brigeData[token.symbol]) brigeData[token.symbol] = {};
-        brigeData[token.symbol][subgraphs[network].chainId] = {
-          ...brigeData[token.symbol][subgraphs[network].chainId],
-          tokenAddress: token.id,
-        };
-        return createTokenEntry(token, subgraphs[network].chainId);
-      });
+      const tokenEntry = await Promise.all(
+        query.tokens.map(async (token, i) => {
+          if (!brigeData[token.symbol]) brigeData[token.symbol] = {};
+          brigeData[token.symbol][subgraphs[network].chainId] = {
+            ...brigeData[token.symbol][subgraphs[network].chainId],
+            tokenAddress: token.id,
+          };
+          return createTokenEntry(token, subgraphs[network].chainId);
+        })
+      );
 
       tokenList.tokens.push(...tokenEntry);
 
