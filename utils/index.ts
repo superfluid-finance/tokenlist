@@ -69,9 +69,9 @@ export const createTokenEntry = async (
   };
 
   try {
-    const manifest: Manifest = await (
+    const manifest = (await (
       await fetch(`${tokenIconBaseUrl}/tokens/${assetKey}/manifest.json`)
-    ).json();
+    ).json()) as Manifest;
 
     tokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
   } catch {
@@ -79,11 +79,11 @@ export const createTokenEntry = async (
 
     try {
       if (underlyingToken) {
-        const manifest: Manifest = await (
+        const manifest = (await (
           await fetch(
             `${tokenIconBaseUrl}/tokens/${underlyingToken.symbol.toLowerCase()}/manifest.json`
           )
-        ).json();
+        ).json()) as Manifest;
 
         tokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
       }

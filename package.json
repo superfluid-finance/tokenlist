@@ -23,8 +23,12 @@
     "dotenv": "^16.0.3",
     "graphql": "^16.6.0",
     "lodash": "^4.17.21",
+    "node-fetch": "2",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4",
     "vanilla-jsoneditor": "^0.16.1"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.6.3"
   }
 }
