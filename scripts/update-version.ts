@@ -2,9 +2,14 @@ import fs from "fs";
 import path from "path";
 import isEmpty from "lodash/isEmpty";
 import { exec } from "child_process";
+import packageJson from "../package.json";
 
-const diffFilePath = process.argv[2];
-const tempFileName = "token-list_v[x.x.x].json";
+let diffFilePath = process.argv[2];
+const tempFileName = "token-list_DRAFT.json";
+
+if (!diffFilePath) {
+  diffFilePath = `diff_token-list_v${packageJson}<>token-list_DRAFT.json`;
+}
 
 const updateTempList = async () => {
   const packageJson = await import(path.resolve(__dirname, "../package.json"));
@@ -16,7 +21,12 @@ const updateTempList = async () => {
     );
 
     fs.writeFileSync(
-      `./versions/${tempFileName.replace("[x.x.x]", packageJson.version)}`,
+      `./versions/${tempFileName.replace("DRAFT", `v${packageJson.version}`)}`,
+      nextVersionContents
+    );
+
+    fs.writeFileSync(
+      `./versions/${tempFileName.replace("DRAFT", "@latest")}`,
       nextVersionContents
     );
 

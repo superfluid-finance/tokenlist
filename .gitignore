@@ -1,5 +1,5 @@
 node_modules
 .env
 .DS_Store
-versions/token-list_v[x.x.x].json
+versions/token-list_DRAFT.json
 yarn-error.log

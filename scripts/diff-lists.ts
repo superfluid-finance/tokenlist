@@ -2,14 +2,16 @@ import { diffTokenLists } from "@uniswap/token-lists";
 import fs from "fs";
 import path from "path";
 import isEmpty from "lodash/isEmpty";
+import packageJson from "../package.json";
 
-const listA = process.argv[2];
-const listB = process.argv[3];
+let listA = process.argv[2];
+let listB = process.argv[3];
 const ignoreExtensions = process.argv[4];
 
-if (!listA || !listB) {
-  console.error("Usage: yarn diff-lists path/to/listA.ext path/to/listB.ext");
-  process.exit(1);
+if (!listA && !listB) {
+  console.info("Usage: lists not provided, using current version and draft.");
+  listA = `versions/token-list_v${packageJson.version}.json`;
+  listB = `versions/token-list_DRAFT.json`;
 }
 
 const listAContents = JSON.parse(

@@ -176,7 +176,7 @@ const mergeWithBridgeData = (brigeData: BridgeInfo, tokenList: TokenList) => {
   });
 };
 
-export const buildSuperfluidTokenList = async () => {
+export const bootstrapSuperfluidTokenList = async () => {
   let tokenList: TokenList = {
     name: "Superfluid Token List",
     version: getVersion(),
@@ -219,7 +219,7 @@ export const buildSuperfluidTokenList = async () => {
     validateUnderlyingTokens(tokenList);
 
     fs.writeFileSync(
-      `versions/token-list_v[x.x.x].json`,
+      `versions/token-list_DRAFT.json`,
       JSON.stringify(tokenList, null, 2)
     );
   } catch (e) {
