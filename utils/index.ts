@@ -40,7 +40,7 @@ const tokenIconBaseUrl = process.env.TOKEN_ICON_URL;
 export const createTokenEntry = async (
   tokenData: FetchTokensQuery["tokens"][number],
   chainId: number
-): Promise<TokenInfo> => {
+): Promise<TokenInfo[]> => {
   const { id, name, symbol, decimals, underlyingToken } = tokenData;
 
   const extensions = {
@@ -62,11 +62,25 @@ export const createTokenEntry = async (
   const tokenInfo: Partial<Writeable<TokenInfo, keyof TokenInfo>> = {
     address: id,
     name: name.substring(0, 39),
-    symbol: symbol.replace(/\s+/g, ""),
+    symbol: symbol.replace(/\s+/g, "").substring(0, 19),
     decimals,
     chainId,
     extensions,
   };
+
+  let underlyingTokenInfo: Partial<Writeable<TokenInfo, keyof TokenInfo>> = {};
+
+  if (tokenData.underlyingToken) {
+    underlyingTokenInfo = {
+      address: tokenData.underlyingToken.id,
+      name: tokenData.underlyingToken.name.substring(0, 39),
+      symbol: tokenData.underlyingToken.symbol
+        .replace(/\s+/g, "")
+        .substring(0, 19),
+      decimals: tokenData.underlyingToken.decimals,
+      chainId,
+    };
+  }
 
   try {
     const manifest = (await (
@@ -74,6 +88,9 @@ export const createTokenEntry = async (
     ).json()) as Manifest;
 
     tokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
+    if (underlyingToken) {
+      underlyingTokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
+    }
   } catch {
     console.error(`logoURI not found for ${symbol} (${id})`);
 
@@ -94,7 +111,10 @@ export const createTokenEntry = async (
     }
   }
 
-  return tokenInfo as TokenInfo;
+  return [
+    tokenInfo,
+    ...(isEmpty(underlyingTokenInfo) ? [] : [underlyingTokenInfo]),
+  ] as TokenInfo[];
 };
 
 export const getVersion = (): Version =>
@@ -127,16 +147,18 @@ export const validateUnderlyingTokens = (tokenList: TokenList) => {
   tokenList.tokens.forEach((token) => {
     if (token.extensions && token.extensions.superTokenInfo) {
       const superTokenInfo = token.extensions.superTokenInfo as Record<
-        "type" | "underlyingAddress",
+        "type" | "underlyingTokenAddress",
         string
       >;
-      if (superTokenInfo.underlyingAddress) {
+      if (superTokenInfo.underlyingTokenAddress) {
         const underlyingToken = tokenList.tokens.find(
-          (t) => t.address === superTokenInfo.underlyingAddress
+          (t) =>
+            t.address.toLowerCase() ===
+            superTokenInfo.underlyingTokenAddress.toLowerCase()
         );
         if (!underlyingToken) {
           errors.push(
-            `Underlying token ${superTokenInfo.underlyingAddress} not found in token-list.`
+            `Underlying token of ${token.symbol}: ${superTokenInfo.underlyingTokenAddress} not found in token-list.`
           );
         }
       }
@@ -192,8 +214,8 @@ export const bootstrapSuperfluidTokenList = async () => {
       await prevQuery;
       const query = await graphSDK[network].fetchTokens();
 
-      const tokenEntry = await Promise.all(
-        query.tokens.map(async (token, i) => {
+      const tokenEntries = await Promise.all(
+        query.tokens.map(async (token) => {
           if (!brigeData[token.symbol]) brigeData[token.symbol] = {};
           brigeData[token.symbol][subgraphs[network].chainId] = {
             ...brigeData[token.symbol][subgraphs[network].chainId],
@@ -203,7 +225,7 @@ export const bootstrapSuperfluidTokenList = async () => {
         })
       );
 
-      tokenList.tokens.push(...tokenEntry);
+      tokenList.tokens.push(...tokenEntries.flat());
 
       return;
     }, Promise.resolve());

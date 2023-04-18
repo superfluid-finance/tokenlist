@@ -3,31 +3,39 @@ import path from "path";
 import isEmpty from "lodash/isEmpty";
 import { exec } from "child_process";
 import packageJson from "../package.json";
+import zipObject from "lodash/zipObject";
 
 let diffFilePath = process.argv[2];
 const tempFileName = "token-list_DRAFT.json";
 
 if (!diffFilePath) {
-  diffFilePath = `diff_token-list_v${packageJson}<>token-list_DRAFT.json`;
+  diffFilePath = `diff-output/diff_token-list_@latest<>token-list_DRAFT.json`;
 }
 
 const updateTempList = async () => {
   const packageJson = await import(path.resolve(__dirname, "../package.json"));
 
   try {
-    const nextVersionContents = fs.readFileSync(
-      path.resolve(__dirname, "../versions", tempFileName),
-      "utf8"
+    const nextVersionContents = JSON.parse(
+      fs.readFileSync(
+        path.resolve(__dirname, "../versions", tempFileName),
+        "utf8"
+      )
+    );
+
+    nextVersionContents.version = zipObject(
+      ["major", "minor", "patch"],
+      packageJson.version.split(".")
     );
 
     fs.writeFileSync(
       `./versions/${tempFileName.replace("DRAFT", `v${packageJson.version}`)}`,
-      nextVersionContents
+      JSON.stringify(nextVersionContents, null, 2)
     );
 
     fs.writeFileSync(
       `./versions/${tempFileName.replace("DRAFT", "@latest")}`,
-      nextVersionContents
+      JSON.stringify(nextVersionContents, null, 2)
     );
 
     fs.rmSync(`./versions/${tempFileName}`);

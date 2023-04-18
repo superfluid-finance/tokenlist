@@ -10,8 +10,6 @@ query fetchTokens {
     underlyingToken {
       id
       decimals
-      isNativeAssetSuperToken
-      isSuperToken
       name
       symbol
     }

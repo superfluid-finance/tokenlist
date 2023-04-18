@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "boostrap": "ts-node scripts/bootstrap.ts",
+    "bootstrap": "ts-node scripts/bootstrap.ts",
     "create:draft": "ts-node scripts/create-draft.ts",
     "diff-lists": "ts-node scripts/diff-lists.ts $1 $2 $3",
     "update:version": "ts-node scripts/update-version.ts $1",

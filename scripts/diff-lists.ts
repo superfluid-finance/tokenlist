@@ -4,13 +4,13 @@ import path from "path";
 import isEmpty from "lodash/isEmpty";
 import packageJson from "../package.json";
 
-let listA = process.argv[2];
-let listB = process.argv[3];
-const ignoreExtensions = process.argv[4];
+const ignoreExtensions = process.argv[2];
+let listA = process.argv[3];
+let listB = process.argv[4];
 
 if (!listA && !listB) {
   console.info("Usage: lists not provided, using current version and draft.");
-  listA = `versions/token-list_v${packageJson.version}.json`;
+  listA = `versions/token-list_@latest.json`;
   listB = `versions/token-list_DRAFT.json`;
 }
 
