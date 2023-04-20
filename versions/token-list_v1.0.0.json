@@ -1,11 +1,11 @@
 {
   "name": "Superfluid Token List",
   "version": {
-    "major": "1",
-    "minor": "0",
-    "patch": "0"
+    "major": 1,
+    "minor": 1,
+    "patch": 0
   },
-  "timestamp": "2023-04-18T14:51:02.710Z",
+  "timestamp": "2023-04-20T09:13:20.925Z",
   "tokens": [
     {
       "address": "0x288398f314d472b82c44855f3f6ff20b633c2a97",
@@ -1390,6 +1390,28 @@
       "decimals": 18,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/near/icon.png"
+    },
+    {
+      "address": "0x0b524b829d243df5f70c81aa9f95e32851a57902",
+      "name": "Super BetProtocolToken (PoS)",
+      "symbol": "BEPROx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x07cc1cc3628cc1615120df781ef9fc8ec2feae09"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/bepro/icon.png"
+    },
+    {
+      "address": "0x07cc1cc3628cc1615120df781ef9fc8ec2feae09",
+      "name": "BetProtocolToken (PoS)",
+      "symbol": "BEPRO",
+      "decimals": 18,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/bepro/icon.png"
     },
     {
       "address": "0x12c294107772b10815307c05989dabd71c21670e",

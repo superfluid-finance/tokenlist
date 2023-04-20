@@ -25,7 +25,7 @@ const updateTempList = async () => {
 
     nextVersionContents.version = zipObject(
       ["major", "minor", "patch"],
-      packageJson.version.split(".")
+      packageJson.version.split(".").map(Number)
     );
 
     fs.writeFileSync(
