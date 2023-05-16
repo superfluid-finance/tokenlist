@@ -14,6 +14,13 @@ import { BridgeInfo, Manifest, Writeable } from "./types";
 
 dotenv.config();
 
+const tags = {
+  supertoken: {
+    name: "SuperToken",
+    description: "This is a supertoken, learn more from the extensions.",
+  },
+};
+
 export const determineSuperTokenType = (
   tokenData: FetchTokensQuery["tokens"][number]
 ) => {
@@ -198,6 +205,19 @@ const mergeWithBridgeData = (brigeData: BridgeInfo, tokenList: TokenList) => {
   });
 };
 
+const attachTags = (tokenList: TokenInfo[]) => {
+  return tokenList.map((token) => {
+    if (!token.extensions) {
+      return token;
+    }
+
+    return {
+      ...token,
+      tags: ["supertoken"],
+    };
+  });
+};
+
 export const bootstrapSuperfluidTokenList = async () => {
   let tokenList: TokenList = {
     name: "Superfluid Token List",
@@ -230,11 +250,14 @@ export const bootstrapSuperfluidTokenList = async () => {
       return;
     }, Promise.resolve());
 
-    const extendedTokenList = mergeWithBridgeData(brigeData, tokenList);
+    const extendedTokenList = attachTags(
+      mergeWithBridgeData(brigeData, tokenList)
+    );
 
     tokenList = {
       ...tokenList,
       tokens: extendedTokenList,
+      tags,
     };
 
     await validate(tokenList);
