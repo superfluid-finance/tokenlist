@@ -11,5 +11,6 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true
-  }
+  },
+  "include": ["./tokenList.ts"]
 }

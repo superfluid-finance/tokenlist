@@ -1,7 +1,18 @@
 {
-  "name": "token-list",
-  "version": "1.1.0",
-  "main": "index.js",
+  "name": "superfluid-token-list",
+  "version": "1.0.0",
+  "main": "dist/tokenList.js",
+  "exports": {
+    ".": "./dist/tokenList.js"
+  },
+  "typesVersions": {
+    "*": {
+      "tokenList": [
+        "dist/types/tokenList.d.ts"
+      ]
+    }
+  },
+  "typings": "dist/types/tokenList.d.ts",
   "license": "MIT",
   "scripts": {
     "bootstrap": "ts-node scripts/bootstrap.ts",
@@ -10,7 +21,8 @@
     "update:version": "ts-node scripts/update-version.ts $1",
     "ipfs:publish": "ts-node scripts/publish.ts $1",
     "superfluid-graphql-codegen": "graphclient build --dir ./subgraph",
-    "editor": "npx ts-node ./editor/server.ts"
+    "editor": "npx ts-node ./editor/server.ts",
+    "build:package": "rimraf sdk/dist && tsc -p ./tsconfig.json --outDir ./dist --declaration"
   },
   "devDependencies": {
     "@graphprotocol/client-cli": "^2.2.20",

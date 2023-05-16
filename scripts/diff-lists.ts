@@ -2,7 +2,6 @@ import { diffTokenLists } from "@uniswap/token-lists";
 import fs from "fs";
 import path from "path";
 import isEmpty from "lodash/isEmpty";
-import packageJson from "../package.json";
 
 const ignoreExtensions = process.argv[2];
 let listA = process.argv[3];
@@ -10,7 +9,7 @@ let listB = process.argv[4];
 
 if (!listA && !listB) {
   console.info("Usage: lists not provided, using current version and draft.");
-  listA = `versions/token-list_@latest.json`;
+  listA = `token-list.json`;
   listB = `versions/token-list_DRAFT.json`;
 }
 

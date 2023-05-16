@@ -9,7 +9,7 @@ let diffFilePath = process.argv[2];
 const tempFileName = "token-list_DRAFT.json";
 
 if (!diffFilePath) {
-  diffFilePath = `diff-output/diff_token-list_@latest<>token-list_DRAFT.json`;
+  diffFilePath = `diff-output/diff_token-list<>token-list_DRAFT.json`;
 }
 
 const updateTempList = async () => {
@@ -34,7 +34,7 @@ const updateTempList = async () => {
     );
 
     fs.writeFileSync(
-      `./versions/${tempFileName.replace("DRAFT", "@latest")}`,
+      `./${tempFileName.replace("_DRAFT", "")}`,
       JSON.stringify(nextVersionContents, null, 2)
     );
 

@@ -39,33 +39,6 @@
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg"
     },
     {
-      "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
-      "name": "USD Coin",
-      "symbol": "USDC",
-      "decimals": 6,
-      "chainId": 43114,
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg"
-    },
-    {
-      "address": "0x6af916e2001bc4935e6d2f256363ed54eb8e20e0",
-      "name": "Super EUROe Stablecoin",
-      "symbol": "EUROex",
-      "decimals": 18,
-      "chainId": 43114,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x820802fa8a99901f52e39acd21177b0be6ee2974"
-        },
-        "bridgeInfo": {
-          "137": {
-            "tokenAddress": "0x5e31d5bdd6c87edff8659d9ead9ce0013fb47184"
-          }
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/euroe/icon.svg"
-    },
-    {
       "address": "0x820802fa8a99901f52e39acd21177b0be6ee2974",
       "name": "EUROe Stablecoin",
       "symbol": "EUROe",

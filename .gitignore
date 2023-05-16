@@ -3,3 +3,4 @@ node_modules
 .DS_Store
 versions/token-list_DRAFT.json
 yarn-error.log
+dist
