@@ -2,7 +2,7 @@ import { TokenInfo, TokenList } from "@uniswap/token-lists";
 import tokenListJSON from "./superfluid.tokenlist.json";
 
 export type SuperTokenExtensions = {
-  extensions: {
+  extensions?: {
     superTokenInfo: {
       type: "Pure" | "Native Asset" | "Wrapper";
       underlyingTokenAddress?: string;
