@@ -1,14 +1,14 @@
 {
-  "name": "superfluid-token-list",
+  "name": "supertoken-list",
   "version": "1.0.0",
-  "main": "dist/tokenList.js",
+  "main": "dist/index.js",
   "exports": {
-    ".": "./dist/tokenList.js"
+    ".": "./dist/index.js"
   },
   "typesVersions": {
     "*": {
       "tokenList": [
-        "dist/types/tokenList.d.ts"
+        "dist/types/index.d.ts"
       ]
     }
   },
@@ -41,5 +41,8 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4",
     "vanilla-jsoneditor": "^0.16.1"
+  },
+  "dependencies": {
+    "supertoken-list": "^1.0.0"
   }
 }

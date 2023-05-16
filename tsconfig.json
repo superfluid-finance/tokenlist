@@ -12,5 +12,5 @@
     "strict": true,
     "noImplicitAny": true
   },
-  "include": ["./tokenList.ts"]
+  "include": ["index.ts"]
 }
