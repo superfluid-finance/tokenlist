@@ -1,6 +1,6 @@
 {
-  "name": "supertoken-list",
-  "version": "3.0.0",
+  "name": "superfluid-supertoken-list",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "exports": {
     ".": "./dist/index.js"
