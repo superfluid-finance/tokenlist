@@ -9,8 +9,8 @@ let listB = process.argv[4];
 
 if (!listA && !listB) {
   console.info("Usage: lists not provided, using current version and draft.");
-  listA = `token-list.json`;
-  listB = `versions/token-list_DRAFT.json`;
+  listA = `superfluid.tokenlist.json`;
+  listB = `versions/DRAFT.tokenlist.json`;
 }
 
 const listAContents = JSON.parse(

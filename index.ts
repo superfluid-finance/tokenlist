@@ -1,5 +1,5 @@
 import { TokenInfo, TokenList } from "@uniswap/token-lists";
-import tokenListJSON from "./token-list.json";
+import tokenListJSON from "./superfluid.tokenlist.json";
 
 export type SuperTokenExtensions = {
   extensions: {

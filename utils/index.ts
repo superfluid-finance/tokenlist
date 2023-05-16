@@ -241,7 +241,7 @@ export const bootstrapSuperfluidTokenList = async () => {
     validateUnderlyingTokens(tokenList);
 
     fs.writeFileSync(
-      `versions/token-list_DRAFT.json`,
+      `versions/DRAFT.tokenlist.json`,
       JSON.stringify(tokenList, null, 2)
     );
   } catch (e) {

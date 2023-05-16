@@ -2,14 +2,13 @@ import fs from "fs";
 import path from "path";
 import isEmpty from "lodash/isEmpty";
 import { exec } from "child_process";
-import packageJson from "../package.json";
 import zipObject from "lodash/zipObject";
 
 let diffFilePath = process.argv[2];
-const tempFileName = "token-list_DRAFT.json";
+const tempFileName = "DRAFT.tokenlist.json";
 
 if (!diffFilePath) {
-  diffFilePath = `diff-output/diff_token-list<>token-list_DRAFT.json`;
+  diffFilePath = `diff-output/diff_superfluid.tokenlist<>DRAFT.tokenlist.json`;
 }
 
 const updateTempList = async () => {
@@ -34,7 +33,7 @@ const updateTempList = async () => {
     );
 
     fs.writeFileSync(
-      `./${tempFileName.replace("_DRAFT", "")}`,
+      `./${tempFileName.replace("DRAFT", "superfluid")}`,
       JSON.stringify(nextVersionContents, null, 2)
     );
 

@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 1,
-    "minor": 1,
+    "minor": 0,
     "patch": 0
   },
-  "timestamp": "2023-04-20T09:13:20.925Z",
+  "timestamp": "2023-05-16T08:49:31.893Z",
   "tokens": [
     {
       "address": "0x288398f314d472b82c44855f3f6ff20b633c2a97",
@@ -60,6 +60,9 @@
         "bridgeInfo": {
           "137": {
             "tokenAddress": "0x5e31d5bdd6c87edff8659d9ead9ce0013fb47184"
+          },
+          "42161": {
+            "tokenAddress": "0x95f1ee4cb6dc16136a79d367a010add361e5192c"
           }
         }
       },
@@ -283,6 +286,36 @@
       "decimals": 18,
       "chainId": 42161,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg"
+    },
+    {
+      "address": "0x95f1ee4cb6dc16136a79d367a010add361e5192c",
+      "name": "Super EUROe Stablecoin",
+      "symbol": "EUROex",
+      "decimals": 18,
+      "chainId": 42161,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xcf985aba4647a432e60efceeb8054bbd64244305"
+        },
+        "bridgeInfo": {
+          "137": {
+            "tokenAddress": "0x5e31d5bdd6c87edff8659d9ead9ce0013fb47184"
+          },
+          "43114": {
+            "tokenAddress": "0x6af916e2001bc4935e6d2f256363ed54eb8e20e0"
+          }
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/euroe/icon.svg"
+    },
+    {
+      "address": "0xcf985aba4647a432e60efceeb8054bbd64244305",
+      "name": "EUROe Stablecoin",
+      "symbol": "EUROe",
+      "decimals": 6,
+      "chainId": 42161,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/euroe/icon.svg"
     },
     {
       "address": "0xe6c8d111337d0052b9d88bf5d7d55b7f8385acd3",
@@ -1284,6 +1317,33 @@
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg"
     },
     {
+      "address": "0x9638ec1d29dfa9835fdb7fa74b5b77b14d6ac77e",
+      "name": "Super Wrapped BTC",
+      "symbol": "WBTCx",
+      "decimals": 18,
+      "chainId": 10,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x68f180fcce6836688e9084f035309e29bf0a2095"
+        },
+        "bridgeInfo": {
+          "137": {
+            "tokenAddress": "0x4086ebf75233e8492f1bcda41c7f2a8288c2fb92"
+          }
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wbtc/icon.svg"
+    },
+    {
+      "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "chainId": 10,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wbtc/icon.svg"
+    },
+    {
       "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
       "name": "Own a fraction",
       "symbol": "FRACTION",
@@ -1346,6 +1406,28 @@
       "decimals": 18,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/xcre8r/icon.svg"
+    },
+    {
+      "address": "0x00fa3405a6bbd94549f3b4855a9736766c4f237e",
+      "name": "Super USDT",
+      "symbol": "USDTx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdt/icon.png"
+    },
+    {
+      "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
+      "name": "(PoS) Tether USD",
+      "symbol": "USDT",
+      "decimals": 6,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdt/icon.png"
     },
     {
       "address": "0x02ef6868d69707b6093a2962bb5fe5661fcc0deb",
@@ -1829,6 +1911,11 @@
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6"
+        },
+        "bridgeInfo": {
+          "10": {
+            "tokenAddress": "0x9638ec1d29dfa9835fdb7fa74b5b77b14d6ac77e"
+          }
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wbtc/icon.svg"
@@ -1939,6 +2026,9 @@
           "underlyingTokenAddress": "0x820802fa8a99901f52e39acd21177b0be6ee2974"
         },
         "bridgeInfo": {
+          "42161": {
+            "tokenAddress": "0x95f1ee4cb6dc16136a79d367a010add361e5192c"
+          },
           "43114": {
             "tokenAddress": "0x6af916e2001bc4935e6d2f256363ed54eb8e20e0"
           }
@@ -2048,6 +2138,28 @@
       "decimals": 18,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eure/icon.svg"
+    },
+    {
+      "address": "0x76220628fc2847c41b14967a75f3093f6e56998a",
+      "name": "Super Dog Biscuits",
+      "symbol": "BSCTx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x600e5f4920f90132725b43412d47a76bc2219f92"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/bsct/icon.svg"
+    },
+    {
+      "address": "0x600e5f4920f90132725b43412d47a76bc2219f92",
+      "name": "Dog Biscuits",
+      "symbol": "BSCT",
+      "decimals": 18,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/bsct/icon.svg"
     },
     {
       "address": "0x782b2725593b18c8453568f3ffb2645b6cb5033e",
@@ -2393,6 +2505,28 @@
       "decimals": 18,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/float/icon.svg"
+    },
+    {
+      "address": "0xb0512060ee623a656da1f25686743474228ba0e6",
+      "name": "Super APWine Token (PoS)",
+      "symbol": "APWx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x6c0ab120dbd11ba701aff6748568311668f63fe0"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/apw/icon.svg"
+    },
+    {
+      "address": "0x6c0ab120dbd11ba701aff6748568311668f63fe0",
+      "name": "APWine Token (PoS)",
+      "symbol": "APW",
+      "decimals": 18,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/apw/icon.svg"
     },
     {
       "address": "0xb63e38d21b31719e6df314d3d2c351df0d4a9162",
