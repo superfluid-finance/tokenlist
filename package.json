@@ -1,22 +1,14 @@
 {
-  "name": "@tokdaniel/superfluid-token-list",
+  "name": "@tokdaniel/supertokenlist",
   "version": "1.0.0",
   "main": "dist/index.js",
   "exports": {
-    ".": "./dist/index.js",
-    "./token-list": "./dist/superfluid.tokenlist.json"
-  },
-  "typesVersions": {
-    "*": {
-      "tokenList": [
-        "dist/types/index.d.ts"
-      ]
-    }
+    ".": "./dist/index.js"
   },
   "files": [
     "dist"
   ],
-  "typings": "dist/types/tokenList.d.ts",
+  "typings": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
     "bootstrap": "ts-node scripts/bootstrap.ts",
