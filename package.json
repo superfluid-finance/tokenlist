@@ -1,9 +1,10 @@
 {
-  "name": "sf-tokenlist",
+  "name": "@tokdaniel/superfluid-token-list",
   "version": "1.0.0",
   "main": "dist/index.js",
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./token-list": "./dist/superfluid.tokenlist.json"
   },
   "typesVersions": {
     "*": {
@@ -12,6 +13,9 @@
       ]
     }
   },
+  "files": [
+    "dist"
+  ],
   "typings": "dist/types/tokenList.d.ts",
   "license": "MIT",
   "scripts": {
