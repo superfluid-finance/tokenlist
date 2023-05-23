@@ -24,9 +24,7 @@ fs.readFile(path.resolve(__dirname, "./index.html"), (err, html) => {
         });
       } else {
         const packageJson = await import("../package.json");
-        const currentTokenList = await import(
-          `../versions/token-list_v${packageJson.version}.json`
-        );
+        const currentTokenList = await import(`../superfluid.tokenlist.json`);
 
         res.writeHead(200, { "Content-Type": "text/html" });
         res.write(
