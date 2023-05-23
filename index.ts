@@ -2,23 +2,30 @@ import { TokenInfo, TokenList } from "@uniswap/token-lists";
 import tokenListJSON from "./superfluid.tokenlist.json";
 
 export type SuperTokenExtensions = {
-  extensions?: {
-    superTokenInfo: {
-      type: "Pure" | "Native Asset" | "Wrapper";
-      underlyingTokenAddress?: string;
-    };
-
-    bridgeInfo?: {
-      [x: `${number}`]: {
-        tokenAddress: string;
+  readonly extensions: {
+    readonly superTokenInfo:
+      | {
+          readonly type: "Pure" | "Native Asset";
+        }
+      | {
+          readonly type: "Wrapper";
+          readonly underlyingTokenAddress: `0x${string}`;
+        };
+    readonly bridgeInfo?: {
+      readonly [x: `${number}`]: {
+        readonly tokenAddress: `0x${string}`;
       };
     };
   };
 };
 
 export type SuperTokenInfo = TokenInfo & SuperTokenExtensions;
+type UnderlyingTokenInfo = TokenInfo;
+
 export type SuperTokenList = Omit<TokenList, "tokens"> & {
-  tokens: SuperTokenInfo[];
+  readonly tokens: (SuperTokenInfo & UnderlyingTokenInfo)[];
 };
 
-export default tokenListJSON as SuperTokenList;
+const superTokenList = tokenListJSON as SuperTokenList;
+
+export default superTokenList;
