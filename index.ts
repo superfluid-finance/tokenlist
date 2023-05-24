@@ -1,6 +1,8 @@
 import { TokenInfo, TokenList } from "@uniswap/token-lists";
 import tokenListJSON from "./superfluid.tokenlist.json";
 
+export type * from "@uniswap/token-lists";
+
 export type SuperTokenExtensions = {
   readonly extensions: {
     readonly superTokenInfo:
