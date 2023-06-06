@@ -4,7 +4,11 @@ import zipObject from "lodash/zipObject";
 import packageJson from "../package.json";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
-import graphSDK, { networks, subgraphs } from "../subgraph/subgraphs";
+import graphSDK, {
+  networks,
+  subgraphs,
+  testNetworks,
+} from "../subgraph/subgraphs";
 import fs from "fs";
 import omit from "lodash/omit";
 import isEmpty from "lodash/isEmpty";
@@ -18,6 +22,10 @@ const tags = {
   supertoken: {
     name: "SuperToken",
     description: "This is a supertoken, learn more from the extensions.",
+  },
+  testnet: {
+    name: "Testnet",
+    description: "This is a testnet token.",
   },
 };
 
@@ -211,9 +219,14 @@ const attachTags = (tokenList: TokenInfo[]) => {
       return token;
     }
 
+    const testNetworkChainIds = testNetworks.map((network) => network.chainId);
+
     return {
       ...token,
-      tags: ["supertoken"],
+      tags: [
+        "supertoken",
+        ...(testNetworkChainIds.includes(token.chainId) ? ["testnet"] : []),
+      ],
     };
   });
 };
