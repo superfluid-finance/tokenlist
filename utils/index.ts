@@ -4,7 +4,11 @@ import zipObject from "lodash/zipObject";
 import packageJson from "../package.json";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
-import graphSDK, { networks, subgraphs } from "../subgraph/subgraphs";
+import graphSDK, {
+  networks,
+  subgraphs,
+  testNetworks,
+} from "../subgraph/subgraphs";
 import fs from "fs";
 import omit from "lodash/omit";
 import isEmpty from "lodash/isEmpty";
@@ -18,6 +22,14 @@ const tags = {
   supertoken: {
     name: "SuperToken",
     description: "This is a supertoken, learn more from the extensions.",
+  },
+  underlying: {
+    name: "Underlying Token",
+    description: "This is an underlying token, of a supertoken.",
+  },
+  testnet: {
+    name: "Testnet",
+    description: "This is a testnet token.",
   },
 };
 
@@ -207,13 +219,26 @@ const mergeWithBridgeData = (brigeData: BridgeInfo, tokenList: TokenList) => {
 
 const attachTags = (tokenList: TokenInfo[]) => {
   return tokenList.map((token) => {
+    const testNetworkChainIds = testNetworks.map((network) => network.chainId);
+
     if (!token.extensions) {
-      return token;
+      // Underlying token tags
+      return {
+        ...token,
+        tags: [
+          "underlying",
+          ...(testNetworkChainIds.includes(token.chainId) ? ["testnet"] : []),
+        ],
+      };
     }
 
     return {
+      // Super token tags
       ...token,
-      tags: ["supertoken"],
+      tags: [
+        "supertoken",
+        ...(testNetworkChainIds.includes(token.chainId) ? ["testnet"] : []),
+      ],
     };
   });
 };

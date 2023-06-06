@@ -1,13 +1,44 @@
 import { getBuiltGraphSDK } from "./.graphclient";
 
-export const subgraphs = {
+type SubgraphName =
+  | "avalanche"
+  | "avalanche-fuji"
+  | "arbitrum-one"
+  | "arbitrum-goerli"
+  | "bsc"
+  | "celo"
+  | "goerli"
+  | "gnosis"
+  | "ethereum"
+  | "optimism"
+  | "optimism-goerli"
+  | "polygon"
+  | "mumbai";
+
+type SubgraphSettings = {
+  chainId: number;
+  url: string;
+  testnet?: boolean;
+};
+
+export const subgraphs: Record<SubgraphName, SubgraphSettings> = {
   avalanche: {
     chainId: 43114,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-avalanche-c",
   },
+  "avalanche-fuji": {
+    chainId: 43113,
+    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-avalanche-fuji",
+    testnet: true,
+  },
   "arbitrum-one": {
     chainId: 42161,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-arbitrum-one",
+  },
+  "arbitrum-goerli": {
+    chainId: 421611,
+    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-arbitrum-goerli",
+    testnet: true,
   },
   bsc: {
     chainId: 56,
@@ -20,6 +51,7 @@ export const subgraphs = {
   goerli: {
     chainId: 5,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-goerli",
+    testnet: true,
   },
   gnosis: {
     chainId: 100,
@@ -33,15 +65,28 @@ export const subgraphs = {
     chainId: 10,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-optimism-mainnet",
   },
+  "optimism-goerli": {
+    chainId: 69,
+    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-optimism-goerli",
+    testnet: true,
+  },
   polygon: {
     chainId: 137,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-matic",
+  },
+  mumbai: {
+    chainId: 80001,
+    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-mumbai",
+    testnet: true,
   },
 };
 
 type Network = keyof typeof subgraphs;
 
 export const networks = Object.keys(subgraphs) as Network[];
+export const testNetworks = Object.values(subgraphs).filter(
+  (settings) => settings.testnet
+);
 
 type SubgraphMapping = Record<Network, ReturnType<typeof getBuiltGraphSDK>>;
 
