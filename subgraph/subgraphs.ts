@@ -5,9 +5,17 @@ export const subgraphs = {
     chainId: 43114,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-avalanche-c",
   },
+  "avalanche-fuji": {
+    chainId: 43113,
+    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-avalanche-fuji",
+  },
   "arbitrum-one": {
     chainId: 42161,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-arbitrum-one",
+  },
+  "arbitrum-goerli": {
+    chainId: 421611,
+    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-arbitrum-goerli",
   },
   bsc: {
     chainId: 56,
@@ -33,9 +41,17 @@ export const subgraphs = {
     chainId: 10,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-optimism-mainnet",
   },
+  "optimism-goerli": {
+    chainId: 69,
+    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-optimism-goerli",
+  },
   polygon: {
     chainId: 137,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-matic",
+  },
+  mumbai: {
+    chainId: 80001,
+    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-mumbai",
   },
 };
 

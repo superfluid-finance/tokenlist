@@ -4,3 +4,4 @@ node_modules
 versions/token-list_DRAFT.json
 yarn-error.log
 dist
+diff-output/*.json
