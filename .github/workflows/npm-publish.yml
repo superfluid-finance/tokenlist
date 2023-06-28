@@ -21,6 +21,6 @@ jobs:
       - name: Build package
         run: pnpm build:package
       - name: Publish package
-        run: pnpm publish
+        run: pnpm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
