@@ -2,8 +2,8 @@
 
 ## Getting Started
 
-- `yarn`
-- `yarn ipfs:publish`
+- `pnpm`
+- `pnpm ipfs:publish`
 
 This will build the tokenlist based on all Superfluid Protocol V1 subgraphs on all networks excluding tokens of which the `isListed` property is `false`.
 When the build has finished, it will automatically publish this to IPFS and pin it with Pinata.

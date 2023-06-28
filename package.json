@@ -1,24 +1,24 @@
 {
   "name": "@superfluid-finance/tokenlist",
   "version": "1.2.0",
-  "main": "dist/index.js",
+  "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
   },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "typings": "dist/index.d.ts",
-  "license": "MIT",
   "scripts": {
     "bootstrap": "ts-node scripts/bootstrap.ts",
+    "build:package": "rimraf sdk/dist && tsc -p ./tsconfig.json --outDir ./dist --declaration",
     "create:draft": "ts-node scripts/create-draft.ts",
     "diff-lists": "ts-node scripts/diff-lists.ts $1 $2 $3",
-    "update:version": "ts-node scripts/update-version.ts $1",
+    "editor": "npx ts-node ./editor/server.ts",
     "ipfs:publish": "ts-node scripts/publish.ts $1",
     "superfluid-graphql-codegen": "graphclient build --dir ./subgraph",
-    "editor": "npx ts-node ./editor/server.ts",
-    "build:package": "rimraf sdk/dist && tsc -p ./tsconfig.json --outDir ./dist --declaration"
+    "update:version": "ts-node scripts/update-version.ts $1"
   },
   "dependencies": {
     "@uniswap/token-lists": "^1.0.0-beta.31"
@@ -26,18 +26,20 @@
   "devDependencies": {
     "@graphprotocol/client-cli": "^2.2.20",
     "@pinata/sdk": "^2.1.0",
-    "@types/lodash": "^4.14.192",
-    "@types/node": "^18.15.11",
+    "@types/lodash": "^4.14.195",
+    "@types/node": "^18.16.18",
     "@types/node-fetch": "^2.6.3",
-    "@uniswap/token-list-bridge-utils": "^1.3.2",
+    "@uniswap/token-list-bridge-utils": "^1.3.3",
     "ajv": "^8.12.0",
     "ajv-formats": "^2.1.1",
-    "dotenv": "^16.0.3",
-    "graphql": "^16.6.0",
+    "dotenv": "^16.3.1",
+    "graphql": "^16.7.1",
     "lodash": "^4.17.21",
     "node-fetch": "2.6.3",
+    "rimraf": "^5.0.1",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.4",
+    "typescript": "^5.1.5",
     "vanilla-jsoneditor": "^0.16.1"
-  }
+  },
+  "packageManager": "pnpm@8.6.1"
 }
