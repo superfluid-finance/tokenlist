@@ -1,8 +1,7 @@
 # Inspired by: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages#publishing-packages-to-the-npm-registry & https://pnpm.io/continuous-integration#github-actions
 name: Publish Superfluid Token List package to NPM
 on:
-  release:
-    types: [published]
+  workflow_dispatch:
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,6 +15,7 @@ jobs:
         with:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
+          scope: "@superfluid-finance"
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Build package
