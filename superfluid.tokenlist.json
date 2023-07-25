@@ -3,7 +3,7 @@
   "version": {
     "major": 1,
     "minor": 3,
-    "patch": 1
+    "patch": 2
   },
   "timestamp": "2023-06-06T13:55:19.133Z",
   "tokens": [
@@ -1097,7 +1097,7 @@
       "symbol": "FUNDx",
       "decimals": 18,
       "chainId": 5,
-      "iconUrl": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
       "extensions": {
         "superTokenInfo": {
           "type": "Wrapper",
@@ -1112,7 +1112,7 @@
       "symbol": "FUND",
       "decimals": 9,
       "chainId": 5,
-      "iconUrl": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
       "tags": ["underlying", "testnet"]
     },
     {
