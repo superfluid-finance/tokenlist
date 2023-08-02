@@ -1,6 +1,6 @@
 {
   "name": "@superfluid-finance/tokenlist",
-  "version": "1.3.2",
+  "version": "2.0.0",
   "license": "MIT",
   "exports": {
     ".": "./dist/index.js"
@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "bootstrap": "ts-node scripts/bootstrap.ts",
-    "build:package": "rimraf sdk/dist && tsc -p ./tsconfig.json --outDir ./dist --declaration",
+    "build:package": "rimraf sdk/dist && tsc -p ./tsconfig.package.json --outDir ./dist --declaration",
     "create:draft": "ts-node scripts/create-draft.ts",
     "diff-lists": "ts-node scripts/diff-lists.ts $1 $2 $3",
     "editor": "npx ts-node ./editor/server.ts",
