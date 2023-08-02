@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2016",
     "lib": ["es2019"],
-    "module": "CommonJS",
+    "module": "ESNext",
     "rootDir": ".",
     "resolveJsonModule": true,
     "outDir": "./bin",
