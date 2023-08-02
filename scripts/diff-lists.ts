@@ -1,7 +1,7 @@
 import { diffTokenLists } from "@uniswap/token-lists";
 import fs from "fs";
 import path from "path";
-import isEmpty from "lodash/isEmpty";
+import isEmpty from "lodash/isEmpty.js";
 
 const ignoreExtensions = process.argv[2];
 let listA = process.argv[3];
@@ -14,11 +14,11 @@ if (!listA && !listB) {
 }
 
 const listAContents = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "../", listA), "utf8")
+  fs.readFileSync(path.resolve(".", listA), "utf8")
 );
 
 const listBContents = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "../", listB), "utf8")
+  fs.readFileSync(path.resolve(".", listB), "utf8")
 );
 
 if (!listAContents.tokens || !listBContents.tokens) {

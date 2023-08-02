@@ -1,8 +1,9 @@
 import fs from "fs";
 import path from "path";
-import isEmpty from "lodash/isEmpty";
 import { exec } from "child_process";
-import zipObject from "lodash/zipObject";
+import zipObject from "lodash/zipObject.js";
+import isEmpty from "lodash/isEmpty.js";
+import packageJson from "../package.json" assert { type: "json" };
 
 let diffFilePath = process.argv[2];
 const tempFileName = "DRAFT.tokenlist.json";
@@ -12,14 +13,9 @@ if (!diffFilePath) {
 }
 
 const updateTempList = async () => {
-  const packageJson = await import(path.resolve(__dirname, "../package.json"));
-
   try {
     const nextVersionContents = JSON.parse(
-      fs.readFileSync(
-        path.resolve(__dirname, "../versions", tempFileName),
-        "utf8"
-      )
+      fs.readFileSync(path.resolve(".", "versions", tempFileName), "utf8")
     );
 
     nextVersionContents.version = zipObject(
@@ -53,7 +49,7 @@ if (!diffFilePath) {
 }
 
 const diffContents = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, "../", diffFilePath), "utf8")
+  fs.readFileSync(path.resolve(".", diffFilePath), "utf8")
 );
 
 if (!diffContents.added && !diffContents.changed && !diffContents.removed) {

@@ -221,7 +221,7 @@ type AccountTokenSnapshotLog {
   totalDeposit: BigInt!
   """
   The total (as of timestamp) net flow rate of the `account` as of `timestamp`/`block`.
-  This can be obtained by: `totalInflowRate - totalOutflowRate` 
+  This can be obtained by: `totalInflowRate - totalOutflowRate`
   
   """
   totalNetFlowRate: BigInt!
@@ -3224,6 +3224,11 @@ type FlowOperator {
   
   """
   flowRateAllowanceRemaining: BigInt!
+  """
+  The transfer allowance granted to the `flowOperator` by the `sender`.
+  
+  """
+  allowance: BigInt!
   flowOperator: Bytes!
   sender: Account!
   token: Token!
@@ -3445,6 +3450,7 @@ enum FlowOperatorUpdatedEvent_orderBy {
   flowOperator__permissions
   flowOperator__flowRateAllowanceGranted
   flowOperator__flowRateAllowanceRemaining
+  flowOperator__allowance
   flowOperator__flowOperator
 }
 
@@ -3513,6 +3519,14 @@ input FlowOperator_filter {
   flowRateAllowanceRemaining_lte: BigInt
   flowRateAllowanceRemaining_in: [BigInt!]
   flowRateAllowanceRemaining_not_in: [BigInt!]
+  allowance: BigInt
+  allowance_not: BigInt
+  allowance_gt: BigInt
+  allowance_lt: BigInt
+  allowance_gte: BigInt
+  allowance_lte: BigInt
+  allowance_in: [BigInt!]
+  allowance_not_in: [BigInt!]
   flowOperator: Bytes
   flowOperator_not: Bytes
   flowOperator_gt: Bytes
@@ -3602,6 +3616,7 @@ enum FlowOperator_orderBy {
   permissions
   flowRateAllowanceGranted
   flowRateAllowanceRemaining
+  allowance
   flowOperator
   sender
   sender__id
@@ -6105,6 +6120,12 @@ enum Index_orderBy {
   indexUnitsUpdatedEvents
   indexUnsubscribedEvents
 }
+
+"""
+8 bytes signed integer
+
+"""
+scalar Int8
 
 type JailEvent implements Event {
   id: ID!
@@ -9689,7 +9710,7 @@ type Stream {
   currentFlowRate: BigInt!
   deposit: BigInt!
   """
-  The amount streamed until `updatedAtTimestamp`/`updatedAtBlock`. 
+  The amount streamed until `updatedAtTimestamp`/`updatedAtBlock`.
   The formula to get the current streamed amount is:
   `streamedUntilUpdatedAt + ((currentTime in seconds) - updatedAtTimestamp) * currentFlowRate`.
   

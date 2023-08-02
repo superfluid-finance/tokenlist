@@ -1,22 +1,26 @@
 import { schema, TokenInfo, TokenList, Version } from "@uniswap/token-lists";
-import { FetchTokensQuery } from "../subgraph/.graphclient";
-import zipObject from "lodash/zipObject";
-import packageJson from "../package.json";
-import Ajv from "ajv";
-import addFormats from "ajv-formats";
+import { FetchTokensQuery } from "../subgraph/.graphclient/index.js";
+import zipObject from "lodash/zipObject.js";
+import packageJson from "../package.json" assert { type: "json" };
+import ajvModule from "ajv";
+import addFormatsModule from "ajv-formats";
 import graphSDK, {
   networks,
   subgraphs,
   testNetworks,
-} from "../subgraph/subgraphs";
+} from "../subgraph/subgraphs.js";
 import fs from "fs";
-import omit from "lodash/omit";
-import isEmpty from "lodash/isEmpty";
+import omit from "lodash/omit.js";
+import isEmpty from "lodash/isEmpty.js";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
-import { BridgeInfo, Manifest, Writeable } from "./types";
-
+import { BridgeInfo, Manifest, Writeable } from "./types.js";
+q;
 dotenv.config();
+
+//@ts-ignore
+const Ajv = ajvModule.default;
+const addFormats = addFormatsModule.default;
 
 const tags = {
   supertoken: {
@@ -260,7 +264,7 @@ export const bootstrapSuperfluidTokenList = async () => {
       const query = await graphSDK[network].fetchTokens();
 
       const tokenEntries = await Promise.all(
-        query.tokens.map(async (token) => {
+        query.tokens.map(async (token: any) => {
           if (!brigeData[token.symbol]) brigeData[token.symbol] = {};
           brigeData[token.symbol][subgraphs[network].chainId] = {
             ...brigeData[token.symbol][subgraphs[network].chainId],

@@ -1,4 +1,4 @@
-import { validate, validateUnderlyingTokens } from "../utils";
+import { validate, validateUnderlyingTokens } from "../utils/index.js";
 import fs from "fs";
 import path from "path";
 import pinataSDK from "@pinata/sdk";

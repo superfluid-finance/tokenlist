@@ -19,6 +19,7 @@ export type Scalars = {
   BigDecimal: any;
   BigInt: any;
   Bytes: any;
+  Int8: any;
 };
 
 /**
@@ -3355,6 +3356,11 @@ export type FlowOperator = {
    *
    */
   flowRateAllowanceRemaining: Scalars['BigInt'];
+  /**
+   * The transfer allowance granted to the `flowOperator` by the `sender`.
+   *
+   */
+  allowance: Scalars['BigInt'];
   flowOperator: Scalars['Bytes'];
   sender: Account;
   token: Token;
@@ -3589,6 +3595,7 @@ export type FlowOperatorUpdatedEvent_orderBy =
   | 'flowOperator__permissions'
   | 'flowOperator__flowRateAllowanceGranted'
   | 'flowOperator__flowRateAllowanceRemaining'
+  | 'flowOperator__allowance'
   | 'flowOperator__flowOperator';
 
 export type FlowOperator_filter = {
@@ -3656,6 +3663,14 @@ export type FlowOperator_filter = {
   flowRateAllowanceRemaining_lte?: InputMaybe<Scalars['BigInt']>;
   flowRateAllowanceRemaining_in?: InputMaybe<Array<Scalars['BigInt']>>;
   flowRateAllowanceRemaining_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  allowance?: InputMaybe<Scalars['BigInt']>;
+  allowance_not?: InputMaybe<Scalars['BigInt']>;
+  allowance_gt?: InputMaybe<Scalars['BigInt']>;
+  allowance_lt?: InputMaybe<Scalars['BigInt']>;
+  allowance_gte?: InputMaybe<Scalars['BigInt']>;
+  allowance_lte?: InputMaybe<Scalars['BigInt']>;
+  allowance_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  allowance_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
   flowOperator?: InputMaybe<Scalars['Bytes']>;
   flowOperator_not?: InputMaybe<Scalars['Bytes']>;
   flowOperator_gt?: InputMaybe<Scalars['Bytes']>;
@@ -3745,6 +3760,7 @@ export type FlowOperator_orderBy =
   | 'permissions'
   | 'flowRateAllowanceGranted'
   | 'flowRateAllowanceRemaining'
+  | 'allowance'
   | 'flowOperator'
   | 'sender'
   | 'sender__id'
