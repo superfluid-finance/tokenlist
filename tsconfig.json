@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "es2016",
     "lib": ["es2019"],
-    "module": "ESNext",
+    "module": "CommonJS",
     "rootDir": ".",
     "moduleResolution": "NodeNext",
     "resolveJsonModule": true,

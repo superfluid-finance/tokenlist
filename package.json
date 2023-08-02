@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "bootstrap": "ts-node --esm scripts/bootstrap.ts",
-    "build:package": "rimraf sdk/dist && tsc -p ./tsconfig.json --outDir ./dist --declaration",
+    "build:package": "rimraf sdk/dist && tsc -p ./tsconfig.package.json --outDir ./dist --declaration",
     "create:draft": "ts-node --esm scripts/create-draft.ts",
     "diff-lists": "ts-node --esm scripts/diff-lists.ts $1 $2 $3",
     "editor": "npx ts-node --esm ./editor/server.ts",
