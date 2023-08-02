@@ -15,7 +15,7 @@ import isEmpty from "lodash/isEmpty.js";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
 import { BridgeInfo, Manifest, Writeable } from "./types.js";
-q;
+
 dotenv.config();
 
 //@ts-ignore
