@@ -19,8 +19,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Build package
-        run: pnpm build:package
+        run: pnpm --filter @superfluid-finance/tokenlist build 
       - name: Publish package
-        run: pnpm publish --access public
+        run: pnpm --filter @superfluid-finance/tokenlist publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
