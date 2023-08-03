@@ -1,5 +1,5 @@
 import { TokenInfo, TokenList, Version, Tags } from "@uniswap/token-lists";
-import tokenListJSON from "./superfluid.tokenlist.json";
+import tokenListJSON from "./superfluid.tokenlist.json" assert { type: "json" };
 
 export { TokenInfo, TokenList, Version, Tags }; // Re-export @uniswap/token-lists' main consumer types.
 
