@@ -11,6 +11,5 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitAny": true
-  },
-  "include": ["index.ts"]
+  }
 }
