@@ -21,6 +21,6 @@ jobs:
       - name: Build package
         run: pnpm --filter @superfluid-finance/tokenlist build 
       - name: Publish package
-        run: pnpm --filter @superfluid-finance/tokenlist -q publish --access public
+        run: pnpm --filter @superfluid-finance/tokenlist publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
