@@ -19,6 +19,7 @@ export type Scalars = {
   BigDecimal: any;
   BigInt: any;
   Bytes: any;
+  Int8: any;
 };
 
 /**
@@ -3355,6 +3356,11 @@ export type FlowOperator = {
    *
    */
   flowRateAllowanceRemaining: Scalars['BigInt'];
+  /**
+   * The transfer allowance granted to the `flowOperator` by the `sender`.
+   *
+   */
+  allowance: Scalars['BigInt'];
   flowOperator: Scalars['Bytes'];
   sender: Account;
   token: Token;
@@ -3589,6 +3595,7 @@ export type FlowOperatorUpdatedEvent_orderBy =
   | 'flowOperator__permissions'
   | 'flowOperator__flowRateAllowanceGranted'
   | 'flowOperator__flowRateAllowanceRemaining'
+  | 'flowOperator__allowance'
   | 'flowOperator__flowOperator';
 
 export type FlowOperator_filter = {
@@ -3656,6 +3663,14 @@ export type FlowOperator_filter = {
   flowRateAllowanceRemaining_lte?: InputMaybe<Scalars['BigInt']>;
   flowRateAllowanceRemaining_in?: InputMaybe<Array<Scalars['BigInt']>>;
   flowRateAllowanceRemaining_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  allowance?: InputMaybe<Scalars['BigInt']>;
+  allowance_not?: InputMaybe<Scalars['BigInt']>;
+  allowance_gt?: InputMaybe<Scalars['BigInt']>;
+  allowance_lt?: InputMaybe<Scalars['BigInt']>;
+  allowance_gte?: InputMaybe<Scalars['BigInt']>;
+  allowance_lte?: InputMaybe<Scalars['BigInt']>;
+  allowance_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  allowance_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
   flowOperator?: InputMaybe<Scalars['Bytes']>;
   flowOperator_not?: InputMaybe<Scalars['Bytes']>;
   flowOperator_gt?: InputMaybe<Scalars['Bytes']>;
@@ -3745,6 +3760,7 @@ export type FlowOperator_orderBy =
   | 'permissions'
   | 'flowRateAllowanceGranted'
   | 'flowRateAllowanceRemaining'
+  | 'allowance'
   | 'flowOperator'
   | 'sender'
   | 'sender__id'
@@ -13603,6 +13619,16 @@ export type TokenStatistic = {
    *
    */
   totalSupply: Scalars['BigInt'];
+  /**
+   * The total number of accounts that have interacted with the token (but might not hold a balance anymore).
+   *
+   */
+  totalNumberOfAccounts: Scalars['Int'];
+  /**
+   * The total number of accounts holding a non-zero balance of the token.
+   *
+   */
+  totalNumberOfHolders: Scalars['Int'];
   token: Token;
   tokenStatisticLogs: Array<TokenStatisticLog>;
 };
@@ -13692,6 +13718,16 @@ export type TokenStatisticLog = {
    *
    */
   totalSupply: Scalars['BigInt'];
+  /**
+   * The total number of accounts that have interacted with the token (but might not hold a balance anymore).
+   *
+   */
+  totalNumberOfAccounts: Scalars['Int'];
+  /**
+   * The total number of accounts holding a non-zero balance of the token.
+   *
+   */
+  totalNumberOfHolders: Scalars['Int'];
   token: Token;
   tokenStatistic: TokenStatistic;
 };
@@ -13863,6 +13899,22 @@ export type TokenStatisticLog_filter = {
   totalSupply_lte?: InputMaybe<Scalars['BigInt']>;
   totalSupply_in?: InputMaybe<Array<Scalars['BigInt']>>;
   totalSupply_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  totalNumberOfAccounts?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_not?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_gt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_lt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_gte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_lte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfAccounts_not_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfHolders?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_not?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_gt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_lt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_gte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_lte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfHolders_not_in?: InputMaybe<Array<Scalars['Int']>>;
   token?: InputMaybe<Scalars['String']>;
   token_not?: InputMaybe<Scalars['String']>;
   token_gt?: InputMaybe<Scalars['String']>;
@@ -13931,6 +13983,8 @@ export type TokenStatisticLog_orderBy =
   | 'totalAmountTransferred'
   | 'totalAmountDistributed'
   | 'totalSupply'
+  | 'totalNumberOfAccounts'
+  | 'totalNumberOfHolders'
   | 'token'
   | 'token__id'
   | 'token__createdAtTimestamp'
@@ -13957,7 +14011,9 @@ export type TokenStatisticLog_orderBy =
   | 'tokenStatistic__totalAmountStreamedUntilUpdatedAt'
   | 'tokenStatistic__totalAmountTransferredUntilUpdatedAt'
   | 'tokenStatistic__totalAmountDistributedUntilUpdatedAt'
-  | 'tokenStatistic__totalSupply';
+  | 'tokenStatistic__totalSupply'
+  | 'tokenStatistic__totalNumberOfAccounts'
+  | 'tokenStatistic__totalNumberOfHolders';
 
 export type TokenStatistic_filter = {
   id?: InputMaybe<Scalars['ID']>;
@@ -14080,6 +14136,22 @@ export type TokenStatistic_filter = {
   totalSupply_lte?: InputMaybe<Scalars['BigInt']>;
   totalSupply_in?: InputMaybe<Array<Scalars['BigInt']>>;
   totalSupply_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  totalNumberOfAccounts?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_not?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_gt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_lt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_gte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_lte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfAccounts_not_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfHolders?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_not?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_gt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_lt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_gte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_lte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfHolders_not_in?: InputMaybe<Array<Scalars['Int']>>;
   token?: InputMaybe<Scalars['String']>;
   token_not?: InputMaybe<Scalars['String']>;
   token_gt?: InputMaybe<Scalars['String']>;
@@ -14124,6 +14196,8 @@ export type TokenStatistic_orderBy =
   | 'totalAmountTransferredUntilUpdatedAt'
   | 'totalAmountDistributedUntilUpdatedAt'
   | 'totalSupply'
+  | 'totalNumberOfAccounts'
+  | 'totalNumberOfHolders'
   | 'token'
   | 'token__id'
   | 'token__createdAtTimestamp'

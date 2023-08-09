@@ -221,7 +221,7 @@ type AccountTokenSnapshotLog {
   totalDeposit: BigInt!
   """
   The total (as of timestamp) net flow rate of the `account` as of `timestamp`/`block`.
-  This can be obtained by: `totalInflowRate - totalOutflowRate` 
+  This can be obtained by: `totalInflowRate - totalOutflowRate`
   
   """
   totalNetFlowRate: BigInt!
@@ -3224,6 +3224,11 @@ type FlowOperator {
   
   """
   flowRateAllowanceRemaining: BigInt!
+  """
+  The transfer allowance granted to the `flowOperator` by the `sender`.
+  
+  """
+  allowance: BigInt!
   flowOperator: Bytes!
   sender: Account!
   token: Token!
@@ -3445,6 +3450,7 @@ enum FlowOperatorUpdatedEvent_orderBy {
   flowOperator__permissions
   flowOperator__flowRateAllowanceGranted
   flowOperator__flowRateAllowanceRemaining
+  flowOperator__allowance
   flowOperator__flowOperator
 }
 
@@ -3513,6 +3519,14 @@ input FlowOperator_filter {
   flowRateAllowanceRemaining_lte: BigInt
   flowRateAllowanceRemaining_in: [BigInt!]
   flowRateAllowanceRemaining_not_in: [BigInt!]
+  allowance: BigInt
+  allowance_not: BigInt
+  allowance_gt: BigInt
+  allowance_lt: BigInt
+  allowance_gte: BigInt
+  allowance_lte: BigInt
+  allowance_in: [BigInt!]
+  allowance_not_in: [BigInt!]
   flowOperator: Bytes
   flowOperator_not: Bytes
   flowOperator_gt: Bytes
@@ -3602,6 +3616,7 @@ enum FlowOperator_orderBy {
   permissions
   flowRateAllowanceGranted
   flowRateAllowanceRemaining
+  allowance
   flowOperator
   sender
   sender__id
@@ -6105,6 +6120,12 @@ enum Index_orderBy {
   indexUnitsUpdatedEvents
   indexUnsubscribedEvents
 }
+
+"""
+8 bytes signed integer
+
+"""
+scalar Int8
 
 type JailEvent implements Event {
   id: ID!
@@ -9689,7 +9710,7 @@ type Stream {
   currentFlowRate: BigInt!
   deposit: BigInt!
   """
-  The amount streamed until `updatedAtTimestamp`/`updatedAtBlock`. 
+  The amount streamed until `updatedAtTimestamp`/`updatedAtBlock`.
   The formula to get the current streamed amount is:
   `streamedUntilUpdatedAt + ((currentTime in seconds) - updatedAtTimestamp) * currentFlowRate`.
   
@@ -14025,6 +14046,16 @@ type TokenStatistic {
   
   """
   totalSupply: BigInt!
+  """
+  The total number of accounts that have interacted with the token (but might not hold a balance anymore).
+  
+  """
+  totalNumberOfAccounts: Int!
+  """
+  The total number of accounts holding a non-zero balance of the token.
+  
+  """
+  totalNumberOfHolders: Int!
   token: Token!
   tokenStatisticLogs(skip: Int = 0, first: Int = 100, orderBy: TokenStatisticLog_orderBy, orderDirection: OrderDirection, where: TokenStatisticLog_filter): [TokenStatisticLog!]!
 }
@@ -14101,6 +14132,16 @@ type TokenStatisticLog {
   
   """
   totalSupply: BigInt!
+  """
+  The total number of accounts that have interacted with the token (but might not hold a balance anymore).
+  
+  """
+  totalNumberOfAccounts: Int!
+  """
+  The total number of accounts holding a non-zero balance of the token.
+  
+  """
+  totalNumberOfHolders: Int!
   token: Token!
   tokenStatistic: TokenStatistic!
 }
@@ -14272,6 +14313,22 @@ input TokenStatisticLog_filter {
   totalSupply_lte: BigInt
   totalSupply_in: [BigInt!]
   totalSupply_not_in: [BigInt!]
+  totalNumberOfAccounts: Int
+  totalNumberOfAccounts_not: Int
+  totalNumberOfAccounts_gt: Int
+  totalNumberOfAccounts_lt: Int
+  totalNumberOfAccounts_gte: Int
+  totalNumberOfAccounts_lte: Int
+  totalNumberOfAccounts_in: [Int!]
+  totalNumberOfAccounts_not_in: [Int!]
+  totalNumberOfHolders: Int
+  totalNumberOfHolders_not: Int
+  totalNumberOfHolders_gt: Int
+  totalNumberOfHolders_lt: Int
+  totalNumberOfHolders_gte: Int
+  totalNumberOfHolders_lte: Int
+  totalNumberOfHolders_in: [Int!]
+  totalNumberOfHolders_not_in: [Int!]
   token: String
   token_not: String
   token_gt: String
@@ -14340,6 +14397,8 @@ enum TokenStatisticLog_orderBy {
   totalAmountTransferred
   totalAmountDistributed
   totalSupply
+  totalNumberOfAccounts
+  totalNumberOfHolders
   token
   token__id
   token__createdAtTimestamp
@@ -14367,6 +14426,8 @@ enum TokenStatisticLog_orderBy {
   tokenStatistic__totalAmountTransferredUntilUpdatedAt
   tokenStatistic__totalAmountDistributedUntilUpdatedAt
   tokenStatistic__totalSupply
+  tokenStatistic__totalNumberOfAccounts
+  tokenStatistic__totalNumberOfHolders
 }
 
 input TokenStatistic_filter {
@@ -14490,6 +14551,22 @@ input TokenStatistic_filter {
   totalSupply_lte: BigInt
   totalSupply_in: [BigInt!]
   totalSupply_not_in: [BigInt!]
+  totalNumberOfAccounts: Int
+  totalNumberOfAccounts_not: Int
+  totalNumberOfAccounts_gt: Int
+  totalNumberOfAccounts_lt: Int
+  totalNumberOfAccounts_gte: Int
+  totalNumberOfAccounts_lte: Int
+  totalNumberOfAccounts_in: [Int!]
+  totalNumberOfAccounts_not_in: [Int!]
+  totalNumberOfHolders: Int
+  totalNumberOfHolders_not: Int
+  totalNumberOfHolders_gt: Int
+  totalNumberOfHolders_lt: Int
+  totalNumberOfHolders_gte: Int
+  totalNumberOfHolders_lte: Int
+  totalNumberOfHolders_in: [Int!]
+  totalNumberOfHolders_not_in: [Int!]
   token: String
   token_not: String
   token_gt: String
@@ -14534,6 +14611,8 @@ enum TokenStatistic_orderBy {
   totalAmountTransferredUntilUpdatedAt
   totalAmountDistributedUntilUpdatedAt
   totalSupply
+  totalNumberOfAccounts
+  totalNumberOfHolders
   token
   token__id
   token__createdAtTimestamp
