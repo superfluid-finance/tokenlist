@@ -21,6 +21,7 @@ import { MeshStore, FsStoreStorageAdapter } from '@graphql-mesh/store';
 import { path as pathModule } from '@graphql-mesh/cross-helpers';
 import { ImportFn } from '@graphql-mesh/types';
 import type { ProtocolV1Types } from './sources/protocol-v1/types';
+import * as importedModule$0 from "./sources/protocol-v1/introspectionSchema";
 export type Maybe<T> = T | undefined;
 export type InputMaybe<T> = T | undefined;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -40,6 +41,7 @@ export type Scalars = {
   BigDecimal: string;
   BigInt: string;
   Bytes: string;
+  Int8: any;
 };
 
 /**
@@ -3376,6 +3378,11 @@ export type FlowOperator = {
    *
    */
   flowRateAllowanceRemaining: Scalars['BigInt'];
+  /**
+   * The transfer allowance granted to the `flowOperator` by the `sender`.
+   *
+   */
+  allowance: Scalars['BigInt'];
   flowOperator: Scalars['Bytes'];
   sender: Account;
   token: Token;
@@ -3610,6 +3617,7 @@ export type FlowOperatorUpdatedEvent_OrderBy =
   | 'flowOperator__permissions'
   | 'flowOperator__flowRateAllowanceGranted'
   | 'flowOperator__flowRateAllowanceRemaining'
+  | 'flowOperator__allowance'
   | 'flowOperator__flowOperator';
 
 export type FlowOperator_Filter = {
@@ -3677,6 +3685,14 @@ export type FlowOperator_Filter = {
   flowRateAllowanceRemaining_lte?: InputMaybe<Scalars['BigInt']>;
   flowRateAllowanceRemaining_in?: InputMaybe<Array<Scalars['BigInt']>>;
   flowRateAllowanceRemaining_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  allowance?: InputMaybe<Scalars['BigInt']>;
+  allowance_not?: InputMaybe<Scalars['BigInt']>;
+  allowance_gt?: InputMaybe<Scalars['BigInt']>;
+  allowance_lt?: InputMaybe<Scalars['BigInt']>;
+  allowance_gte?: InputMaybe<Scalars['BigInt']>;
+  allowance_lte?: InputMaybe<Scalars['BigInt']>;
+  allowance_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  allowance_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
   flowOperator?: InputMaybe<Scalars['Bytes']>;
   flowOperator_not?: InputMaybe<Scalars['Bytes']>;
   flowOperator_gt?: InputMaybe<Scalars['Bytes']>;
@@ -3766,6 +3782,7 @@ export type FlowOperator_OrderBy =
   | 'permissions'
   | 'flowRateAllowanceGranted'
   | 'flowRateAllowanceRemaining'
+  | 'allowance'
   | 'flowOperator'
   | 'sender'
   | 'sender__id'
@@ -13624,6 +13641,16 @@ export type TokenStatistic = {
    *
    */
   totalSupply: Scalars['BigInt'];
+  /**
+   * The total number of accounts that have interacted with the token (but might not hold a balance anymore).
+   *
+   */
+  totalNumberOfAccounts: Scalars['Int'];
+  /**
+   * The total number of accounts holding a non-zero balance of the token.
+   *
+   */
+  totalNumberOfHolders: Scalars['Int'];
   token: Token;
   tokenStatisticLogs: Array<TokenStatisticLog>;
 };
@@ -13713,6 +13740,16 @@ export type TokenStatisticLog = {
    *
    */
   totalSupply: Scalars['BigInt'];
+  /**
+   * The total number of accounts that have interacted with the token (but might not hold a balance anymore).
+   *
+   */
+  totalNumberOfAccounts: Scalars['Int'];
+  /**
+   * The total number of accounts holding a non-zero balance of the token.
+   *
+   */
+  totalNumberOfHolders: Scalars['Int'];
   token: Token;
   tokenStatistic: TokenStatistic;
 };
@@ -13884,6 +13921,22 @@ export type TokenStatisticLog_Filter = {
   totalSupply_lte?: InputMaybe<Scalars['BigInt']>;
   totalSupply_in?: InputMaybe<Array<Scalars['BigInt']>>;
   totalSupply_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  totalNumberOfAccounts?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_not?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_gt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_lt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_gte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_lte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfAccounts_not_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfHolders?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_not?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_gt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_lt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_gte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_lte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfHolders_not_in?: InputMaybe<Array<Scalars['Int']>>;
   token?: InputMaybe<Scalars['String']>;
   token_not?: InputMaybe<Scalars['String']>;
   token_gt?: InputMaybe<Scalars['String']>;
@@ -13952,6 +14005,8 @@ export type TokenStatisticLog_OrderBy =
   | 'totalAmountTransferred'
   | 'totalAmountDistributed'
   | 'totalSupply'
+  | 'totalNumberOfAccounts'
+  | 'totalNumberOfHolders'
   | 'token'
   | 'token__id'
   | 'token__createdAtTimestamp'
@@ -13978,7 +14033,9 @@ export type TokenStatisticLog_OrderBy =
   | 'tokenStatistic__totalAmountStreamedUntilUpdatedAt'
   | 'tokenStatistic__totalAmountTransferredUntilUpdatedAt'
   | 'tokenStatistic__totalAmountDistributedUntilUpdatedAt'
-  | 'tokenStatistic__totalSupply';
+  | 'tokenStatistic__totalSupply'
+  | 'tokenStatistic__totalNumberOfAccounts'
+  | 'tokenStatistic__totalNumberOfHolders';
 
 export type TokenStatistic_Filter = {
   id?: InputMaybe<Scalars['ID']>;
@@ -14101,6 +14158,22 @@ export type TokenStatistic_Filter = {
   totalSupply_lte?: InputMaybe<Scalars['BigInt']>;
   totalSupply_in?: InputMaybe<Array<Scalars['BigInt']>>;
   totalSupply_not_in?: InputMaybe<Array<Scalars['BigInt']>>;
+  totalNumberOfAccounts?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_not?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_gt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_lt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_gte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_lte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfAccounts_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfAccounts_not_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfHolders?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_not?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_gt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_lt?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_gte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_lte?: InputMaybe<Scalars['Int']>;
+  totalNumberOfHolders_in?: InputMaybe<Array<Scalars['Int']>>;
+  totalNumberOfHolders_not_in?: InputMaybe<Array<Scalars['Int']>>;
   token?: InputMaybe<Scalars['String']>;
   token_not?: InputMaybe<Scalars['String']>;
   token_gt?: InputMaybe<Scalars['String']>;
@@ -14145,6 +14218,8 @@ export type TokenStatistic_OrderBy =
   | 'totalAmountTransferredUntilUpdatedAt'
   | 'totalAmountDistributedUntilUpdatedAt'
   | 'totalSupply'
+  | 'totalNumberOfAccounts'
+  | 'totalNumberOfHolders'
   | 'token'
   | 'token__id'
   | 'token__createdAtTimestamp'
@@ -15032,6 +15107,8 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
   info: GraphQLResolveInfo
 ) => TResult | Promise<TResult>;
 
+
+
 /** Mapping between all available schema types and the resolvers types */
 export type ResolversTypes = ResolversObject<{
   Account: ResolverTypeWrapper<Account>;
@@ -15124,6 +15201,7 @@ export type ResolversTypes = ResolversObject<{
   Index_filter: Index_Filter;
   Index_orderBy: Index_OrderBy;
   Int: ResolverTypeWrapper<Scalars['Int']>;
+  Int8: ResolverTypeWrapper<Scalars['Int8']>;
   JailEvent: ResolverTypeWrapper<JailEvent>;
   JailEvent_filter: JailEvent_Filter;
   JailEvent_orderBy: JailEvent_OrderBy;
@@ -15294,6 +15372,7 @@ export type ResolversParentTypes = ResolversObject<{
   IndexUpdatedEvent_filter: IndexUpdatedEvent_Filter;
   Index_filter: Index_Filter;
   Int: Scalars['Int'];
+  Int8: Scalars['Int8'];
   JailEvent: JailEvent;
   JailEvent_filter: JailEvent_Filter;
   MintedEvent: MintedEvent;
@@ -15701,6 +15780,7 @@ export type FlowOperatorResolvers<ContextType = MeshContext, ParentType extends 
   permissions?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   flowRateAllowanceGranted?: Resolver<ResolversTypes['BigInt'], ParentType, ContextType>;
   flowRateAllowanceRemaining?: Resolver<ResolversTypes['BigInt'], ParentType, ContextType>;
+  allowance?: Resolver<ResolversTypes['BigInt'], ParentType, ContextType>;
   flowOperator?: Resolver<ResolversTypes['Bytes'], ParentType, ContextType>;
   sender?: Resolver<ResolversTypes['Account'], ParentType, ContextType>;
   token?: Resolver<ResolversTypes['Token'], ParentType, ContextType>;
@@ -15938,6 +16018,10 @@ export type IndexUpdatedEventResolvers<ContextType = MeshContext, ParentType ext
   index?: Resolver<ResolversTypes['Index'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
+
+export interface Int8ScalarConfig extends GraphQLScalarTypeConfig<ResolversTypes['Int8'], any> {
+  name: 'Int8';
+}
 
 export type JailEventResolvers<ContextType = MeshContext, ParentType extends ResolversParentTypes['JailEvent'] = ResolversParentTypes['JailEvent']> = ResolversObject<{
   id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
@@ -16657,6 +16741,8 @@ export type TokenStatisticResolvers<ContextType = MeshContext, ParentType extend
   totalAmountTransferredUntilUpdatedAt?: Resolver<ResolversTypes['BigInt'], ParentType, ContextType>;
   totalAmountDistributedUntilUpdatedAt?: Resolver<ResolversTypes['BigInt'], ParentType, ContextType>;
   totalSupply?: Resolver<ResolversTypes['BigInt'], ParentType, ContextType>;
+  totalNumberOfAccounts?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  totalNumberOfHolders?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   token?: Resolver<ResolversTypes['Token'], ParentType, ContextType>;
   tokenStatisticLogs?: Resolver<Array<ResolversTypes['TokenStatisticLog']>, ParentType, ContextType, RequireFields<TokenStatisticTokenStatisticLogsArgs, 'skip' | 'first'>>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
@@ -16682,6 +16768,8 @@ export type TokenStatisticLogResolvers<ContextType = MeshContext, ParentType ext
   totalAmountTransferred?: Resolver<ResolversTypes['BigInt'], ParentType, ContextType>;
   totalAmountDistributed?: Resolver<ResolversTypes['BigInt'], ParentType, ContextType>;
   totalSupply?: Resolver<ResolversTypes['BigInt'], ParentType, ContextType>;
+  totalNumberOfAccounts?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
+  totalNumberOfHolders?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   token?: Resolver<ResolversTypes['Token'], ParentType, ContextType>;
   tokenStatistic?: Resolver<ResolversTypes['TokenStatistic'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
@@ -16787,6 +16875,7 @@ export type Resolvers<ContextType = MeshContext> = ResolversObject<{
   IndexUnitsUpdatedEvent?: IndexUnitsUpdatedEventResolvers<ContextType>;
   IndexUnsubscribedEvent?: IndexUnsubscribedEventResolvers<ContextType>;
   IndexUpdatedEvent?: IndexUpdatedEventResolvers<ContextType>;
+  Int8?: GraphQLScalarType;
   JailEvent?: JailEventResolvers<ContextType>;
   MintedEvent?: MintedEventResolvers<ContextType>;
   NewPICEvent?: NewPicEventResolvers<ContextType>;
@@ -16840,7 +16929,7 @@ const importFn: ImportFn = <T>(moduleId: string) => {
   const relativeModuleId = (pathModule.isAbsolute(moduleId) ? pathModule.relative(baseDir, moduleId) : moduleId).split('\\').join('/').replace(baseDir + '/', '');
   switch(relativeModuleId) {
     case ".graphclient/sources/protocol-v1/introspectionSchema":
-      return import("./sources/protocol-v1/introspectionSchema") as T;
+      return Promise.resolve(importedModule$0) as T;
     
     default:
       return Promise.reject(new Error(`Cannot find module '${relativeModuleId}'.`));

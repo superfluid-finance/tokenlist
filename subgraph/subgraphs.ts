@@ -5,6 +5,7 @@ type SubgraphName =
   | "avalanche-fuji"
   | "arbitrum-one"
   | "arbitrum-goerli"
+  | "base-mainnet"
   | "bsc"
   | "celo"
   | "goerli"
@@ -39,6 +40,10 @@ export const subgraphs: Record<SubgraphName, SubgraphSettings> = {
     chainId: 421611,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-arbitrum-goerli",
     testnet: true,
+  },
+  "base-mainnet": {
+    chainId: 8453,
+    url: "https://base-mainnet.subgraph.x.superfluid.dev",
   },
   bsc: {
     chainId: 56,
