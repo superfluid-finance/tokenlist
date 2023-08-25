@@ -11,7 +11,11 @@ if (!diffFilePath) {
   diffFilePath = `diff-output/diff_superfluid.tokenlist<>DRAFT.tokenlist.json`;
 }
 
-const updateTempList = async () => {
+const updateTempList = async (version: {
+  major: number;
+  minor: number;
+  patch: number;
+}) => {
   const currentList = await import(
     path.resolve(__dirname, "../superfluid.tokenlist.json")
   );
@@ -26,11 +30,16 @@ const updateTempList = async () => {
 
     nextVersionContents.version = zipObject(
       ["major", "minor", "patch"],
-      Object.values(currentList.version).map(Number)
+      Object.entries(currentList.version).map(
+        ([name, value]) => Number(value) + version[name as keyof typeof version]
+      )
     );
 
     fs.writeFileSync(
-      `./versions/${tempFileName.replace("DRAFT", `v${currentList.version}`)}`,
+      `./versions/${tempFileName.replace(
+        "DRAFT",
+        `v${Object.values(nextVersionContents.version).join(".")}`
+      )}`,
       JSON.stringify(nextVersionContents, null, 2)
     );
 
@@ -76,7 +85,7 @@ if (
 
     await new Promise((resolve) => {
       exec(`npm version major --no-git-tag-version`, async () => {
-        await updateTempList();
+        await updateTempList({ major: 1, minor: 0, patch: 0 });
         resolve(null);
       });
     });
@@ -88,7 +97,7 @@ if (
     console.info(`bump version: minor`);
     await new Promise((resolve) => {
       exec(`npm version minor --no-git-tag-version`, async () => {
-        await updateTempList();
+        await updateTempList({ major: 0, minor: 1, patch: 0 });
         resolve(null);
       });
     });
@@ -99,7 +108,7 @@ if (
     console.info(`bump version: patch`);
     await new Promise((resolve) => {
       exec(`npm version patch --no-git-tag-version`, async () => {
-        await updateTempList();
+        await updateTempList({ major: 0, minor: 0, patch: 1 });
         resolve(null);
       });
     });
