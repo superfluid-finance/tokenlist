@@ -771,6 +771,7 @@
           "underlyingTokenAddress": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
         }
       },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
       "tags": ["supertoken"]
     },
     {
@@ -779,6 +780,7 @@
       "symbol": "USDbC",
       "decimals": 6,
       "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
       "tags": ["underlying"]
     },
     {
