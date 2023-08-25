@@ -12,7 +12,9 @@ if (!diffFilePath) {
 }
 
 const updateTempList = async () => {
-  const packageJson = await import(path.resolve(__dirname, "../package.json"));
+  const currentList = await import(
+    path.resolve(__dirname, "../superfluid.tokenlist.json")
+  );
 
   try {
     const nextVersionContents = JSON.parse(
@@ -24,11 +26,11 @@ const updateTempList = async () => {
 
     nextVersionContents.version = zipObject(
       ["major", "minor", "patch"],
-      packageJson.version.split(".").map(Number)
+      Object.values(currentList.version).map(Number)
     );
 
     fs.writeFileSync(
-      `./versions/${tempFileName.replace("DRAFT", `v${packageJson.version}`)}`,
+      `./versions/${tempFileName.replace("DRAFT", `v${currentList.version}`)}`,
       JSON.stringify(nextVersionContents, null, 2)
     );
 
@@ -38,10 +40,8 @@ const updateTempList = async () => {
     );
 
     fs.rmSync(`./versions/${tempFileName}`);
-  } catch {
-    console.error(
-      "Temporary tokenList file not found, have you run 'yarn build' yet?"
-    );
+  } catch (e) {
+    console.error("Temporary tokenList file not found", e);
 
     process.exit(1);
   }
