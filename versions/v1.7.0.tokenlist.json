@@ -2,11 +2,7 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 1,
-<<<<<<< HEAD
     "minor": 7,
-=======
-    "minor": 6,
->>>>>>> 5085bf803073adf560ee052886ba5c5eb52af650
     "patch": 0
   },
   "timestamp": "2023-09-04T15:39:11.432Z",
