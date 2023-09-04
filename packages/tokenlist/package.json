@@ -1,6 +1,6 @@
 {
   "name": "@superfluid-finance/tokenlist",
-  "version": "2.3gi.0",
+  "version": "2.3.0",
   "license": "MIT",
   "type": "module",
   "exports": {
