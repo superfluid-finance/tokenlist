@@ -2,7 +2,7 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 1,
-    "minor": 7,
+    "minor": 6,
     "patch": 0
   },
   "timestamp": "2023-08-25T09:28:26.702Z",
@@ -412,9 +412,6 @@
           },
           "137": {
             "tokenAddress": "0xcaa7349cea390f89641fe306d93591f87595dc1f"
-          },
-          "8453": {
-            "tokenAddress": "0xd04383398dd2426297da660f9cca3d439af9ce1b"
           },
           "43114": {
             "tokenAddress": "0x288398f314d472b82c44855f3f6ff20b633c2a97"
@@ -1462,9 +1459,6 @@
           "137": {
             "tokenAddress": "0xcaa7349cea390f89641fe306d93591f87595dc1f"
           },
-          "8453": {
-            "tokenAddress": "0xd04383398dd2426297da660f9cca3d439af9ce1b"
-          },
           "42161": {
             "tokenAddress": "0x1dbc1809486460dcd189b8a15990bca3272ee04e"
           },
@@ -1924,9 +1918,6 @@
           "137": {
             "tokenAddress": "0xcaa7349cea390f89641fe306d93591f87595dc1f"
           },
-          "8453": {
-            "tokenAddress": "0xd04383398dd2426297da660f9cca3d439af9ce1b"
-          },
           "42161": {
             "tokenAddress": "0x1dbc1809486460dcd189b8a15990bca3272ee04e"
           },
@@ -2233,9 +2224,6 @@
           },
           "137": {
             "tokenAddress": "0xcaa7349cea390f89641fe306d93591f87595dc1f"
-          },
-          "8453": {
-            "tokenAddress": "0xd04383398dd2426297da660f9cca3d439af9ce1b"
           },
           "42161": {
             "tokenAddress": "0x1dbc1809486460dcd189b8a15990bca3272ee04e"
@@ -3996,9 +3984,6 @@
           },
           "100": {
             "tokenAddress": "0x1234756ccf0660e866305289267211823ae86eec"
-          },
-          "8453": {
-            "tokenAddress": "0xd04383398dd2426297da660f9cca3d439af9ce1b"
           },
           "42161": {
             "tokenAddress": "0x1dbc1809486460dcd189b8a15990bca3272ee04e"
