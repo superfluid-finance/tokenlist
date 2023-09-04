@@ -82,7 +82,9 @@
             "tokenAddress": "0x288398f314d472b82c44855f3f6ff20b633c2a97"
           }
         }
-      }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": ["supertoken"]
     },
     {
       "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
