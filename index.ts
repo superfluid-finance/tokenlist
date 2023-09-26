@@ -13,11 +13,6 @@ export type SuperTokenExtensions = {
           readonly type: "Wrapper";
           readonly underlyingTokenAddress: `0x${string}`;
         };
-    readonly bridgeInfo?: {
-      readonly [x: `${number}`]: {
-        readonly tokenAddress: `0x${string}`;
-      };
-    };
   };
 };
 
