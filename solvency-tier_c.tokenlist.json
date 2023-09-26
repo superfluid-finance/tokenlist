@@ -1047,7 +1047,7 @@
       "name": "fTUSD Fake Token",
       "symbol": "fTUSD",
       "decimals": 18,
-      "chainId": 421611,
+      "chainId": 69,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/tusd/icon.svg",
       "tags": [
         "underlying",
@@ -1078,7 +1078,7 @@
       "name": "fUSDC Fake Token",
       "symbol": "fUSDC",
       "decimals": 18,
-      "chainId": 421611,
+      "chainId": 69,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
       "tags": [
         "underlying",
@@ -1109,7 +1109,7 @@
       "name": "fDAI Fake Token",
       "symbol": "fDAI",
       "decimals": 18,
-      "chainId": 421611,
+      "chainId": 69,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
       "tags": [
         "underlying",
@@ -1498,7 +1498,7 @@
       "name": "TDL Fake Token",
       "symbol": "TDL",
       "decimals": 18,
-      "chainId": 100,
+      "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/tdl/icon.svg",
       "tags": [
         "underlying"

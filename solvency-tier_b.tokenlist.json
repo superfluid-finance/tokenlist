@@ -860,7 +860,7 @@
       "name": "EUROe Stablecoin",
       "symbol": "EUROe",
       "decimals": 6,
-      "chainId": 43114,
+      "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/euroe/icon.svg",
       "tags": [
         "underlying"

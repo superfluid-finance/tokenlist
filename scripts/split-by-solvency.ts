@@ -25,9 +25,11 @@ const createFilteredList = async (tokenList: SuperTokenList, tier: string) => {
       const underlyingToken = underlyingTokens.find(
         (underlyingToken) =>
           underlyingToken.address ===
-          // @ts-ignore (Special Native Assets have underlying tokens)
-          token.extensions?.superTokenInfo?.underlyingTokenAddress
+            // @ts-ignore (Special Native Assets have underlying tokens)
+            token.extensions?.superTokenInfo?.underlyingTokenAddress &&
+          underlyingToken.chainId === token.chainId
       );
+
       if (underlyingToken) {
         tokens.push(underlyingToken);
       }
