@@ -50,7 +50,7 @@ const createFilteredList = async (tokenList: SuperTokenList, tier: string) => {
     }
 
     fs.writeFileSync(
-      `solvency-${tier}.tokenlist.json`,
+      `superfluid.${tier}.tokenlist.json`,
       JSON.stringify(partialTokenList, null, 2)
     );
   } catch (e) {
