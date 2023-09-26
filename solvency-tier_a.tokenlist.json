@@ -42,40 +42,6 @@
       ]
     },
     {
-      "address": "0xd04383398dd2426297da660f9cca3d439af9ce1b",
-      "name": "Super USD Coin",
-      "symbol": "USDCx",
-      "decimals": 18,
-      "chainId": 8453,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"
-        },
-        "bridgeInfo": {
-          "1": {
-            "tokenAddress": "0x1ba8603da702602a8657980e825a6daa03dee93a"
-          }
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": [
-        "supertoken",
-        "tier_a"
-      ]
-    },
-    {
-      "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-      "name": "USD Coin",
-      "symbol": "USDC",
-      "decimals": 6,
-      "chainId": 8453,
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": [
-        "underlying"
-      ]
-    },
-    {
       "address": "0x7cd00c2b9a78f270b897457ab070274e4a17de83",
       "name": "Super Dai Stablecoin",
       "symbol": "DAI.ex",
@@ -102,6 +68,23 @@
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
       "tags": [
         "underlying"
+      ]
+    },
+    {
+      "address": "0xbe916845d8678b5d2f7ad79525a62d7c08abba7e",
+      "name": "Super AVAX",
+      "symbol": "AVAXx",
+      "decimals": 18,
+      "chainId": 43114,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Native Asset"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/avax/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_a"
       ]
     },
     {
@@ -199,6 +182,28 @@
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
       "tags": [
         "underlying"
+      ]
+    },
+    {
+      "address": "0xe6c8d111337d0052b9d88bf5d7d55b7f8385acd3",
+      "name": "Super ETH",
+      "symbol": "ETHx",
+      "decimals": 18,
+      "chainId": 42161,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Native Asset"
+        },
+        "bridgeInfo": {
+          "1": {
+            "tokenAddress": "0xc22bea0be9872d8b7b3933cec70ece4d53a900da"
+          }
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_a"
       ]
     },
     {
@@ -386,6 +391,40 @@
       ]
     },
     {
+      "address": "0x9757d68a4273635c69d93b84ee3cdac2304dd467",
+      "name": "Super ETH",
+      "symbol": "ETHx",
+      "decimals": 18,
+      "chainId": 100,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1"
+        },
+        "bridgeInfo": {
+          "1": {
+            "tokenAddress": "0xc22bea0be9872d8b7b3933cec70ece4d53a900da"
+          }
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
+    },
+    {
+      "address": "0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1",
+      "name": "Wrapped Ether on xDai",
+      "symbol": "WETH",
+      "decimals": 18,
+      "chainId": 100,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x1ba8603da702602a8657980e825a6daa03dee93a",
       "name": "Super USD Coin",
       "symbol": "USDCx",
@@ -472,6 +511,74 @@
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
       "tags": [
         "underlying"
+      ]
+    },
+    {
+      "address": "0xc22bea0be9872d8b7b3933cec70ece4d53a900da",
+      "name": "Super ETH",
+      "symbol": "ETHx",
+      "decimals": 18,
+      "chainId": 1,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Native Asset"
+        },
+        "bridgeInfo": {
+          "5": {
+            "tokenAddress": "0x5943f705abb6834cad767e6e4bb258bc48d9c947"
+          },
+          "10": {
+            "tokenAddress": "0x4ac8bd1bdae47beef2d1c6aa62229509b962aa0d"
+          },
+          "69": {
+            "tokenAddress": "0xe01f8743677da897f4e7de9073b57bf034fc2433"
+          },
+          "100": {
+            "tokenAddress": "0x9757d68a4273635c69d93b84ee3cdac2304dd467"
+          },
+          "137": {
+            "tokenAddress": "0x27e1e4e6bc79d93032abef01025811b7e4727e85"
+          },
+          "8453": {
+            "tokenAddress": "0x46fd5cfb4c12d87acd3a13e92baa53240c661d93"
+          },
+          "42161": {
+            "tokenAddress": "0xe6c8d111337d0052b9d88bf5d7d55b7f8385acd3"
+          },
+          "84531": {
+            "tokenAddress": "0x7ffce315b2014546ba461d54eded7aac70df4f53"
+          },
+          "421611": {
+            "tokenAddress": "0xe01f8743677da897f4e7de9073b57bf034fc2433"
+          }
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
+    },
+    {
+      "address": "0x4ac8bd1bdae47beef2d1c6aa62229509b962aa0d",
+      "name": "Super ETH",
+      "symbol": "ETHx",
+      "decimals": 18,
+      "chainId": 10,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Native Asset"
+        },
+        "bridgeInfo": {
+          "1": {
+            "tokenAddress": "0xc22bea0be9872d8b7b3933cec70ece4d53a900da"
+          }
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_a"
       ]
     },
     {
@@ -630,6 +737,69 @@
       "decimals": 18,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x27e1e4e6bc79d93032abef01025811b7e4727e85",
+      "name": "Super WETH (PoS)",
+      "symbol": "ETHx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619"
+        },
+        "bridgeInfo": {
+          "1": {
+            "tokenAddress": "0xc22bea0be9872d8b7b3933cec70ece4d53a900da"
+          }
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
+    },
+    {
+      "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x3ad736904e9e65189c3000c7dd2c8ac8bb7cd4e3",
+      "name": "Super MATIC",
+      "symbol": "MATICx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Native Asset",
+          "underlyingTokenAddress": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/matic/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
+    },
+    {
+      "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+      "name": "Wrapped Matic",
+      "symbol": "WMATIC",
+      "decimals": 18,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/matic/icon.svg",
       "tags": [
         "underlying"
       ]

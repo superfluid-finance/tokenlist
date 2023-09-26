@@ -1,5 +1,5 @@
 import { SuperTokenList, TokenInfo } from "..";
-import tokenList from "../superfluid.tokenlist.json";
+import tokenList from "../solvency-superfluid.tokenlist.json";
 import fs from "fs";
 import { validate, validateUnderlyingTokens } from "../utils";
 

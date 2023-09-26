@@ -37,6 +37,40 @@
       ]
     },
     {
+      "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
+      "name": "Own a fraction",
+      "symbol": "FRACTION",
+      "decimals": 18,
+      "chainId": 43114,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fraction/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_b"
+      ]
+    },
+    {
+      "address": "0x2bf2ba13735160624a0feae98f6ac8f70885ea61",
+      "name": "Own a fraction",
+      "symbol": "FRACTION",
+      "decimals": 18,
+      "chainId": 42161,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fraction/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_b"
+      ]
+    },
+    {
       "address": "0x95f1ee4cb6dc16136a79d367a010add361e5192c",
       "name": "Super EUROe Stablecoin",
       "symbol": "EUROex",
@@ -124,6 +158,23 @@
       ]
     },
     {
+      "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
+      "name": "Own a fraction",
+      "symbol": "FRACTION",
+      "decimals": 18,
+      "chainId": 56,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fraction/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_b"
+      ]
+    },
+    {
       "address": "0x62b8b11039fcfe5ab0c56e502b1c372a3d2a9c7a",
       "name": "GoodDollar",
       "symbol": "G$",
@@ -135,6 +186,23 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/g$/icon.png",
+      "tags": [
+        "supertoken",
+        "tier_b"
+      ]
+    },
+    {
+      "address": "0x2bf2ba13735160624a0feae98f6ac8f70885ea61",
+      "name": "Own a fraction",
+      "symbol": "FRACTION",
+      "decimals": 18,
+      "chainId": 100,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fraction/icon.svg",
       "tags": [
         "supertoken",
         "tier_b"
@@ -886,6 +954,35 @@
       ]
     },
     {
+      "address": "0x72a9bae5ce6de9816aadcbc24daa09f5d169a980",
+      "name": "Monerium EUR emoney",
+      "symbol": "EURex",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x18ec0a6e18e5bc3784fdd3a3634b31245ab704f6"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eure/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_b"
+      ]
+    },
+    {
+      "address": "0x18ec0a6e18e5bc3784fdd3a3634b31245ab704f6",
+      "name": "Monerium EUR emoney",
+      "symbol": "EURe",
+      "decimals": 18,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eure/icon.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x782b2725593b18c8453568f3ffb2645b6cb5033e",
       "name": "Super jCAD",
       "symbol": "jCADx",
@@ -1331,6 +1428,23 @@
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/spork/icon.png",
       "tags": [
         "underlying"
+      ]
+    },
+    {
+      "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
+      "name": "Own a fraction",
+      "symbol": "FRACTION",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fraction/icon.svg",
+      "tags": [
+        "supertoken",
+        "tier_b"
       ]
     },
     {
