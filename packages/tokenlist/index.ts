@@ -33,8 +33,8 @@ export type SuperTokenList = Omit<TokenList, "tokens"> & {
 
 const superTokenList = tokenListJSON as SuperTokenList;
 
-const superTokenList_TierA = tokenListTierAJSON as SuperTokenList;
-const superTokenList_TierB = tokenListTierBJSON as SuperTokenList;
-const superTokenList_TierC = tokenListTierCJSON as SuperTokenList;
+export const superTokenList_TierA = tokenListTierAJSON as SuperTokenList;
+export const superTokenList_TierB = tokenListTierBJSON as SuperTokenList;
+export const superTokenList_TierC = tokenListTierCJSON as SuperTokenList;
 
 export default superTokenList;
