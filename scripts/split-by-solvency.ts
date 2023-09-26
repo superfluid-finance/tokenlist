@@ -1,5 +1,5 @@
-import { SuperTokenList, TokenInfo } from "..";
-import tokenList from "../solvency-superfluid.tokenlist.json";
+import { SuperTokenInfo, SuperTokenList, TokenInfo } from "..";
+import tokenList from "../superfluid.tokenlist.json";
 import fs from "fs";
 import { validate, validateUnderlyingTokens } from "../utils";
 
@@ -12,7 +12,7 @@ const createFilteredList = async (tokenList: SuperTokenList, tier: string) => {
     token.tags?.includes(tier)
   );
 
-  const tokens: TokenInfo[] = [];
+  const tokens: SuperTokenInfo[] = [];
 
   filteredByTier.forEach((token) => {
     tokens.push(token);
@@ -35,31 +35,25 @@ const createFilteredList = async (tokenList: SuperTokenList, tier: string) => {
   });
 
   try {
-    const partialTokenList = { ...tokenList, tokens };
+    const partialTokenList = {
+      ...tokenList,
+      name: `${tokenList.name} ${tier.split("_")[1].toUpperCase()}`,
+      tokens,
+    };
     await validate(partialTokenList);
     const result = validateUnderlyingTokens(partialTokenList);
 
     if (!result) {
       throw new Error("Underlying tokens validation failed");
     }
+
+    fs.writeFileSync(
+      `solvency-${tier}.tokenlist.json`,
+      JSON.stringify(partialTokenList, null, 2)
+    );
   } catch (e) {
     console.error(tier, e);
   }
-
-  fs.writeFileSync(
-    `solvency-${tier}.tokenlist.json`,
-    JSON.stringify(
-      {
-        ...tokenList,
-        name: `${tokenList.name} (Solvency ${tier
-          .replace("_", " ")
-          .toUpperCase()})`,
-        tokens,
-      },
-      null,
-      2
-    )
-  );
 };
 
 const main = () => {
