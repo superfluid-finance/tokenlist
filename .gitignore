@@ -1,7 +1,7 @@
 node_modules
 .env
 .DS_Store
-versions/token-list_DRAFT.json
 yarn-error.log
 dist
 diff-output/*.json
+packages/tokenlist/**.tokenlist.json
