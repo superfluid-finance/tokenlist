@@ -31,6 +31,21 @@ const tags = {
     name: "Testnet",
     description: "This is a testnet token.",
   },
+  tier_a: {
+    name: "Solvency Tier A",
+    description:
+      "This is a Tier A token based on Solvency: Native Asset, or Stablecoin.",
+  },
+  tier_b: {
+    name: "Solvency Tier B",
+    description:
+      "This is a Tier B token based on Solvency: Tied to a project or company, and has value, or utility.",
+  },
+  tier_c: {
+    name: "Solvency Tier C",
+    description:
+      "This is a Tier C token based on Solvency: Not qualifying for Solvency Tier A or B.",
+  },
 };
 
 export const determineSuperTokenType = (

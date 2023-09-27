@@ -1,5 +1,9 @@
 import { TokenInfo, TokenList, Version, Tags } from "@uniswap/token-lists";
 import tokenListJSON from "./superfluid.tokenlist.json" assert { type: "json" };
+import extendedTokenListJSON from "./superfluid.extended.tokenlist.json" assert { type: "json" };
+import tierATokenListJSON from "./superfluid.tier-a.tokenlist.json" assert { type: "json" };
+import tierBTokenListJSON from "./superfluid.tier-b.tokenlist.json" assert { type: "json" };
+import tierCTokenListJSON from "./superfluid.tier-c.tokenlist.json" assert { type: "json" };
 
 export { TokenInfo, TokenList, Version, Tags }; // Re-export @uniswap/token-lists' main consumer types.
 
@@ -27,6 +31,11 @@ type UnderlyingTokenInfo = TokenInfo;
 export type SuperTokenList = Omit<TokenList, "tokens"> & {
   readonly tokens: (SuperTokenInfo & UnderlyingTokenInfo)[];
 };
+
+export const extendedSuperTokenList = extendedTokenListJSON as SuperTokenList;
+export const tierASuperTokenList = tierATokenListJSON as SuperTokenList;
+export const tierBSuperTokenList = tierBTokenListJSON as SuperTokenList;
+export const tierCSuperTokenList = tierCTokenListJSON as SuperTokenList;
 
 const superTokenList = tokenListJSON as SuperTokenList;
 
