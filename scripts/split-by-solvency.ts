@@ -1,15 +1,20 @@
 import { SuperTokenInfo, SuperTokenList, TokenInfo } from "..";
-import tokenList from "../superfluid.tokenlist.json";
+import tokenList from "../superfluid.extended.tokenlist.json";
 import fs from "fs";
 import { validate, validateUnderlyingTokens } from "../utils";
 
-const createFilteredList = async (tokenList: SuperTokenList, tier: string) => {
+const createFilteredList = async (
+  tokenList: SuperTokenList,
+  tiers: string[],
+  listName: string,
+  fileName: string
+) => {
   const underlyingTokens = tokenList.tokens.filter((token) =>
     token.tags?.includes("underlying")
   );
 
   const filteredByTier = tokenList.tokens.filter((token) =>
-    token.tags?.includes(tier)
+    tiers.some((tier) => token.tags?.includes(tier))
   );
 
   const tokens: SuperTokenInfo[] = [];
@@ -39,7 +44,7 @@ const createFilteredList = async (tokenList: SuperTokenList, tier: string) => {
   try {
     const partialTokenList = {
       ...tokenList,
-      name: `${tokenList.name} ${tier.split("_")[1].toUpperCase()}`,
+      name: listName,
       tokens,
     };
     await validate(partialTokenList);
@@ -49,19 +54,38 @@ const createFilteredList = async (tokenList: SuperTokenList, tier: string) => {
       throw new Error("Underlying tokens validation failed");
     }
 
-    fs.writeFileSync(
-      `superfluid.${tier}.tokenlist.json`,
-      JSON.stringify(partialTokenList, null, 2)
-    );
+    fs.writeFileSync(fileName, JSON.stringify(partialTokenList, null, 2));
   } catch (e) {
-    console.error(tier, e);
+    console.error(tiers, e);
   }
 };
 
 const main = () => {
-  createFilteredList(tokenList as SuperTokenList, "tier_a");
-  createFilteredList(tokenList as SuperTokenList, "tier_b");
-  createFilteredList(tokenList as SuperTokenList, "tier_c");
+  createFilteredList(
+    tokenList as SuperTokenList,
+    ["tier_a"],
+    "Superfluid Token List A",
+    "superfluid.tier-a.tokenlist.json"
+  );
+  createFilteredList(
+    tokenList as SuperTokenList,
+    ["tier_b"],
+    "Superfluid Token List B",
+    "superfluid.tier-b.tokenlist.json"
+  );
+  createFilteredList(
+    tokenList as SuperTokenList,
+    ["tier_c"],
+    "Superfluid Token List C",
+    "superfluid.tier-c.tokenlist.json"
+  );
+
+  createFilteredList(
+    tokenList as SuperTokenList,
+    ["tier_a", "tier_b"],
+    "Superfluid Token List",
+    "superfluid.tokenlist.json"
+  );
 };
 
 main();

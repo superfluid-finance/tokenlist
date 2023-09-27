@@ -1,7 +1,7 @@
-import { TokenInfo } from "@uniswap/token-lists";
-import tokenList from "../superfluid.tokenlist.json";
+import tokenList from "../superfluid.extended.tokenlist.json";
 import fs from "fs";
 import { SuperTokenInfo, SuperTokenList } from "..";
+import { validate, validateUnderlyingTokens } from "../utils";
 
 const solvencyCategoryToTagMap = {
   A: "tier_a",
@@ -9,14 +9,14 @@ const solvencyCategoryToTagMap = {
   C: "tier_c",
 };
 
-const main = () => {
-  const [rawHeaders, ...rest] = fs
+const main = async () => {
+  const [rawHeaders, ...rows] = fs
     .readFileSync("./solvency-categories.csv", "utf8")
     .split("\n");
 
   const headers = rawHeaders.split(",");
 
-  const solvencyCategories = rest.reduce<
+  const solvencyCategories = rows.reduce<
     Record<`${string}-${number}`, Record<string, string>>
   >((acc, line) => {
     const row = line.split(",");
@@ -53,13 +53,25 @@ const main = () => {
 
   const tokenListWithSolvency: SuperTokenList = {
     ...tokenList,
+    name: `${tokenList.name} Ext`,
     tokens,
   };
 
-  fs.writeFileSync(
-    "./superfluid.tokenlist.json",
-    JSON.stringify(tokenListWithSolvency, null, 2)
-  );
+  try {
+    await validate(tokenListWithSolvency);
+    const result = validateUnderlyingTokens(tokenListWithSolvency);
+
+    if (!result) {
+      throw new Error("Underlying tokens validation failed");
+    }
+
+    fs.writeFileSync(
+      "./superfluid.extended.tokenlist.json",
+      JSON.stringify(tokenListWithSolvency, null, 2)
+    );
+  } catch (e) {
+    console.error(e);
+  }
 };
 
 main();
