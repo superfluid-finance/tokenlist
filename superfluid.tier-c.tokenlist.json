@@ -564,6 +564,30 @@
       "tags": ["underlying", "testnet"]
     },
     {
+      "address": "0x783fdeab6951504c4601184587aafed01511ed24",
+      "name": "Super FUND (Sepolia)",
+      "symbol": "FUNDx",
+      "decimals": 18,
+      "chainId": 11155111,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xafe70a1985ebdefbdcaeedba045d66091c38e1b1"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0xafe70a1985ebdefbdcaeedba045d66091c38e1b1",
+      "name": "FUND (Sepolia)",
+      "symbol": "FUND",
+      "decimals": 9,
+      "chainId": 11155111,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["underlying", "testnet"]
+    },
+    {
       "address": "0xf2d68898557ccb2cf4c10c3ef2b034b2a69dad00",
       "name": "Super fDAI Fake Token",
       "symbol": "fDAIx",
