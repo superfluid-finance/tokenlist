@@ -290,9 +290,7 @@ export const bootstrapSuperfluidTokenList = async () => {
       return;
     }, Promise.resolve());
 
-    const extendedTokenList = attachTags(
-      mergeWithBridgeData(brigeData, tokenList)
-    );
+    const extendedTokenList = attachTags(tokenList.tokens);
 
     tokenList = {
       ...tokenList,
@@ -304,7 +302,7 @@ export const bootstrapSuperfluidTokenList = async () => {
     validateUnderlyingTokens(tokenList);
 
     fs.writeFileSync(
-      `versions/DRAFT.tokenlist.json`,
+      `DRAFT.tokenlist.json`,
       JSON.stringify(tokenList, null, 2)
     );
   } catch (e) {

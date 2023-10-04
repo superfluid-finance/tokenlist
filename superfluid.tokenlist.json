@@ -3,9 +3,9 @@
   "version": {
     "major": 2,
     "minor": 0,
-    "patch": 0
+    "patch": 2
   },
-  "timestamp": "2023-09-26T14:00:00.640Z",
+  "timestamp": "2023-10-04T13:11:23.632Z",
   "tokens": [
     {
       "address": "0x288398f314d472b82c44855f3f6ff20b633c2a97",
@@ -129,30 +129,6 @@
       "decimals": 6,
       "chainId": 43114,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdt/icon.png",
-      "tags": ["underlying"]
-    },
-    {
-      "address": "0x1dbc1809486460dcd189b8a15990bca3272ee04e",
-      "name": "Super USD Coin (Arb1)",
-      "symbol": "USDCx",
-      "decimals": 18,
-      "chainId": 42161,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["supertoken", "tier_a"]
-    },
-    {
-      "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
-      "name": "USD Coin (Arb1)",
-      "symbol": "USDC",
-      "decimals": 6,
-      "chainId": 42161,
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
       "tags": ["underlying"]
     },
     {
