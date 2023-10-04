@@ -3,9 +3,9 @@
   "version": {
     "major": 2,
     "minor": 0,
-    "patch": 1
+    "patch": 2
   },
-  "timestamp": "2023-09-26T14:00:00.640Z",
+  "timestamp": "2023-10-04T13:11:23.632Z",
   "tokens": [
     {
       "address": "0xd04383398dd2426297da660f9cca3d439af9ce1b",
@@ -128,6 +128,20 @@
       "tags": ["underlying", "testnet"]
     },
     {
+      "address": "0x34baf0a8292ec36b49f49eff07b374bdd7ba8703",
+      "name": "Super Fake DAI Token",
+      "symbol": "fDAIx",
+      "decimals": 18,
+      "chainId": 43113,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
       "address": "0xffd0f6d73ee52c68bf1b01c8afa2529c97ca17f3",
       "name": "Super AVAX",
       "symbol": "AVAXx",
@@ -140,6 +154,30 @@
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/avax/icon.svg",
       "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0xfc55f2854e74b4f42d01a6d3daac4c52d9dfdcff",
+      "name": "Super USD Coin",
+      "symbol": "USDCx",
+      "decimals": 18,
+      "chainId": 42161,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0xaf88d065e77c8cc2239327c5edb3a432268e5831",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 42161,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": ["underlying"]
     },
     {
       "address": "0x675be78ed16cabe47f6d9f816d615c3d6d740508",
@@ -253,13 +291,59 @@
           "underlyingTokenAddress": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
         }
       },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
       "tags": ["supertoken", "tier_c"]
     },
     {
       "address": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca",
       "name": "USD Base Coin",
       "symbol": "USDbC",
+      "decimals": 6,
+      "chainId": 8453,
+      "tags": ["underlying"]
+    },
+    {
+      "address": "0x708169c8c87563ce904e0a7f3bfc1f3b0b767f41",
+      "name": "Super Dai Stablecoin",
+      "symbol": "DAIx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb",
+      "name": "Dai Stablecoin",
+      "symbol": "DAI",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
+      "tags": ["underlying"]
+    },
+    {
+      "address": "0xd04383398dd2426297da660f9cca3d439af9ce1b",
+      "name": "Super USDC",
+      "symbol": "USDCx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "name": "USD Coin",
+      "symbol": "USDC",
       "decimals": 6,
       "chainId": 8453,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
@@ -549,6 +633,92 @@
       "decimals": 18,
       "chainId": 5,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
+      "tags": ["underlying", "testnet"]
+    },
+    {
+      "address": "0x30a6933ca9230361972e413a15dc8114c952414e",
+      "name": "Super ETH",
+      "symbol": "ETHx",
+      "decimals": 18,
+      "chainId": 11155111,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Native Asset"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0x783fdeab6951504c4601184587aafed01511ed24",
+      "name": "Super FUND (Sepolia)",
+      "symbol": "FUNDx",
+      "decimals": 18,
+      "chainId": 11155111,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xafe70a1985ebdefbdcaeedba045d66091c38e1b1"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0xafe70a1985ebdefbdcaeedba045d66091c38e1b1",
+      "name": "FUND (Sepolia)",
+      "symbol": "FUND",
+      "decimals": 9,
+      "chainId": 11155111,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["underlying", "testnet"]
+    },
+    {
+      "address": "0x9ce2062b085a2268e8d769ffc040f6692315fd2c",
+      "name": "Super fDAI Fake Token",
+      "symbol": "fDAIx",
+      "decimals": 18,
+      "chainId": 11155111,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x4e89088cd14064f38e5b2f309cfab9c864f9a8e6"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0x4e89088cd14064f38e5b2f309cfab9c864f9a8e6",
+      "name": "fDAI Fake Token",
+      "symbol": "fDAI",
+      "decimals": 18,
+      "chainId": 11155111,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
+      "tags": ["underlying", "testnet"]
+    },
+    {
+      "address": "0xb598e6c621618a9f63788816ffb50ee2862d443b",
+      "name": "Super fUSDC Fake Token",
+      "symbol": "fUSDCx",
+      "decimals": 18,
+      "chainId": 11155111,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xe72f289584eda2be69cfe487f4638f09bac920db"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0xe72f289584eda2be69cfe487f4638f09bac920db",
+      "name": "fUSDC Fake Token",
+      "symbol": "fUSDC",
+      "decimals": 18,
+      "chainId": 11155111,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
       "tags": ["underlying", "testnet"]
     },
     {
@@ -1140,8 +1310,7 @@
       "decimals": 18,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/work/icon.png",
-      "extensions": {},
-      "tags": ["supertoken", "tier_c"]
+      "tags": ["underlying"]
     },
     {
       "address": "0x76220628fc2847c41b14967a75f3093f6e56998a",

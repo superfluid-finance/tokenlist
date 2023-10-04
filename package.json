@@ -1,7 +1,7 @@
 {
   "name": "@superfluid-finance/tokenlist-repo",
   "private": true,
-  "version": "3.0.2",
+  "version": "3.0.3",
   "license": "MIT",
   "scripts": {
     "bootstrap": "ts-node scripts/bootstrap.ts",

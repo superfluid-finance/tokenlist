@@ -10,6 +10,7 @@ type SubgraphName =
   | "bsc"
   | "celo"
   | "goerli"
+  | "sepolia"
   | "gnosis"
   | "ethereum"
   | "optimism"
@@ -61,6 +62,11 @@ export const subgraphs: Record<SubgraphName, SubgraphSettings> = {
   goerli: {
     chainId: 5,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-goerli",
+    testnet: true,
+  },
+  sepolia: {
+    chainId: 11155111,
+    url: "https://subgraph.satsuma-prod.com/c5br3jaVlJI6/superfluid/eth-sepolia/api",
     testnet: true,
   },
   gnosis: {
