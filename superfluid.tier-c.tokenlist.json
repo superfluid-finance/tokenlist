@@ -8,6 +8,30 @@
   "timestamp": "2023-10-04T13:11:23.632Z",
   "tokens": [
     {
+      "address": "0xd04383398dd2426297da660f9cca3d439af9ce1b",
+      "name": "Super USD Coin",
+      "symbol": "USDCx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": ["underlying"]
+    },
+    {
       "address": "0xa60c5bebccdb9738f63891bbdd7fec3e762f9098",
       "name": "Super JoeToken",
       "symbol": "JOEx",
