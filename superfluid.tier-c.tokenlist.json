@@ -504,7 +504,7 @@
       "tags": ["underlying", "testnet"]
     },
     {
-      "address": "0xdd610f0e0e29a33168d43e96399a638df86b9c43",
+      "address": "0x783fdeab6951504c4601184587aafed01511ed24",
       "name": "Super FUND (Sepolia)",
       "symbol": "FUNDx",
       "decimals": 18,
