@@ -3,7 +3,7 @@
   "version": {
     "major": 2,
     "minor": 0,
-    "patch": 0
+    "patch": 1
   },
   "timestamp": "2023-09-26T14:00:00.640Z",
   "tokens": [
@@ -900,6 +900,30 @@
       "symbol": "FUND",
       "decimals": 9,
       "chainId": 5,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["underlying", "testnet"]
+    },
+    {
+      "address": "0xdd610f0e0e29a33168d43e96399a638df86b9c43",
+      "name": "Super FUND (Sepolia)",
+      "symbol": "FUNDx",
+      "decimals": 18,
+      "chainId": 11155111,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xafe70a1985ebdefbdcaeedba045d66091c38e1b1"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0xafe70a1985ebdefbdcaeedba045d66091c38e1b1",
+      "name": "FUND (Sepolia)",
+      "symbol": "FUND",
+      "decimals": 9,
+      "chainId": 11155111,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
       "tags": ["underlying", "testnet"]
     },
