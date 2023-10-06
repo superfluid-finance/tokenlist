@@ -16,6 +16,7 @@ type SubgraphName =
   | "optimism"
   | "optimism-goerli"
   | "polygon"
+  | "polygon-zkevm-testnet"
   | "mumbai";
 
 type SubgraphSettings = {
@@ -89,6 +90,10 @@ export const subgraphs: Record<SubgraphName, SubgraphSettings> = {
   polygon: {
     chainId: 137,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-matic",
+  },
+  "polygon-zkevm-testnet": {
+    chainId: 1101,
+    url: "https://polygon-zkevm-testnet.subgraph.x.superfluid.dev/",
   },
   mumbai: {
     chainId: 80001,
