@@ -94,6 +94,7 @@ export const subgraphs: Record<SubgraphName, SubgraphSettings> = {
   "polygon-zkevm-testnet": {
     chainId: 1101,
     url: "https://polygon-zkevm-testnet.subgraph.x.superfluid.dev/",
+    testnet: true,
   },
   mumbai: {
     chainId: 80001,

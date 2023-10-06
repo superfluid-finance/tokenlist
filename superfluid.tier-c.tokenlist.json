@@ -1517,7 +1517,7 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/tusd/icon.svg",
-      "tags": ["supertoken", "tier_c"]
+      "tags": ["supertoken", "testnet", "tier_c"]
     },
     {
       "address": "0x992805ed822c786bcdba4cb1f07b5cada3bc3cba",
@@ -1526,7 +1526,7 @@
       "decimals": 18,
       "chainId": 1101,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/tusd/icon.svg",
-      "tags": ["underlying"]
+      "tags": ["underlying", "testnet"]
     },
     {
       "address": "0x33cb2412846068b57119c09bcb4454ee0b07e297",
@@ -1541,7 +1541,7 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["supertoken", "tier_c"]
+      "tags": ["supertoken", "testnet", "tier_c"]
     },
     {
       "address": "0xf0d7d1d47109ba426b9d8a3cde1941327af1eea3",
@@ -1550,7 +1550,7 @@
       "decimals": 18,
       "chainId": 1101,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["underlying"]
+      "tags": ["underlying", "testnet"]
     },
     {
       "address": "0x6345aa6cec42a85160cf436810f97661e28c1876",
@@ -1564,7 +1564,7 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
-      "tags": ["supertoken", "tier_c"]
+      "tags": ["supertoken", "testnet", "tier_c"]
     },
     {
       "address": "0xf408daa31a958c4089f433eb239686c7809f8899",
@@ -1579,7 +1579,7 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["supertoken", "tier_c"]
+      "tags": ["supertoken", "testnet", "tier_c"]
     },
     {
       "address": "0x94a8358e313044bc5bc4a615da4e59acaf3e1101",
@@ -1588,7 +1588,7 @@
       "decimals": 18,
       "chainId": 1101,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["underlying"]
+      "tags": ["underlying", "testnet"]
     },
     {
       "address": "0x42bb40bf79730451b11f6de1cba222f17b87afd7",
