@@ -2,10 +2,10 @@
   "name": "Superfluid Token List Ext",
   "version": {
     "major": 2,
-    "minor": 0,
-    "patch": 2
+    "minor": 1,
+    "patch": 0
   },
-  "timestamp": "2023-10-04T13:11:23.632Z",
+  "timestamp": "2023-10-06T09:23:50.760Z",
   "tokens": [
     {
       "address": "0x288398f314d472b82c44855f3f6ff20b633c2a97",
@@ -3675,6 +3675,92 @@
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/gns/icon.png",
       "tags": ["underlying"]
+    },
+    {
+      "address": "0x0988dd6bfec3fd1b4accd4195987d3d759f99945",
+      "name": "Super fTUSD Fake Token",
+      "symbol": "fTUSDx",
+      "decimals": 18,
+      "chainId": 1101,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x992805ed822c786bcdba4cb1f07b5cada3bc3cba"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/tusd/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0x992805ed822c786bcdba4cb1f07b5cada3bc3cba",
+      "name": "fTUSD Fake Token",
+      "symbol": "fTUSD",
+      "decimals": 18,
+      "chainId": 1101,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/tusd/icon.svg",
+      "tags": ["underlying", "testnet"]
+    },
+    {
+      "address": "0x33cb2412846068b57119c09bcb4454ee0b07e297",
+      "name": "Super fUSDC Fake Token",
+      "symbol": "fUSDCx",
+      "decimals": 18,
+      "chainId": 1101,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xf0d7d1d47109ba426b9d8a3cde1941327af1eea3"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0xf0d7d1d47109ba426b9d8a3cde1941327af1eea3",
+      "name": "fUSDC Fake Token",
+      "symbol": "fUSDC",
+      "decimals": 18,
+      "chainId": 1101,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": ["underlying", "testnet"]
+    },
+    {
+      "address": "0x6345aa6cec42a85160cf436810f97661e28c1876",
+      "name": "Super ETH",
+      "symbol": "ETHx",
+      "decimals": 18,
+      "chainId": 1101,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Native Asset"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0xf408daa31a958c4089f433eb239686c7809f8899",
+      "name": "Super fDAI Fake Token",
+      "symbol": "fDAIx",
+      "decimals": 18,
+      "chainId": 1101,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x94a8358e313044bc5bc4a615da4e59acaf3e1101"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0x94a8358e313044bc5bc4a615da4e59acaf3e1101",
+      "name": "fDAI Fake Token",
+      "symbol": "fDAI",
+      "decimals": 18,
+      "chainId": 1101,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
+      "tags": ["underlying", "testnet"]
     },
     {
       "address": "0x42bb40bf79730451b11f6de1cba222f17b87afd7",
