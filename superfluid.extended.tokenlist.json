@@ -3,7 +3,7 @@
   "version": {
     "major": 2,
     "minor": 1,
-    "patch": 0
+    "patch": 1
   },
   "timestamp": "2023-10-06T09:23:50.760Z",
   "tokens": [
@@ -432,7 +432,7 @@
       "name": "Super fTUSD Fake Token",
       "symbol": "fTUSDx",
       "decimals": 18,
-      "chainId": 421611,
+      "chainId": 421613,
       "extensions": {
         "superTokenInfo": {
           "type": "Wrapper",
@@ -447,7 +447,7 @@
       "name": "fTUSD Fake Token",
       "symbol": "fTUSD",
       "decimals": 18,
-      "chainId": 421611,
+      "chainId": 421613,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/tusd/icon.svg",
       "tags": ["underlying", "testnet"]
     },
@@ -456,7 +456,7 @@
       "name": "Super fUSDC Fake Token",
       "symbol": "fUSDCx",
       "decimals": 18,
-      "chainId": 421611,
+      "chainId": 421613,
       "extensions": {
         "superTokenInfo": {
           "type": "Wrapper",
@@ -471,7 +471,7 @@
       "name": "fUSDC Fake Token",
       "symbol": "fUSDC",
       "decimals": 18,
-      "chainId": 421611,
+      "chainId": 421613,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
       "tags": ["underlying", "testnet"]
     },
@@ -480,7 +480,7 @@
       "name": "Super fDAI Fake Token",
       "symbol": "fDAIx",
       "decimals": 18,
-      "chainId": 421611,
+      "chainId": 421613,
       "extensions": {
         "superTokenInfo": {
           "type": "Wrapper",
@@ -495,7 +495,7 @@
       "name": "fDAI Fake Token",
       "symbol": "fDAI",
       "decimals": 18,
-      "chainId": 421611,
+      "chainId": 421613,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
       "tags": ["underlying", "testnet"]
     },
@@ -504,7 +504,7 @@
       "name": "Super ETH",
       "symbol": "ETHx",
       "decimals": 18,
-      "chainId": 421611,
+      "chainId": 421613,
       "extensions": {
         "superTokenInfo": {
           "type": "Native Asset"
