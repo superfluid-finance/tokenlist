@@ -40,7 +40,7 @@ export const subgraphs: Record<SubgraphName, SubgraphSettings> = {
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-arbitrum-one",
   },
   "arbitrum-goerli": {
-    chainId: 421613b,
+    chainId: 421613,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-arbitrum-goerli",
     testnet: true,
   },
