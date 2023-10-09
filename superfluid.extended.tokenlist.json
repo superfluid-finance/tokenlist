@@ -2,10 +2,10 @@
   "name": "Superfluid Token List Ext",
   "version": {
     "major": 2,
-    "minor": 1,
-    "patch": 1
+    "minor": 2,
+    "patch": 0
   },
-  "timestamp": "2023-10-06T09:23:50.760Z",
+  "timestamp": "2023-10-09T11:39:20.594Z",
   "tokens": [
     {
       "address": "0x288398f314d472b82c44855f3f6ff20b633c2a97",
@@ -962,6 +962,54 @@
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/ntdl/icon.svg",
       "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0x479347dfd0be56f2a5f7bb1506bfd7ab24d4ba26",
+      "name": "Super Unification",
+      "symbol": "FUNDx",
+      "decimals": 18,
+      "chainId": 1,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xe9b076b476d8865cdf79d1cf7df420ee397a7f75"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0xe9b076b476d8865cdf79d1cf7df420ee397a7f75",
+      "name": "Unification",
+      "symbol": "FUND",
+      "decimals": 9,
+      "chainId": 1,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["underlying"]
+    },
+    {
+      "address": "0xf1e073d53af781966f23b1a3b2d9e67cbba69b92",
+      "name": "Super Unification (FXERC20)",
+      "symbol": "fxFUNDx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x1f0145eac900d75808510190dfc293a09c7a964f"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0x1f0145eac900d75808510190dfc293a09c7a964f",
+      "name": "Unification (FXERC20)",
+      "symbol": "fxFUND",
+      "decimals": 9,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["underlying"]
     },
     {
       "address": "0xdd610f0e0e29a33168d43e96399a638df86b9c43",

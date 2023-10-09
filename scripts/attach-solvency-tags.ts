@@ -53,7 +53,7 @@ const main = async () => {
 
   const tokenListWithSolvency: SuperTokenList = {
     ...tokenList,
-    name: `${tokenList.name} Ext`,
+    name: `${tokenList.name}`,
     tokens,
   };
 
