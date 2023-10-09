@@ -59,6 +59,7 @@ Tokens are classified into specific types:
 - **Wrapper**: A supertoken that wraps a regular token (eg. USDC - USDCx).
 - **Native Asset**: A supertoken related to the blockchain's native token (eg. ETH - ETHx).
 - **Pure**: Supertokens that neither wrap other assets nor are they related to the native asset.
+- **Underlying**: Regular (ERC20) tokens, which are the underlying tokens of some supertoken.
 
 Underlying tokens always get included in the respective lists.
 
