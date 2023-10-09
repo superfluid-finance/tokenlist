@@ -97,10 +97,10 @@ Users are encouraged to perform their due diligence and research before making a
 Tokens are categorized using tags for quicker identification:
 
 - **`underlying`**: Marks a token as an underlying asset for another token.
+- **`supertoken`**: Marks a token as a supertoken.
 - **`tier_a`**: Indicates tokens of solvency category A.
 - **`tier_b`**: Indicates tokens of solvency category B.
 - **`tier_c`**: Indicates tokens of solvency category C.
-- **`supertoken`**: Marks a token as a supertoken variant.
 - **`testnet`**: Testnet tokens such as fUSDC & fUSDCx.
 
   
