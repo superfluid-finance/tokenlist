@@ -110,11 +110,10 @@ Tokens are categorized using tags for quicker identification:
 
 **Purpose:** Read subgraphs, and generate the extended token list.
 
-- Reads from `superfluid.extended.tokenlist.json`.
-- Fetches solvency data from a CSV file.
-- Maps solvency categories (A, B, C) to tags (`tier_a`, `tier_b`, `tier_c`).
-- Updates tokens with the relevant solvency category tags.
-- Outputs the updated list to `superfluid.tokenlist.json`.
+- Read Superfluid's subgraphs
+- Collect the listed tokens, and their respective data
+- attach metadata (token type, logoURI, some tags)
+- Output the resulting list to `superfluid.extended.tokenlist.json`.
 
 #### 2. `attach-solvency-tags.ts`
 
