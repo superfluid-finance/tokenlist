@@ -73,24 +73,18 @@ Underlying tokens always get included in the respective lists.
 
 ### Solvency Categories
 
-Solvency categories are classifications assigned to tokens to represent their perceived financial stability or risk. The categories help users make informed decisions when dealing with tokens, especially in financial contexts.
+Solvency categories are classifications assigned to tokens to represent their perceived financial stability or risk. The categories help users make informed decisions when dealing with tokens, especially in financial contexts. All token issuers are recommended to run their own [Sentinel](https://docs.superfluid.finance/superfluid/sentinels/running-a-sentinel) to make sure their token remains solvent.
 
 #### Categories:
 
-- **Category A (`tier_a`)**:
-    - Represents tokens deemed to be the most stable and lowest risk.
-    - These are typically well-established tokens with high market capitalization and liquidity.
+- **Category A (`tier_a`)**: Chain native tokens and well-known stable-coins (e.g. USDCx, ETHx, MATICx etc.).
     
-- **Category B (`tier_b`)**:
-    - Tokens that may carry a moderate level of risk.
-    - Often newer tokens or those with smaller market caps, but still possess significant trust and adoption in the market.
+- **Category B (`tier_b`)**: A delegate for the token is known by Superfluid who is committed to ensuring the solvency of the token which is used by their platform or service.
     
-- **Category C (`tier_c`)**:
-    - Represents tokens with the highest level of risk.
-    - Might be very new tokens, those with lower liquidity, or ones from projects that haven't established a significant reputation.
-    
-Users are encouraged to perform their due diligence and research before making any financial moves, even with tokens from Category A.
+- **Category C (`tier_c`)**: Any token not in the above two categories.
 
+Users are encouraged to perform their due diligence and research before making any financial moves, even with tokens from Category A.
+If you want to know more how you ensure solvency of your token please reach out to us on [Discord](https://discord.com/channels/752490247643725875/889417021220077588).
 
 ### Tags Explanation
 
