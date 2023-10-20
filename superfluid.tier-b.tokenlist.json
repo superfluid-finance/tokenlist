@@ -322,6 +322,30 @@
       "tags": ["underlying"]
     },
     {
+      "address": "0x4caB5B9930210E2EdC6A905B9C75D615872A1A7E",
+      "name": "Super Giveth Token",
+      "symbol": "GIVx",
+      "decimals": 18,
+      "chainId": 10,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x528CDc92eAB044E1E39FE43B9514bfdAB4412B98"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/Giveth/giveth-design-assets/9fc25bfcd4a04cae53ceaecb8f96e5db738ff8a5/02-logos/GIV%20Token/GIVToken_128x128.svg",
+      "tags": ["supertoken", "tier_b"]
+    },
+    {
+      "address": "0x528CDc92eAB044E1E39FE43B9514bfdAB4412B98",
+      "name": "Giveth Token",
+      "symbol": "GIV",
+      "decimals": 18,
+      "chainId": 10,
+      "logoURI": "https://raw.githubusercontent.com/Giveth/giveth-design-assets/9fc25bfcd4a04cae53ceaecb8f96e5db738ff8a5/02-logos/GIV%20Token/GIVToken_128x128.svg",
+      "tags": ["underlying"]
+    },
+    {
       "address": "0x02ef6868d69707b6093a2962bb5fe5661fcc0deb",
       "name": "Super STASIS EURS",
       "symbol": "EURSx",
