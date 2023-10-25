@@ -11,7 +11,7 @@
     "README.md"
   ],
   "scripts": {
-    "build": "pnpm copy-tokenlist && rimraf ./dist && tsc -p ./tsconfig.json --outDir ./dist --declaration && tsup",
+    "build": "pnpm copy-tokenlist && rimraf ./dist && tsup",
     "copy-tokenlist": "shx cp ./../../superfluid{,.**}.tokenlist.json ./"
   },
   "dependencies": {
