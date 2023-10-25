@@ -10,6 +10,10 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
   },
-  "include": ["./index.ts"],
-  "exclude": ["node_modules"],
+  "include": [
+    "./index.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
 }
