@@ -7,4 +7,5 @@ export default defineConfig({
   minify: true,
   sourcemap: true,
   dts: true, // declaration files
+  publicDir: "./public", // copy the jsons to dist for good measure
 });
