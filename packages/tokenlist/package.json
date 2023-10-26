@@ -1,6 +1,6 @@
 {
   "name": "@superfluid-finance/tokenlist",
-  "version": "3.3.1",
+  "version": "3.3.2",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs",
@@ -15,10 +15,10 @@
     "copy-tokenlist": "shx cp ./../../superfluid{,.**}.tokenlist.json ./public"
   },
   "dependencies": {
-    "@uniswap/token-lists": "^1.0.0-beta.31"
+    "@uniswap/token-lists": "^1.0.0-beta.33"
   },
   "devDependencies": {
-    "rimraf": "^5.0.1",
+    "rimraf": "^5.0.5",
     "shx": "^0.3.4",
     "tsup": "^7.2.0"
   },
