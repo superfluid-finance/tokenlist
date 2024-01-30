@@ -232,30 +232,52 @@ const mergeWithBridgeData = (brigeData: BridgeInfo, tokenList: TokenList) => {
   });
 };
 
-const attachTags = (tokenList: TokenInfo[]) => {
-  return tokenList.map((token) => {
-    const testNetworkChainIds = testNetworks.map((network) => network.chainId);
+const attachTags = (token: TokenInfo): TokenInfo => {
+  const testNetworkChainIds = testNetworks.map((network) => network.chainId);
 
-    if (!token.extensions) {
-      // Underlying token tags
-      return {
-        ...token,
-        tags: [
-          "underlying",
-          ...(testNetworkChainIds.includes(token.chainId) ? ["testnet"] : []),
-        ],
-      };
-    }
-
+  if (!token.extensions) {
+    // Underlying token tags
     return {
-      // Super token tags
       ...token,
       tags: [
-        "supertoken",
+        "underlying",
         ...(testNetworkChainIds.includes(token.chainId) ? ["testnet"] : []),
       ],
     };
-  });
+  }
+
+  return {
+    // Super token tags
+    ...token,
+    tags: [
+      "supertoken",
+      ...(testNetworkChainIds.includes(token.chainId) ? ["testnet"] : []),
+    ],
+  };
+};
+
+const handleLegacyUSDCxIfNecessary = (token: TokenInfo) => {
+  if (
+    token.chainId === 137 &&
+    token.address.toLowerCase() === "0xcaa7349cea390f89641fe306d93591f87595dc1f"
+  ) {
+    return {
+      ...token,
+      symbol: "USDC.ex",
+    };
+  }
+
+  if (
+    token.chainId === 42161 &&
+    token.address.toLowerCase() === "0x1dbc1809486460dcd189b8a15990bca3272ee04e"
+  ) {
+    return {
+      ...token,
+      symbol: "USDC.ex",
+    };
+  }
+
+  return token;
 };
 
 export const bootstrapSuperfluidTokenList = async () => {
@@ -290,7 +312,9 @@ export const bootstrapSuperfluidTokenList = async () => {
       return;
     }, Promise.resolve());
 
-    const extendedTokenList = attachTags(tokenList.tokens);
+    const extendedTokenList = tokenList.tokens
+      .map(attachTags)
+      .map(handleLegacyUSDCxIfNecessary);
 
     tokenList = {
       ...tokenList,
