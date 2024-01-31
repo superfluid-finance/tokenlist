@@ -22,10 +22,7 @@ const updateTempList = async (version: {
 
   try {
     const nextVersionContents = JSON.parse(
-      fs.readFileSync(
-        path.resolve(__dirname, "../versions", tempFileName),
-        "utf8"
-      )
+      fs.readFileSync(path.resolve(__dirname, "../", tempFileName), "utf8")
     );
 
     nextVersionContents.version = zipObject(
@@ -36,19 +33,11 @@ const updateTempList = async (version: {
     );
 
     fs.writeFileSync(
-      `./versions/${tempFileName.replace(
-        "DRAFT",
-        `v${Object.values(nextVersionContents.version).join(".")}`
-      )}`,
+      `./${tempFileName.replace("DRAFT", "superfluid.extended")}`,
       JSON.stringify(nextVersionContents, null, 2)
     );
 
-    fs.writeFileSync(
-      `./${tempFileName.replace("DRAFT", "superfluid")}`,
-      JSON.stringify(nextVersionContents, null, 2)
-    );
-
-    fs.rmSync(`./versions/${tempFileName}`);
+    fs.rmSync(`./${tempFileName}`);
   } catch (e) {
     console.error("Temporary tokenList file not found", e);
 
