@@ -1,11 +1,11 @@
 {
   "name": "Superfluid Token List A",
   "version": {
-    "major": 2,
-    "minor": 3,
+    "major": 3,
+    "minor": 4,
     "patch": 0
   },
-  "timestamp": "2023-10-20T08:18:44.184Z",
+  "timestamp": "2024-01-31T09:52:41.437Z",
   "tokens": [
     {
       "address": "0x288398f314d472b82c44855f3f6ff20b633c2a97",
@@ -20,7 +20,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xb97ef9ef8734c71904d8002f8b6bc66dd9c48a6e",
@@ -29,7 +32,9 @@
       "decimals": 6,
       "chainId": 43114,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x7cd00c2b9a78f270b897457ab070274e4a17de83",
@@ -44,7 +49,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xd586e7f844cea2f87f50152665bcbc2c279d8d70",
@@ -53,7 +61,9 @@
       "decimals": 18,
       "chainId": 43114,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0xbe916845d8678b5d2f7ad79525a62d7c08abba7e",
@@ -67,7 +77,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/avax/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xdf37ee57b2efd215a6a8329d6b8b72064f09bbd0",
@@ -82,7 +95,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdt/icon.png",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x9702230a8ea53601f5cd2dc00fdbc13d4df4a8c7",
@@ -91,12 +107,14 @@
       "decimals": 6,
       "chainId": 43114,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdt/icon.png",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x1dbc1809486460dcd189b8a15990bca3272ee04e",
       "name": "Super USD Coin (Arb1)",
-      "symbol": "USDCx",
+      "symbol": "USDC.ex",
       "decimals": 18,
       "chainId": 42161,
       "extensions": {
@@ -106,7 +124,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
@@ -115,7 +136,9 @@
       "decimals": 6,
       "chainId": 42161,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x521677a61d101a80ce0fb903b13cb485232774ee",
@@ -130,7 +153,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
@@ -139,7 +165,9 @@
       "decimals": 18,
       "chainId": 42161,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0xe6c8d111337d0052b9d88bf5d7d55b7f8385acd3",
@@ -153,7 +181,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x529a4116f160c833c61311569d6b33dff41fd657",
@@ -167,7 +198,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/bnb/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x3acb9a08697b6db4cd977e8ab42b6f24722e6d6e",
@@ -182,7 +216,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/cusd/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x765de816845861e75a25fca122bb6898b8b1282a",
@@ -191,7 +228,9 @@
       "decimals": 18,
       "chainId": 42220,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/cusd/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x671425ae1f272bc6f79bec3ed5c4b00e9c628240",
@@ -205,7 +244,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/celo/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x7a5f9c3e43aadc62647ab5d41802db33dc7d8c4b",
@@ -220,7 +262,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/creal/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xe8537a3d056da446677b9e9d6c5db704eaab4787",
@@ -229,7 +274,9 @@
       "decimals": 18,
       "chainId": 42220,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/creal/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0xd9f9a02e49225c7ab5b40fce8d44d256b0e984fb",
@@ -244,7 +291,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/ceur/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xd8763cba276a3738e6de85b4b3bf5fded6d6ca73",
@@ -253,7 +303,9 @@
       "decimals": 18,
       "chainId": 42220,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/ceur/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -268,7 +320,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xddafbb505ad214d7b80b1f830fccc89b60fb7a83",
@@ -277,7 +332,9 @@
       "decimals": 6,
       "chainId": 100,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x59988e47a3503aafaa0368b9def095c818fdca01",
@@ -292,7 +349,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/xdai/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xe91d153e0b41518a2ce8dd3d7944fa863463a97d",
@@ -301,7 +361,9 @@
       "decimals": 18,
       "chainId": 100,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/xdai/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x9757d68a4273635c69d93b84ee3cdac2304dd467",
@@ -316,7 +378,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1",
@@ -325,7 +390,9 @@
       "decimals": 18,
       "chainId": 100,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x1ba8603da702602a8657980e825a6daa03dee93a",
@@ -340,7 +407,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
@@ -349,7 +419,9 @@
       "decimals": 6,
       "chainId": 1,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x4f228bf911ed67730e4b51b1f82ac291b49053ee",
@@ -364,7 +436,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x6b175474e89094c44da98b954eedeac495271d0f",
@@ -373,7 +448,9 @@
       "decimals": 18,
       "chainId": 1,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0xc22bea0be9872d8b7b3933cec70ece4d53a900da",
@@ -387,7 +464,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x4ac8bd1bdae47beef2d1c6aa62229509b962aa0d",
@@ -401,7 +481,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x7d342726b69c28d942ad8bfe6ac81b972349d524",
@@ -416,7 +499,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1",
@@ -425,7 +511,9 @@
       "decimals": 18,
       "chainId": 10,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x8430f084b939208e2eded1584889c9a66b90562f",
@@ -440,7 +528,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
@@ -449,7 +540,9 @@
       "decimals": 6,
       "chainId": 10,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x9638ec1d29dfa9835fdb7fa74b5b77b14d6ac77e",
@@ -464,7 +557,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wbtc/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x68f180fcce6836688e9084f035309e29bf0a2095",
@@ -473,7 +569,9 @@
       "decimals": 8,
       "chainId": 10,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wbtc/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x00fa3405a6bbd94549f3b4855a9736766c4f237e",
@@ -488,7 +586,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdt/icon.png",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f",
@@ -497,7 +598,9 @@
       "decimals": 6,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdt/icon.png",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x1305f6b6df9dc47159d12eb7ac2804d4a33173c2",
@@ -512,7 +615,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x8f3cf7ad23cd3cadbd9735aff958023239c6a063",
@@ -521,7 +627,9 @@
       "decimals": 18,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x27e1e4e6bc79d93032abef01025811b7e4727e85",
@@ -536,7 +644,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619",
@@ -545,7 +656,9 @@
       "decimals": 18,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x3ad736904e9e65189c3000c7dd2c8ac8bb7cd4e3",
@@ -560,7 +673,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/matic/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
@@ -569,7 +685,9 @@
       "decimals": 18,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/matic/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0x4086ebf75233e8492f1bcda41c7f2a8288c2fb92",
@@ -584,7 +702,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wbtc/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6",
@@ -593,12 +714,14 @@
       "decimals": 8,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wbtc/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0xcaa7349cea390f89641fe306d93591f87595dc1f",
       "name": "Super USDC (PoS)",
-      "symbol": "USDCx",
+      "symbol": "USDC.ex",
       "decimals": 18,
       "chainId": 137,
       "extensions": {
@@ -608,7 +731,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
@@ -617,7 +743,9 @@
       "decimals": 6,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     },
     {
       "address": "0xe04ad5d86c40d53a12357e1ba2a9484f60db0da5",
@@ -632,7 +760,10 @@
         }
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/matic/icon.svg",
-      "tags": ["supertoken", "tier_a"]
+      "tags": [
+        "supertoken",
+        "tier_a"
+      ]
     },
     {
       "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
@@ -641,7 +772,9 @@
       "decimals": 18,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/matic/icon.svg",
-      "tags": ["underlying"]
+      "tags": [
+        "underlying"
+      ]
     }
   ],
   "tags": {

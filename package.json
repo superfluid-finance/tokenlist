@@ -1,16 +1,17 @@
 {
   "name": "@superfluid-finance/tokenlist-repo",
   "private": true,
-  "version": "3.3.0",
+  "version": "3.9.0",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "ts-node scripts/bootstrap.ts",
-    "create:draft": "ts-node scripts/create-draft.ts",
-    "diff-lists": "ts-node scripts/diff-lists.ts $1 $2 $3",
+    "1.bootstrap": "ts-node scripts/bootstrap.ts",
+    "2.diff-lists": "ts-node scripts/diff-lists.ts $1 $2 $3",
+    "3.update:version": "ts-node scripts/update-version.ts $1",
+    "4.attach:solvency": "ts-node scripts/attach-solvency-tags.ts",
+    "5.split:solvency": "ts-node scripts/split-by-solvency.ts",
     "editor": "npx ts-node ./editor/server.ts",
     "ipfs:publish": "ts-node scripts/publish.ts $1",
-    "superfluid-graphql-codegen": "graphclient build --dir ./subgraph",
-    "update:version": "ts-node scripts/update-version.ts $1"
+    "superfluid-graphql-codegen": "graphclient build --dir ./subgraph"
   },
   "devDependencies": {
     "@graphprotocol/client-cli": "^2.2.20",

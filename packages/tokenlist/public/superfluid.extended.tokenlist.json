@@ -1,11 +1,11 @@
 {
-  "name": "Superfluid Token List Ext",
+  "name": "Superfluid Token List",
   "version": {
-    "major": 2,
+    "major": 3,
     "minor": 3,
     "patch": 0
   },
-  "timestamp": "2023-10-20T08:18:44.184Z",
+  "timestamp": "2024-01-25T16:50:25.228Z",
   "tokens": [
     {
       "address": "0x288398f314d472b82c44855f3f6ff20b633c2a97",
@@ -28,30 +28,6 @@
       "symbol": "USDC",
       "decimals": 6,
       "chainId": 43114,
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["underlying"]
-    },
-    {
-      "address": "0xd04383398dd2426297da660f9cca3d439af9ce1b",
-      "name": "Super USD Coin",
-      "symbol": "USDCx",
-      "decimals": 18,
-      "chainId": 8453,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
-      "tags": ["supertoken", "tier_c"]
-    },
-    {
-      "address": "0x833589fcd6edb6e08f4c7c32d4f71b54bda02913",
-      "name": "USD Coin",
-      "symbol": "USDC",
-      "decimals": 6,
-      "chainId": 8453,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
       "tags": ["underlying"]
     },
@@ -204,6 +180,20 @@
       "tags": ["underlying", "testnet"]
     },
     {
+      "address": "0x1290248e01ed2f9f863a9752a8aad396ef3a1b00",
+      "name": "Super Aleph",
+      "symbol": "ALEPH",
+      "decimals": 18,
+      "chainId": 43113,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/aleph/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
       "address": "0x232a9cf3ded0f9f708099eb0cb8ed56313c02a4b",
       "name": "Super fTUSD Fake Token",
       "symbol": "fTUSDx",
@@ -266,6 +256,20 @@
       "tags": ["supertoken", "testnet", "tier_c"]
     },
     {
+      "address": "0xffd0f6d73ee52c68bf1b01c8afa2529c97ca17f3",
+      "name": "Super AVAX",
+      "symbol": "AVAXx",
+      "decimals": 18,
+      "chainId": 43113,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Native Asset"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/avax/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
       "address": "0x1dbc1809486460dcd189b8a15990bca3272ee04e",
       "name": "Super USD Coin (Arb1)",
       "symbol": "USDCx",
@@ -288,20 +292,6 @@
       "chainId": 42161,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
       "tags": ["underlying"]
-    },
-    {
-      "address": "0xffd0f6d73ee52c68bf1b01c8afa2529c97ca17f3",
-      "name": "Super AVAX",
-      "symbol": "AVAXx",
-      "decimals": 18,
-      "chainId": 43113,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Native Asset"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/avax/icon.svg",
-      "tags": ["supertoken", "testnet", "tier_c"]
     },
     {
       "address": "0x2bf2ba13735160624a0feae98f6ac8f70885ea61",
@@ -736,6 +726,30 @@
       "tags": ["supertoken", "tier_b"]
     },
     {
+      "address": "0x06b6e03bc9711eeb58d5a381a476019e19fddec4",
+      "name": "Super ECO CFA",
+      "symbol": "eXOFx",
+      "decimals": 18,
+      "chainId": 42220,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x73f93dcc49cb8a239e2032663e9475dd5ef29a08"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/exof/icon.svg",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0x73f93dcc49cb8a239e2032663e9475dd5ef29a08",
+      "name": "ECO CFA",
+      "symbol": "eXOF",
+      "decimals": 18,
+      "chainId": 42220,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/exof/icon.svg",
+      "tags": ["underlying"]
+    },
+    {
       "address": "0x3acb9a08697b6db4cd977e8ab42b6f24722e6d6e",
       "name": "Super Celo Dollar",
       "symbol": "cUSDx",
@@ -964,54 +978,6 @@
       "tags": ["supertoken", "testnet", "tier_c"]
     },
     {
-      "address": "0x479347dfd0be56f2a5f7bb1506bfd7ab24d4ba26",
-      "name": "Super Unification",
-      "symbol": "FUNDx",
-      "decimals": 18,
-      "chainId": 1,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0xe9b076b476d8865cdf79d1cf7df420ee397a7f75"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
-      "tags": ["supertoken", "tier_c"]
-    },
-    {
-      "address": "0xe9b076b476d8865cdf79d1cf7df420ee397a7f75",
-      "name": "Unification",
-      "symbol": "FUND",
-      "decimals": 9,
-      "chainId": 1,
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
-      "tags": ["underlying"]
-    },
-    {
-      "address": "0xf1e073d53af781966f23b1a3b2d9e67cbba69b92",
-      "name": "Super Unification (FXERC20)",
-      "symbol": "fxFUNDx",
-      "decimals": 18,
-      "chainId": 137,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x1f0145eac900d75808510190dfc293a09c7a964f"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
-      "tags": ["supertoken", "tier_c"]
-    },
-    {
-      "address": "0x1f0145eac900d75808510190dfc293a09c7a964f",
-      "name": "Unification (FXERC20)",
-      "symbol": "fxFUND",
-      "decimals": 9,
-      "chainId": 137,
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
-      "tags": ["underlying"]
-    },
-    {
       "address": "0xdd610f0e0e29a33168d43e96399a638df86b9c43",
       "name": "Super FUND (Goerli)",
       "symbol": "FUNDx",
@@ -1032,30 +998,6 @@
       "symbol": "FUND",
       "decimals": 9,
       "chainId": 5,
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
-      "tags": ["underlying", "testnet"]
-    },
-    {
-      "address": "0x783fdeab6951504c4601184587aafed01511ed24",
-      "name": "Super FUND (Sepolia)",
-      "symbol": "FUNDx",
-      "decimals": 18,
-      "chainId": 11155111,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0xafe70a1985ebdefbdcaeedba045d66091c38e1b1"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
-      "tags": ["supertoken", "testnet", "tier_c"]
-    },
-    {
-      "address": "0xafe70a1985ebdefbdcaeedba045d66091c38e1b1",
-      "name": "FUND (Sepolia)",
-      "symbol": "FUND",
-      "decimals": 9,
-      "chainId": 11155111,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
       "tags": ["underlying", "testnet"]
     },
@@ -1084,6 +1026,30 @@
       "tags": ["underlying", "testnet"]
     },
     {
+      "address": "0x22064a21fee226d8ffb8818e7627d5ff6d0fc33a",
+      "name": "Super Gho Token",
+      "symbol": "GHOx",
+      "decimals": 18,
+      "chainId": 11155111,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xc4bf5cbdabe595361438f8c6a187bdc330539c60"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/gho/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0xc4bf5cbdabe595361438f8c6a187bdc330539c60",
+      "name": "Gho Token",
+      "symbol": "GHO",
+      "decimals": 18,
+      "chainId": 11155111,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/gho/icon.svg",
+      "tags": ["underlying", "testnet"]
+    },
+    {
       "address": "0x30a6933ca9230361972e413a15dc8114c952414e",
       "name": "Super ETH",
       "symbol": "ETHx",
@@ -1096,6 +1062,30 @@
       },
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
       "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0x783fdeab6951504c4601184587aafed01511ed24",
+      "name": "Super FUND (Sepolia)",
+      "symbol": "FUNDx",
+      "decimals": 18,
+      "chainId": 11155111,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xafe70a1985ebdefbdcaeedba045d66091c38e1b1"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["supertoken", "testnet", "tier_c"]
+    },
+    {
+      "address": "0xafe70a1985ebdefbdcaeedba045d66091c38e1b1",
+      "name": "FUND (Sepolia)",
+      "symbol": "FUND",
+      "decimals": 9,
+      "chainId": 11155111,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["underlying", "testnet"]
     },
     {
       "address": "0x9ce2062b085a2268e8d769ffc040f6692315fd2c",
@@ -1566,6 +1556,30 @@
       "tags": ["underlying"]
     },
     {
+      "address": "0x479347dfd0be56f2a5f7bb1506bfd7ab24d4ba26",
+      "name": "Super Unification",
+      "symbol": "FUNDx",
+      "decimals": 18,
+      "chainId": 1,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xe9b076b476d8865cdf79d1cf7df420ee397a7f75"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0xe9b076b476d8865cdf79d1cf7df420ee397a7f75",
+      "name": "Unification",
+      "symbol": "FUND",
+      "decimals": 9,
+      "chainId": 1,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["underlying"]
+    },
+    {
       "address": "0x4f228bf911ed67730e4b51b1f82ac291b49053ee",
       "name": "Super Dai Stablecoin",
       "symbol": "DAIx",
@@ -1704,7 +1718,7 @@
       "tags": ["supertoken", "tier_a"]
     },
     {
-      "address": "0x4caB5B9930210E2EdC6A905B9C75D615872A1A7E",
+      "address": "0x4cab5b9930210e2edc6a905b9c75d615872a1a7e",
       "name": "Super Giveth Token",
       "symbol": "GIVx",
       "decimals": 18,
@@ -1712,19 +1726,19 @@
       "extensions": {
         "superTokenInfo": {
           "type": "Wrapper",
-          "underlyingTokenAddress": "0x528CDc92eAB044E1E39FE43B9514bfdAB4412B98"
+          "underlyingTokenAddress": "0x528cdc92eab044e1e39fe43b9514bfdab4412b98"
         }
       },
-      "logoURI": "https://raw.githubusercontent.com/Giveth/giveth-design-assets/9fc25bfcd4a04cae53ceaecb8f96e5db738ff8a5/02-logos/GIV%20Token/GIVToken_128x128.svg",
-      "tags": ["supertoken", "tier_b"]
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/giv/icon.svg",
+      "tags": ["supertoken", "tier_c"]
     },
     {
-      "address": "0x528CDc92eAB044E1E39FE43B9514bfdAB4412B98",
+      "address": "0x528cdc92eab044e1e39fe43b9514bfdab4412b98",
       "name": "Giveth Token",
       "symbol": "GIV",
       "decimals": 18,
       "chainId": 10,
-      "logoURI": "https://raw.githubusercontent.com/Giveth/giveth-design-assets/9fc25bfcd4a04cae53ceaecb8f96e5db738ff8a5/02-logos/GIV%20Token/GIVToken_128x128.svg",
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/giv/icon.svg",
       "tags": ["underlying"]
     },
     {
@@ -1982,6 +1996,30 @@
       "decimals": 2,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eurs/icon.png",
+      "tags": ["underlying"]
+    },
+    {
+      "address": "0x07b24bbd834c1c546ece89ff95f71d9f13a2ebd1",
+      "name": "Super USD Coin",
+      "symbol": "USDCx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
       "tags": ["underlying"]
     },
     {
@@ -2563,6 +2601,30 @@
       "tags": ["underlying"]
     },
     {
+      "address": "0x5034f401716a6ceb26c8232fb5640075508085af",
+      "name": "Super Waru Token V2",
+      "symbol": "WARUx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xfa3872970c1952741c518b33f1dce815f55dc00a"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/waru/icon.png",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0xfa3872970c1952741c518b33f1dce815f55dc00a",
+      "name": "Waru Token V2",
+      "symbol": "WARU",
+      "decimals": 18,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/waru/icon.png",
+      "tags": ["underlying"]
+    },
+    {
       "address": "0x513412fcd5e0da4bed9102017164b84c06e557d4",
       "name": "Super Dood",
       "symbol": "Doodx",
@@ -2585,6 +2647,20 @@
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dood/icon.png",
       "tags": ["underlying"]
+    },
+    {
+      "address": "0x520acbb446028dac642374773b312dbc577869fb",
+      "name": "ClubX",
+      "symbol": "ClubX",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/clubx/icon.svg",
+      "tags": ["supertoken", "tier_c"]
     },
     {
       "address": "0x5d6fdc854b46e8b237bd2ccc2714cfa3d18cf58e",
@@ -3473,6 +3549,30 @@
       "tags": ["underlying"]
     },
     {
+      "address": "0xe0d1978033ee7cf12a8246da7f173f9441b769b0",
+      "name": "Super REVV Token",
+      "symbol": "REVVx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x70c006878a5a50ed185ac4c87d837633923de296"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/revv/icon.png",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0x70c006878a5a50ed185ac4c87d837633923de296",
+      "name": "REVV",
+      "symbol": "REVV",
+      "decimals": 18,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/revv/icon.png",
+      "tags": ["underlying"]
+    },
+    {
       "address": "0xe127d2d7b2ce51130429e32d22d908e8d96a3247",
       "name": "Super jSGD",
       "symbol": "jSGDx",
@@ -3674,6 +3774,30 @@
       "decimals": 18,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/idlewethyield/icon.svg",
+      "tags": ["underlying"]
+    },
+    {
+      "address": "0xf1e073d53af781966f23b1a3b2d9e67cbba69b92",
+      "name": "Super Unification (FXERC20)",
+      "symbol": "fxFUNDx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x1f0145eac900d75808510190dfc293a09c7a964f"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
+      "tags": ["supertoken", "tier_c"]
+    },
+    {
+      "address": "0x1f0145eac900d75808510190dfc293a09c7a964f",
+      "name": "Unification (FXERC20)",
+      "symbol": "fxFUND",
+      "decimals": 9,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/fund/icon.svg",
       "tags": ["underlying"]
     },
     {
