@@ -10,11 +10,12 @@ This repository contains scripts and utilities for managing the Superfluid token
 
 ```typescript
 import tokenlist, { 
- extendedSuperTokenList, 
- tierATokenListJSON, 
- tierBTokenListJSON, 
- tierCTokenListJSON 
-} from "@superfluid-finance/tokenlist"
+    extendedSuperTokenList,
+    tierCSuperTokenList,
+    tierBSuperTokenList,
+    tierASuperTokenList,
+    
+   } from "@superfluid-finance/tokenlist"
 
 // ...later
 
