@@ -1,8 +1,8 @@
 {
   "name": "Superfluid Token List",
   "version": {
-    "major": 3,
-    "minor": 5,
+    "major": 4,
+    "minor": 0,
     "patch": 0
   },
   "timestamp": "2024-03-25T10:42:53.654Z",
@@ -965,6 +965,23 @@
       },
       "tags": [
         "supertoken"
+      ]
+    },
+    {
+      "address": "0x62b8b11039fcfe5ab0c56e502b1c372a3d2a9c7a",
+      "name": "GoodDollar",
+      "symbol": "G$",
+      "decimals": 18,
+      "chainId": 42220,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/g$/icon.png",
+      "tags": [
+        "supertoken",
+        "tier_b"
       ]
     },
     {
