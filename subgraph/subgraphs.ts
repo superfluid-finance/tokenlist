@@ -4,19 +4,14 @@ type SubgraphName =
   | "avalanche"
   | "avalanche-fuji"
   | "arbitrum-one"
-  | "arbitrum-goerli"
-  | "base-goerli"
   | "base-mainnet"
   | "bsc"
   | "celo"
-  | "goerli"
   | "sepolia"
   | "gnosis"
   | "ethereum"
   | "optimism"
-  | "optimism-goerli"
   | "polygon"
-  | "polygon-zkevm-testnet"
   | "mumbai";
 
 type SubgraphSettings = {
@@ -39,18 +34,10 @@ export const subgraphs: Record<SubgraphName, SubgraphSettings> = {
     chainId: 42161,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-arbitrum-one",
   },
-  "arbitrum-goerli": {
-    chainId: 421613,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-arbitrum-goerli",
-    testnet: true,
-  },
+
   "base-mainnet": {
     chainId: 8453,
     url: "https://base-mainnet.subgraph.x.superfluid.dev",
-  },
-  "base-goerli": {
-    chainId: 84531,
-    url: "https://base-goerli.subgraph.x.superfluid.dev",
   },
   bsc: {
     chainId: 56,
@@ -59,11 +46,6 @@ export const subgraphs: Record<SubgraphName, SubgraphSettings> = {
   celo: {
     chainId: 42220,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-celo-mainnet",
-  },
-  goerli: {
-    chainId: 5,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-goerli",
-    testnet: true,
   },
   sepolia: {
     chainId: 11155111,
@@ -82,20 +64,11 @@ export const subgraphs: Record<SubgraphName, SubgraphSettings> = {
     chainId: 10,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-optimism-mainnet",
   },
-  "optimism-goerli": {
-    chainId: 69,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-optimism-goerli",
-    testnet: true,
-  },
   polygon: {
     chainId: 137,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-matic",
   },
-  "polygon-zkevm-testnet": {
-    chainId: 1101,
-    url: "https://polygon-zkevm-testnet.subgraph.x.superfluid.dev/",
-    testnet: true,
-  },
+
   mumbai: {
     chainId: 80001,
     url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-mumbai",

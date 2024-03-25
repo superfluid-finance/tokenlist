@@ -7,14 +7,15 @@ const createFilteredList = async (
   tokenList: SuperTokenList,
   tiers: string[],
   listName: string,
-  fileName: string
+  fileName: string,
+  inverseFiltering?: boolean
 ) => {
   const underlyingTokens = tokenList.tokens.filter((token) =>
     token.tags?.includes("underlying")
   );
 
   const filteredByTier = tokenList.tokens.filter((token) =>
-    tiers.some((tier) => token.tags?.includes(tier))
+    tiers.some((tier) => inverseFiltering ?  !token.tags?.includes(tier) :  !token.tags?.includes(tier))
   );
 
   const tokens: SuperTokenInfo[] = [];
@@ -63,29 +64,12 @@ const createFilteredList = async (
 const main = () => {
   createFilteredList(
     tokenList as SuperTokenList,
-    ["tier_a"],
-    "Superfluid Token List A",
-    "superfluid.tier-a.tokenlist.json"
-  );
-  createFilteredList(
-    tokenList as SuperTokenList,
-    ["tier_b"],
-    "Superfluid Token List B",
-    "superfluid.tier-b.tokenlist.json"
-  );
-  createFilteredList(
-    tokenList as SuperTokenList,
-    ["tier_c"],
-    "Superfluid Token List C",
-    "superfluid.tier-c.tokenlist.json"
+    ["testnet"],
+    "Superfluid Token List",
+    "superfluid.tokenlist.json",
+    true
   );
 
-  createFilteredList(
-    tokenList as SuperTokenList,
-    ["tier_a", "tier_b"],
-    "Superfluid Token List",
-    "superfluid.tokenlist.json"
-  );
 };
 
 main();
