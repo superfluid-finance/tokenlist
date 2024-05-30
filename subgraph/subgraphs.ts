@@ -1,18 +1,5 @@
 import { getBuiltGraphSDK } from "./.graphclient";
-
-type SubgraphName =
-  | "avalanche"
-  | "avalanche-fuji"
-  | "arbitrum-one"
-  | "base-mainnet"
-  | "bsc"
-  | "celo"
-  | "sepolia"
-  | "gnosis"
-  | "ethereum"
-  | "optimism"
-  | "polygon"
-  | "mumbai";
+import sfMeta from "@superfluid-finance/metadata"
 
 type SubgraphSettings = {
   chainId: number;
@@ -20,61 +7,28 @@ type SubgraphSettings = {
   testnet?: boolean;
 };
 
-export const subgraphs: Record<SubgraphName, SubgraphSettings> = {
-  avalanche: {
-    chainId: 43114,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-avalanche-c",
-  },
-  "avalanche-fuji": {
-    chainId: 43113,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-avalanche-fuji",
-    testnet: true,
-  },
-  "arbitrum-one": {
-    chainId: 42161,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-arbitrum-one",
-  },
+export const deprecatedNetworkChainIds = [
+  80001, // Polygon Mumbai
+  5, // Goerli
+  420, // Optimism Goerli
+  421613, // Arbitrum Goerli
+  1442, // Polygon zkEVM Testnet
+  84531, // Base Goerli
+];
 
-  "base-mainnet": {
-    chainId: 8453,
-    url: "https://base-mainnet.subgraph.x.superfluid.dev",
-  },
-  bsc: {
-    chainId: 56,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-bsc-mainnet",
-  },
-  celo: {
-    chainId: 42220,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-celo-mainnet",
-  },
-  sepolia: {
-    chainId: 11155111,
-    url: "https://subgraph.satsuma-prod.com/c5br3jaVlJI6/superfluid/eth-sepolia/api",
-    testnet: true,
-  },
-  gnosis: {
-    chainId: 100,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-xdai",
-  },
-  ethereum: {
-    chainId: 1,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-eth-mainnet",
-  },
-  optimism: {
-    chainId: 10,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-optimism-mainnet",
-  },
-  polygon: {
-    chainId: 137,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-matic",
-  },
+export const subgraphs = sfMeta.networks.reduce((acc, x) => {
+  if (deprecatedNetworkChainIds.includes(x.chainId)) {
+    return acc;
+  }
 
-  mumbai: {
-    chainId: 80001,
-    url: "https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-dev-mumbai",
-    testnet: true,
-  },
-};
+  acc[x.name] = {
+    chainId: x.chainId,
+    testnet: x.isTestnet,
+    url: `https://${x.name}.subgraph.x.superfluid.dev`
+  };
+  
+  return acc;
+}, {} as Record<string, SubgraphSettings>);
 
 type Network = keyof typeof subgraphs;
 
