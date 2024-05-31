@@ -8,7 +8,7 @@ let diffFilePath = process.argv[2];
 const tempFileName = "DRAFT.tokenlist.json";
 
 if (!diffFilePath) {
-  diffFilePath = `diff-output/diff_superfluid.tokenlist<>DRAFT.tokenlist.json`;
+  diffFilePath = `diff-output/diff_superfluid.extended.tokenlist<>DRAFT.tokenlist.json`;
 }
 
 const updateTempList = async (version: {
@@ -17,7 +17,7 @@ const updateTempList = async (version: {
   patch: number;
 }) => {
   const currentList = await import(
-    path.resolve(__dirname, "../superfluid.tokenlist.json")
+    path.resolve(__dirname, "../superfluid.extended.tokenlist.json")
   );
 
   try {
