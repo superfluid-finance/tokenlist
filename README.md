@@ -2,7 +2,7 @@
 
 This repository contains scripts and utilities for managing the Superfluid token list(s). The scripts update or filter tokens based on various criteria, such as solvency categories or token types.
 
-## Installation and Getting Started
+## Installation a"nd Getting Started
 
 ```sh
 [npm install | yarn add | pnpm add] @superfluid-finance/tokenlist
@@ -10,11 +10,12 @@ This repository contains scripts and utilities for managing the Superfluid token
 
 ```typescript
 import tokenlist, { 
- extendedSuperTokenList, 
- tierATokenListJSON, 
- tierBTokenListJSON, 
- tierCTokenListJSON 
-} from "@superfluid-finance/tokenlist"
+    extendedSuperTokenList,
+    tierCSuperTokenList,
+    tierBSuperTokenList,
+    tierASuperTokenList,
+    
+   } from "@superfluid-finance/tokenlist"
 
 // ...later
 
