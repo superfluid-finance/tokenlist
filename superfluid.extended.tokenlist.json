@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 0,
+    "minor": 1,
     "patch": 0
   },
-  "timestamp": "2024-05-30T12:36:34.283Z",
+  "timestamp": "2024-07-04T11:53:06.771Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -39,7 +39,7 @@
     },
     {
       "address": "0x1290248e01ed2f9f863a9752a8aad396ef3a1b00",
-      "name": "Super Aleph",
+      "name": "Aleph.im V2 SuperToken",
       "symbol": "ALEPH",
       "decimals": 18,
       "chainId": 43113,
@@ -3518,6 +3518,34 @@
       ]
     },
     {
+      "address": "0xb44df234e068f62a9a18b6be6543de28d5a7312f",
+      "name": "Super SLING",
+      "symbol": "SLINGx",
+      "decimals": 18,
+      "chainId": 42161,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x5f8a7c646511a790c53f171891e5d469ca884ede"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/sling/icon.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x5f8a7c646511a790c53f171891e5d469ca884ede",
+      "name": "Slingshot",
+      "symbol": "SLING",
+      "decimals": 18,
+      "chainId": 42161,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/sling/icon.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0xe6c8d111337d0052b9d88bf5d7d55b7f8385acd3",
       "name": "Super ETH",
       "symbol": "ETHx",
@@ -4194,6 +4222,34 @@
       ]
     },
     {
+      "address": "0x09b1ad979d093377e201d804fa9ac0a9a07cfb0b",
+      "name": "Super AERO",
+      "symbol": "AEROx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x940181a94a35a4569e4529a3cdfb74e38fd98631"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/aero/icon.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x940181a94a35a4569e4529a3cdfb74e38fd98631",
+      "name": "Aerodrome",
+      "symbol": "AERO",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/aero/icon.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x1eff3dd78f4a14abfa9fa66579bd3ce9e1b30529",
       "name": "Super Degen",
       "symbol": "DEGENx",
@@ -4219,6 +4275,22 @@
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/degen/icon.png",
       "tags": [
         "underlying"
+      ]
+    },
+    {
+      "address": "0x2112b92a4f6496b7b2f10850857ffa270464d054",
+      "name": "SuperBoring",
+      "symbol": "BORING",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/boring/icon.svg",
+      "tags": [
+        "supertoken"
       ]
     },
     {
@@ -4290,6 +4362,60 @@
       ]
     },
     {
+      "address": "0x5f2fab273f1f64b6bc6ab8f35314cd21501f35c5",
+      "name": "Super HIGHER",
+      "symbol": "HIGHERx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x0578d8a44db98b23bf096a382e016e29a5ce0ffe"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/higher/icon.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x0578d8a44db98b23bf096a382e016e29a5ce0ffe",
+      "name": "higher",
+      "symbol": "HIGHER",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/higher/icon.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x65e9b4ae7885bd3e4e1cc4f280863b859d231fc2",
+      "name": "Super /treeplanting",
+      "symbol": "TREEx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x6888c2409d48222e2cb738eb5a805a522a96ce80"
+        }
+      },
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x6888c2409d48222e2cb738eb5a805a522a96ce80",
+      "name": "/treeplanting",
+      "symbol": "TREE",
+      "decimals": 18,
+      "chainId": 8453,
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x708169c8c87563ce904e0a7f3bfc1f3b0b767f41",
       "name": "Super Dai Stablecoin",
       "symbol": "DAIx",
@@ -4313,6 +4439,34 @@
       "decimals": 18,
       "chainId": 8453,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/dai/icon.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x8414ab8c70c7b16a46012d49b8111959baf2fc42",
+      "name": "Super BUILD",
+      "symbol": "BUILDx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x3c281a39944a2319aa653d81cfd93ca10983d234"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/build/icon.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x3c281a39944a2319aa653d81cfd93ca10983d234",
+      "name": "BUILD",
+      "symbol": "BUILD",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/build/icon.png",
       "tags": [
         "underlying"
       ]
@@ -4369,6 +4523,34 @@
       "decimals": 6,
       "chainId": 8453,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0xefbe11336b0008dce3797c515e6457cc4841645c",
+      "name": "Super TN100X",
+      "symbol": "TN100Xx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x5b5dee44552546ecea05edea01dcd7be7aa6144a"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/tn100x/icon.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x5b5dee44552546ecea05edea01dcd7be7aa6144a",
+      "name": "The Next 100x Memecoin on Base",
+      "symbol": "TN100x",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/tn100x/icon.png",
       "tags": [
         "underlying"
       ]
