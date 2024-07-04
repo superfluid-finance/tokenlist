@@ -15,10 +15,10 @@
     "copy-tokenlist": "shx cp ./../../superfluid{,.**}.tokenlist.json ./public"
   },
   "dependencies": {
-    "@uniswap/token-lists": "^1.0.0-beta.33"
+    "@uniswap/token-lists": "1.0.0-beta.34"
   },
   "devDependencies": {
-    "rimraf": "^5.0.5",
+    "rimraf": "^5.0.7",
     "shx": "^0.3.4",
     "tsup": "^7.2.0"
   },
