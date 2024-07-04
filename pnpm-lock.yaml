@@ -30,8 +30,8 @@ importers:
         specifier: ^1.3.3
         version: 1.3.3(@ethersproject/abi@5.7.0)(@ethersproject/providers@5.7.2)(@types/node@18.19.39)(typescript@5.5.3)
       '@uniswap/token-lists':
-        specifier: 1.0.0-beta.33
-        version: 1.0.0-beta.33
+        specifier: 1.0.0-beta.34
+        version: 1.0.0-beta.34
       ajv:
         specifier: ^8.16.0
         version: 8.16.0
@@ -4083,15 +4083,9 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@uniswap/token-lists@1.0.0-beta.33:
-    resolution: {integrity: sha512-JQkXcpRI3jFG8y3/CGC4TS8NkDgcxXaOQuYW8Qdvd6DcDiIyg2vVYCG9igFEzF0G6UvxgHkBKC7cWCgzZNYvQg==}
-    engines: {node: '>=10'}
-    dev: true
-
   /@uniswap/token-lists@1.0.0-beta.34:
     resolution: {integrity: sha512-Hc3TfrFaupg0M84e/Zv7BoF+fmMWDV15mZ5s8ZQt2qZxUcNw2GQW+L6L/2k74who31G+p1m3GRYbJpAo7d1pqA==}
     engines: {node: '>=10'}
-    dev: false
 
   /@whatwg-node/cookie-store@0.0.1:
     resolution: {integrity: sha512-uoti8QU5xd+X+9PULOGpPpOqPDdwkz+ukMc4kyQG1GwXeKVGktr4FSllr6dBotjOjNVPSBPpmj5V6zrUdDcLaw==}
@@ -8336,8 +8330,8 @@ packages:
       unpipe: 1.0.0
     dev: true
 
-  /react-devtools-core@5.3.0:
-    resolution: {integrity: sha512-IG3T+azv48Oc5VLdHR4XdBNKNZIUOKRtx0sJMRvb++Zom/uqtx73j6u37JCsIBNIaq6vA7RPH5Bbcf/Wj53KXA==}
+  /react-devtools-core@5.3.1:
+    resolution: {integrity: sha512-7FSb9meX0btdBQLwdFOwt6bGqvRPabmVMMslv8fgoSPqXyuGpgQe36kx8gR86XPw7aV1yVouTp6fyZ0EH+NfUw==}
     dependencies:
       shell-quote: 1.8.1
       ws: 7.5.10
@@ -8412,7 +8406,7 @@ packages:
       pretty-format: 26.6.2
       promise: 8.3.0
       react: 18.2.0
-      react-devtools-core: 5.3.0
+      react-devtools-core: 5.3.1
       react-refresh: 0.14.2
       react-shallow-renderer: 16.15.0(react@18.2.0)
       regenerator-runtime: 0.13.11
