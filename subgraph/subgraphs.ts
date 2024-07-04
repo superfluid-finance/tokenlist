@@ -14,6 +14,7 @@ export const deprecatedNetworkChainIds = [
   421613, // Arbitrum Goerli
   1442, // Polygon zkEVM Testnet
   84531, // Base Goerli
+  84532, // Base Sepolia (might not be deprecated but wouldn't support it here yet as it's not even shown in the Dashboard/Console)
 ];
 
 export const subgraphs = sfMeta.networks.reduce((acc, x) => {
