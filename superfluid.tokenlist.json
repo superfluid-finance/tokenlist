@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 1,
+    "minor": 2,
     "patch": 0
   },
-  "timestamp": "2024-07-04T11:53:06.771Z",
+  "timestamp": "2024-07-30T20:18:52.247Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -139,7 +139,7 @@
     },
     {
       "address": "0x60fdb4d22e793353d98324d824034d66827f602e",
-      "name": "NTDL",
+      "name": "",
       "symbol": "NTDL",
       "decimals": 18,
       "chainId": 100,
@@ -1078,7 +1078,7 @@
     },
     {
       "address": "0x263026e7e53dbfdce5ae55ade22493f828922965",
-      "name": "Ricochet",
+      "name": "",
       "symbol": "RIC",
       "decimals": 18,
       "chainId": 137,
@@ -2866,7 +2866,7 @@
     },
     {
       "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
-      "name": "Own a fraction",
+      "name": "",
       "symbol": "FRACTION",
       "decimals": 18,
       "chainId": 137,
@@ -2882,7 +2882,7 @@
     },
     {
       "address": "0xc0b2983a17573660053beeed6fdb1053107cf387",
-      "name": "Minerva Wallet SuperToken",
+      "name": "",
       "symbol": "MIVA",
       "decimals": 18,
       "chainId": 137,
@@ -3090,7 +3090,7 @@
     },
     {
       "address": "0xd735b487b9018eeada2cc0464db02aa4b90ca711",
-      "name": "NTDL",
+      "name": "",
       "symbol": "NTDL",
       "decimals": 18,
       "chainId": 137,
@@ -3798,7 +3798,7 @@
     },
     {
       "address": "0x4ac8bd1bdae47beef2d1c6aa62229509b962aa0d",
-      "name": "Super ETH",
+      "name": "",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 10,
@@ -3970,7 +3970,7 @@
     },
     {
       "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
-      "name": "Own a fraction",
+      "name": "",
       "symbol": "FRACTION",
       "decimals": 18,
       "chainId": 10,
@@ -4040,7 +4040,7 @@
     },
     {
       "address": "0x2bf2ba13735160624a0feae98f6ac8f70885ea61",
-      "name": "Own a fraction",
+      "name": "",
       "symbol": "FRACTION",
       "decimals": 18,
       "chainId": 42161,
@@ -4173,7 +4173,7 @@
     },
     {
       "address": "0xe6c8d111337d0052b9d88bf5d7d55b7f8385acd3",
-      "name": "Super ETH",
+      "name": "",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 42161,
@@ -4423,7 +4423,7 @@
     },
     {
       "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
-      "name": "Own a fraction",
+      "name": "",
       "symbol": "FRACTION",
       "decimals": 18,
       "chainId": 43114,
@@ -4439,7 +4439,7 @@
     },
     {
       "address": "0xbe916845d8678b5d2f7ad79525a62d7c08abba7e",
-      "name": "Super AVAX",
+      "name": "",
       "symbol": "AVAXx",
       "decimals": 18,
       "chainId": 43114,
@@ -4510,7 +4510,7 @@
     },
     {
       "address": "0x529a4116f160c833c61311569d6b33dff41fd657",
-      "name": "Super BNB",
+      "name": "",
       "symbol": "BNBx",
       "decimals": 18,
       "chainId": 56,
@@ -4565,7 +4565,7 @@
     },
     {
       "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
-      "name": "Own a fraction",
+      "name": "",
       "symbol": "FRACTION",
       "decimals": 18,
       "chainId": 56,
@@ -4776,7 +4776,7 @@
     },
     {
       "address": "0xc22bea0be9872d8b7b3933cec70ece4d53a900da",
-      "name": "Super ETH",
+      "name": "",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 1,
@@ -4925,7 +4925,7 @@
     },
     {
       "address": "0x671425ae1f272bc6f79bec3ed5c4b00e9c628240",
-      "name": "Super CELO",
+      "name": "",
       "symbol": "CELOx",
       "decimals": 18,
       "chainId": 42220,
@@ -5151,6 +5151,45 @@
       ]
     },
     {
+      "address": "0x304989da2adc80a6568170567d477af5e48dbaae",
+      "name": "Super Wrapped eETH",
+      "symbol": "weETHx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/weeth/icon.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/weeth/icon.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/weeth/icon.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x307d8225c6428a1e505f824b1c97cf9127351f0c",
       "name": "Super Rorschach",
       "symbol": "RORx",
@@ -5188,7 +5227,7 @@
     },
     {
       "address": "0x46fd5cfb4c12d87acd3a13e92baa53240c661d93",
-      "name": "Super ETH",
+      "name": "",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 8453,
@@ -5234,6 +5273,45 @@
       "symbol": "USDbC",
       "decimals": 6,
       "chainId": 8453,
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x58122a048878f25c8c5d4b562419500ed74c6f75",
+      "name": "Super Wrapped liquid staked Ether 2.0",
+      "symbol": "wstETHx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wsteth/icon.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452",
+      "name": "Wrapped liquid staked Ether 2.0",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wsteth/icon.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452",
+      "name": "Wrapped liquid staked Ether 2.0",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wsteth/icon.png",
       "tags": [
         "underlying"
       ]
@@ -5510,7 +5588,7 @@
     },
     {
       "address": "0x483c1716b6133cda01237ebbf19c5a92898204b7",
-      "name": "Super ETH",
+      "name": "",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 534352,
@@ -5542,7 +5620,7 @@
     },
     {
       "address": "0xda58fa9bfc3d3960df33ddd8d4d762cf8fa6f7ad",
-      "name": "Super Degen",
+      "name": "",
       "symbol": "DEGENx",
       "decimals": 18,
       "chainId": 666666666,
