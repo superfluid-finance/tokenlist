@@ -4908,6 +4908,45 @@
       ]
     },
     {
+      "address": "0x51cacc88227a038cb6083a7870daf7fa3ebd906c",
+      "name": "Super Wrapped Ether (Wormhole)",
+      "symbol": "WETHx",
+      "decimals": 18,
+      "chainId": 42220,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x66803fb87abd4aac3cbb3fad7c3aa01f6f3fb207"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x66803fb87abd4aac3cbb3fad7c3aa01f6f3fb207",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "chainId": 42220,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x66803fb87abd4aac3cbb3fad7c3aa01f6f3fb207",
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "decimals": 18,
+      "chainId": 42220,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/eth/icon.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x62b8b11039fcfe5ab0c56e502b1c372a3d2a9c7a",
       "name": "GoodDollar",
       "symbol": "G$",
