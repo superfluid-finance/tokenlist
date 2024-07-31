@@ -4294,6 +4294,34 @@
       ]
     },
     {
+      "address": "0x304989da2adc80a6568170567d477af5e48dbaae",
+      "name": "Super Wrapped eETH",
+      "symbol": "weETHx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/weeth/icon.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a",
+      "name": "Wrapped eETH",
+      "symbol": "weETH",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/weeth/icon.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x307d8225c6428a1e505f824b1c97cf9127351f0c",
       "name": "Super Rorschach",
       "symbol": "RORx",
@@ -4357,6 +4385,34 @@
       "symbol": "USDbC",
       "decimals": 6,
       "chainId": 8453,
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x58122a048878f25c8c5d4b562419500ed74c6f75",
+      "name": "Super Wrapped liquid staked Ether 2.0",
+      "symbol": "wstETHx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wsteth/icon.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452",
+      "name": "Wrapped liquid staked Ether 2.0",
+      "symbol": "wstETH",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/wsteth/icon.png",
       "tags": [
         "underlying"
       ]
