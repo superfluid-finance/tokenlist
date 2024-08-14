@@ -3419,7 +3419,7 @@
     },
     {
       "address": "0x1dbc1809486460dcd189b8a15990bca3272ee04e",
-      "name": "Super USD Coin (Arb1)",
+      "name": "Super Bridged USDC",
       "symbol": "USDC.ex",
       "decimals": 18,
       "chainId": 42161,
@@ -3436,7 +3436,7 @@
     },
     {
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
-      "name": "USD Coin (Arb1)",
+      "name": "Bridged USDC",
       "symbol": "USDC",
       "decimals": 6,
       "chainId": 42161,
