@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 1,
+    "minor": 4,
     "patch": 0
   },
-  "timestamp": "2024-07-04T11:53:06.771Z",
+  "timestamp": "2024-08-14T11:40:21.403Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -3259,6 +3259,34 @@
       ]
     },
     {
+      "address": "0x35adeb0638eb192755b6e52544650603fe65a006",
+      "name": "Super USD Coin",
+      "symbol": "USDCx",
+      "decimals": 18,
+      "chainId": 10,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x0b2c639c533813f4aa9d7837caf62653d097ff85"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x0b2c639c533813f4aa9d7837caf62653d097ff85",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 6,
+      "chainId": 10,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x4ac8bd1bdae47beef2d1c6aa62229509b962aa0d",
       "name": "Super ETH",
       "symbol": "ETHx",
@@ -3332,8 +3360,8 @@
     },
     {
       "address": "0x8430f084b939208e2eded1584889c9a66b90562f",
-      "name": "Super USD Coin",
-      "symbol": "USDCx",
+      "name": "Super USD Coin (Bridged from Ethereum)",
+      "symbol": "USDC.ex",
       "decimals": 18,
       "chainId": 10,
       "extensions": {
@@ -3349,8 +3377,8 @@
     },
     {
       "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
-      "name": "USD Coin",
-      "symbol": "USDC",
+      "name": "USD Coin (Bridged from Ethereum)",
+      "symbol": "USDC.e",
       "decimals": 6,
       "chainId": 10,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
@@ -3419,7 +3447,7 @@
     },
     {
       "address": "0x1dbc1809486460dcd189b8a15990bca3272ee04e",
-      "name": "Super USD Coin (Arb1)",
+      "name": "Super Bridged USDC",
       "symbol": "USDC.ex",
       "decimals": 18,
       "chainId": 42161,
@@ -3436,7 +3464,7 @@
     },
     {
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
-      "name": "USD Coin (Arb1)",
+      "name": "Bridged USDC",
       "symbol": "USDC",
       "decimals": 6,
       "chainId": 42161,
