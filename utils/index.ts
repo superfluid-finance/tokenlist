@@ -15,6 +15,7 @@ import isEmpty from "lodash/isEmpty";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
 import { BridgeInfo, Manifest, Writeable } from "./types";
+import { uniqBy } from "lodash";
 
 dotenv.config();
 
@@ -336,7 +337,9 @@ export const bootstrapSuperfluidTokenList = async () => {
         })
       );
 
-      tokenList.tokens.push(...tokenEntries.flat());
+      // Assume the entries by address are unique as they're queried from the same data source.
+      const uniqueTokenEntries = uniqBy(tokenEntries.flat(), x => x.address);
+      tokenList.tokens.push(...uniqueTokenEntries);
 
       return;
     }, Promise.resolve());
