@@ -1,7 +1,7 @@
-import { SuperTokenInfo, SuperTokenList, TokenInfo } from "..";
+import { SuperTokenInfo, SuperTokenList } from "..";
 import tokenList from "../superfluid.extended.tokenlist.json";
 import fs from "fs";
-import { validate, validateUnderlyingTokens } from "../utils";
+import { validate } from "../utils";
 
 const createFilteredList = async (
   tokenList: SuperTokenList,
@@ -21,7 +21,10 @@ const createFilteredList = async (
   const tokens: SuperTokenInfo[] = [];
 
   filteredByTier.forEach((token) => {
-    tokens.push(token);
+    const isTokenAlreadyAdded = tokens.find(x => x.chainId === token.chainId && x.address === token.address)
+    if (!isTokenAlreadyAdded) {
+      tokens.push(token);
+    }
 
     if (
       ["Wrapper", "Native Asset"].includes(
@@ -35,9 +38,11 @@ const createFilteredList = async (
             token.extensions?.superTokenInfo?.underlyingTokenAddress &&
           underlyingToken.chainId === token.chainId
       );
-
       if (underlyingToken) {
-        tokens.push(underlyingToken);
+        const isUnderlyingTokenAlreadyAdded = tokens.find(x => x.chainId === underlyingToken.chainId && x.address === underlyingToken.address)
+        if (!isUnderlyingTokenAlreadyAdded) {
+          tokens.push(underlyingToken);
+        }
       }
     }
   });
@@ -48,9 +53,8 @@ const createFilteredList = async (
       name: listName,
       tokens,
     };
-    await validate(partialTokenList);
-    const result = validateUnderlyingTokens(partialTokenList);
-
+    
+    const result = await validate(partialTokenList);
     if (!result) {
       throw new Error("Underlying tokens validation failed");
     }

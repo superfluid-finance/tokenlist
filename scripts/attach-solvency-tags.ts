@@ -1,7 +1,7 @@
 import tokenList from "../superfluid.extended.tokenlist.json";
 import fs from "fs";
 import { SuperTokenInfo, SuperTokenList } from "..";
-import { validate, validateUnderlyingTokens } from "../utils";
+import { validate } from "../utils";
 
 const solvencyCategoryToTagMap = {
   A: "tier_a",
@@ -58,9 +58,7 @@ const main = async () => {
   };
 
   try {
-    await validate(tokenListWithSolvency);
-    const result = validateUnderlyingTokens(tokenListWithSolvency);
-
+    const result = await validate(tokenListWithSolvency);
     if (!result) {
       throw new Error("Underlying tokens validation failed");
     }

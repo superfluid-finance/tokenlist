@@ -1,9 +1,10 @@
 {
   "name": "@superfluid-finance/tokenlist-repo",
   "private": true,
-  "version": "5.4.0",
+  "version": "5.5.0",
   "license": "MIT",
   "scripts": {
+    "tsc": "tsc --noEmit",
     "1.bootstrap": "ts-node scripts/bootstrap.ts",
     "2.diff-lists": "ts-node scripts/diff-lists.ts $1 $2 $3",
     "3.update:version": "ts-node scripts/update-version.ts $1",
@@ -22,8 +23,8 @@
     "@types/node-fetch": "^2.6.11",
     "@uniswap/token-list-bridge-utils": "^1.3.3",
     "@uniswap/token-lists": "1.0.0-beta.34",
-    "ajv": "^8.16.0",
-    "ajv-formats": "^2.1.1",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
     "dotenv": "^16.4.5",
     "graphql": "^16.9.0",
     "lodash": "^4.17.21",

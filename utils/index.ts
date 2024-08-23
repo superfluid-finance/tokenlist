@@ -15,6 +15,7 @@ import isEmpty from "lodash/isEmpty";
 import dotenv from "dotenv";
 import fetch from "node-fetch";
 import { BridgeInfo, Manifest, Writeable } from "./types";
+import { uniqBy } from "lodash";
 
 dotenv.config();
 
@@ -164,6 +165,11 @@ export const validate = async (builtList: Object) => {
 
   const valid = validate(builtList);
   if (valid) {
+    const tokenList = (builtList as unknown) as TokenList;
+
+    validateUnderlyingTokens(tokenList);
+    validateTokenUniqueness(tokenList);
+
     return valid;
   }
   if (validate.errors) {
@@ -206,6 +212,30 @@ export const validateUnderlyingTokens = (tokenList: TokenList) => {
   throw errors.map((error) => {
     return error;
   });
+};
+
+export const validateTokenUniqueness = (tokenList: TokenList) => {
+  const addressMap: { [chainId: number]: { [address: string]: TokenInfo } } = {};
+  const errors: string[] = [];
+
+  tokenList.tokens.forEach((token) => {
+    if (!addressMap[token.chainId]) {
+      addressMap[token.chainId] = {};
+    }
+
+    const lowercaseAddress = token.address.toLowerCase();
+    if (addressMap[token.chainId][lowercaseAddress]) {
+      errors.push(`Duplicate token found: ${token.symbol} (${token.address}) on chain ${token.chainId}`);
+    } else {
+      addressMap[token.chainId][lowercaseAddress] = token;
+    }
+  });
+
+  if (errors.length === 0) {
+    return true;
+  }
+
+  throw errors;
 };
 
 const mergeWithBridgeData = (brigeData: BridgeInfo, tokenList: TokenList) => {
@@ -307,7 +337,9 @@ export const bootstrapSuperfluidTokenList = async () => {
         })
       );
 
-      tokenList.tokens.push(...tokenEntries.flat());
+      // Assume the entries by address are unique as they're queried from the same data source.
+      const uniqueTokenEntries = uniqBy(tokenEntries.flat(), x => x.address);
+      tokenList.tokens.push(...uniqueTokenEntries);
 
       return;
     }, Promise.resolve());
@@ -323,7 +355,6 @@ export const bootstrapSuperfluidTokenList = async () => {
     };
 
     await validate(tokenList);
-    validateUnderlyingTokens(tokenList);
 
     fs.writeFileSync(
       `DRAFT.tokenlist.json`,
