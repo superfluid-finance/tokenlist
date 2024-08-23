@@ -21,10 +21,7 @@ const createFilteredList = async (
   const tokens: SuperTokenInfo[] = [];
 
   filteredByTier.forEach((token) => {
-    const isTokenAlreadyAdded = tokens.find(x => x.chainId === token.chainId && x.address === token.address)
-    if (!isTokenAlreadyAdded) {
-      tokens.push(token);
-    }
+    tokens.push(token);
 
     if (
       ["Wrapper", "Native Asset"].includes(
@@ -38,11 +35,9 @@ const createFilteredList = async (
             token.extensions?.superTokenInfo?.underlyingTokenAddress &&
           underlyingToken.chainId === token.chainId
       );
+
       if (underlyingToken) {
-        const isUnderlyingTokenAlreadyAdded = tokens.find(x => x.chainId === underlyingToken.chainId && x.address === underlyingToken.address)
-        if (!isUnderlyingTokenAlreadyAdded) {
-          tokens.push(underlyingToken);
-        }
+        tokens.push(underlyingToken);
       }
     }
   });

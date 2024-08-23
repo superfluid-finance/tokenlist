@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 5,
+    "minor": 4,
     "patch": 0
   },
-  "timestamp": "2024-08-23T11:04:13.293Z",
+  "timestamp": "2024-08-14T11:40:21.403Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -39,7 +39,7 @@
     },
     {
       "address": "0x1290248e01ed2f9f863a9752a8aad396ef3a1b00",
-      "name": "",
+      "name": "Aleph.im V2 SuperToken",
       "symbol": "ALEPH",
       "decimals": 18,
       "chainId": 43113,
@@ -116,7 +116,7 @@
     },
     {
       "address": "0xffd0f6d73ee52c68bf1b01c8afa2529c97ca17f3",
-      "name": "",
+      "name": "Super AVAX",
       "symbol": "AVAXx",
       "decimals": 18,
       "chainId": 43113,
@@ -270,7 +270,7 @@
     },
     {
       "address": "0x0043d7c85c8b96a49a72a92c0b48cdc4720437d7",
-      "name": "",
+      "name": "Super ETH",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 11155420,
@@ -407,7 +407,7 @@
     },
     {
       "address": "0x58f0a7c6c143074f5d824c2f27a85f6da311a6fb",
-      "name": "",
+      "name": "Super ETH",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 534351,
@@ -582,7 +582,7 @@
     },
     {
       "address": "0x60fdb4d22e793353d98324d824034d66827f602e",
-      "name": "",
+      "name": "NTDL",
       "symbol": "NTDL",
       "decimals": 18,
       "chainId": 100,
@@ -1270,7 +1270,7 @@
     },
     {
       "address": "0x263026e7e53dbfdce5ae55ade22493f828922965",
-      "name": "",
+      "name": "Ricochet",
       "symbol": "RIC",
       "decimals": 18,
       "chainId": 137,
@@ -2568,7 +2568,7 @@
     },
     {
       "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
-      "name": "",
+      "name": "Own a fraction",
       "symbol": "FRACTION",
       "decimals": 18,
       "chainId": 137,
@@ -2584,7 +2584,7 @@
     },
     {
       "address": "0xc0b2983a17573660053beeed6fdb1053107cf387",
-      "name": "",
+      "name": "Minerva Wallet SuperToken",
       "symbol": "MIVA",
       "decimals": 18,
       "chainId": 137,
@@ -2738,7 +2738,7 @@
     },
     {
       "address": "0xd735b487b9018eeada2cc0464db02aa4b90ca711",
-      "name": "",
+      "name": "NTDL",
       "symbol": "NTDL",
       "decimals": 18,
       "chainId": 137,
@@ -2823,6 +2823,17 @@
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/matic/icon.svg",
       "tags": [
         "supertoken"
+      ]
+    },
+    {
+      "address": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270",
+      "name": "Wrapped Matic",
+      "symbol": "WMATIC",
+      "decimals": 18,
+      "chainId": 137,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/matic/icon.svg",
+      "tags": [
+        "underlying"
       ]
     },
     {
@@ -3277,7 +3288,7 @@
     },
     {
       "address": "0x4ac8bd1bdae47beef2d1c6aa62229509b962aa0d",
-      "name": "",
+      "name": "Super ETH",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 10,
@@ -3349,8 +3360,8 @@
     },
     {
       "address": "0x8430f084b939208e2eded1584889c9a66b90562f",
-      "name": "Super USD Coin",
-      "symbol": "USDCx",
+      "name": "Super USD Coin (Bridged from Ethereum)",
+      "symbol": "USDC.ex",
       "decimals": 18,
       "chainId": 10,
       "extensions": {
@@ -3366,8 +3377,8 @@
     },
     {
       "address": "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
-      "name": "USD Coin",
-      "symbol": "USDC",
+      "name": "USD Coin (Bridged from Ethereum)",
+      "symbol": "USDC.e",
       "decimals": 6,
       "chainId": 10,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
@@ -3405,7 +3416,7 @@
     },
     {
       "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
-      "name": "",
+      "name": "Own a fraction",
       "symbol": "FRACTION",
       "decimals": 18,
       "chainId": 10,
@@ -3435,36 +3446,8 @@
       ]
     },
     {
-      "address": "0xb3edb2f90fec1bf1f872a9ef143cfd614773ad04",
-      "name": "Super ARB",
-      "symbol": "ARBx",
-      "decimals": 18,
-      "chainId": 42161,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x912ce59144191c1204e64559fe8253a0e49e6548"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/arb/icon.svg",
-      "tags": [
-        "supertoken"
-      ]
-    },
-    {
-      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
-      "name": "Arbitrum",
-      "symbol": "ARB",
-      "decimals": 18,
-      "chainId": 42161,
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/arb/icon.svg",
-      "tags": [
-        "underlying"
-      ]
-    },
-    {
       "address": "0x1dbc1809486460dcd189b8a15990bca3272ee04e",
-      "name": "Super USD Coin (Arb1)",
+      "name": "Super Bridged USDC",
       "symbol": "USDC.ex",
       "decimals": 18,
       "chainId": 42161,
@@ -3481,7 +3464,7 @@
     },
     {
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
-      "name": "USD Coin (Arb1)",
+      "name": "Bridged USDC",
       "symbol": "USDC",
       "decimals": 6,
       "chainId": 42161,
@@ -3492,7 +3475,7 @@
     },
     {
       "address": "0x2bf2ba13735160624a0feae98f6ac8f70885ea61",
-      "name": "",
+      "name": "Own a fraction",
       "symbol": "FRACTION",
       "decimals": 18,
       "chainId": 42161,
@@ -3563,34 +3546,6 @@
       ]
     },
     {
-      "address": "0xb3edb2f90fec1bf1f872a9ef143cfd614773ad04",
-      "name": "Super ARB",
-      "symbol": "ARBx",
-      "decimals": 18,
-      "chainId": 42161,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x912ce59144191c1204e64559fe8253a0e49e6548"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/arb/icon.svg",
-      "tags": [
-        "supertoken"
-      ]
-    },
-    {
-      "address": "0x912ce59144191c1204e64559fe8253a0e49e6548",
-      "name": "Arbitrum",
-      "symbol": "ARB",
-      "decimals": 18,
-      "chainId": 42161,
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/arb/icon.svg",
-      "tags": [
-        "underlying"
-      ]
-    },
-    {
       "address": "0xb44df234e068f62a9a18b6be6543de28d5a7312f",
       "name": "Super SLING",
       "symbol": "SLINGx",
@@ -3620,7 +3575,7 @@
     },
     {
       "address": "0xe6c8d111337d0052b9d88bf5d7d55b7f8385acd3",
-      "name": "",
+      "name": "Super ETH",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 42161,
@@ -3804,7 +3759,7 @@
     },
     {
       "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
-      "name": "",
+      "name": "Own a fraction",
       "symbol": "FRACTION",
       "decimals": 18,
       "chainId": 43114,
@@ -3820,7 +3775,7 @@
     },
     {
       "address": "0xbe916845d8678b5d2f7ad79525a62d7c08abba7e",
-      "name": "",
+      "name": "Super AVAX",
       "symbol": "AVAXx",
       "decimals": 18,
       "chainId": 43114,
@@ -3880,7 +3835,7 @@
     },
     {
       "address": "0x529a4116f160c833c61311569d6b33dff41fd657",
-      "name": "",
+      "name": "Super BNB",
       "symbol": "BNBx",
       "decimals": 18,
       "chainId": 56,
@@ -3924,7 +3879,7 @@
     },
     {
       "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
-      "name": "",
+      "name": "Own a fraction",
       "symbol": "FRACTION",
       "decimals": 18,
       "chainId": 56,
@@ -4080,7 +4035,7 @@
     },
     {
       "address": "0xc22bea0be9872d8b7b3933cec70ece4d53a900da",
-      "name": "",
+      "name": "Super ETH",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 1,
@@ -4224,7 +4179,7 @@
     },
     {
       "address": "0x671425ae1f272bc6f79bec3ed5c4b00e9c628240",
-      "name": "",
+      "name": "Super CELO",
       "symbol": "CELOx",
       "decimals": 18,
       "chainId": 42220,
@@ -4292,50 +4247,6 @@
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/ceur/icon.svg",
       "tags": [
         "underlying"
-      ]
-    },
-    {
-      "address": "0x7ef392131c3ab326016cf7b560f96c91f4f9d4fa",
-      "name": "Super Moxie",
-      "symbol": "MOXIEx",
-      "decimals": 18,
-      "chainId": 8453,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x8c9037d1ef5c6d1f6816278c7aaf5491d24cd527"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/moxie/icon.svg",
-      "tags": [
-        "supertoken"
-      ]
-    },
-    {
-      "address": "0x8c9037d1ef5c6d1f6816278c7aaf5491d24cd527",
-      "name": "Moxie",
-      "symbol": "MOXIE",
-      "decimals": 18,
-      "chainId": 8453,
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/moxie/icon.svg",
-      "tags": [
-        "underlying"
-      ]
-    },
-    {
-      "address": "0xc0fbc4967259786c743361a5885ef49380473dcf",
-      "name": "Aleph.im V2 SuperToken",
-      "symbol": "ALEPH",
-      "decimals": 18,
-      "chainId": 8453,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Pure"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/aleph/icon.svg",
-      "tags": [
-        "supertoken"
       ]
     },
     {
@@ -4494,7 +4405,7 @@
     },
     {
       "address": "0x46fd5cfb4c12d87acd3a13e92baa53240c661d93",
-      "name": "",
+      "name": "Super ETH",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 8453,
@@ -4645,34 +4556,6 @@
       ]
     },
     {
-      "address": "0x7ef392131c3ab326016cf7b560f96c91f4f9d4fa",
-      "name": "Super Moxie",
-      "symbol": "MOXIEx",
-      "decimals": 18,
-      "chainId": 8453,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x8c9037d1ef5c6d1f6816278c7aaf5491d24cd527"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/moxie/icon.svg",
-      "tags": [
-        "supertoken"
-      ]
-    },
-    {
-      "address": "0x8c9037d1ef5c6d1f6816278c7aaf5491d24cd527",
-      "name": "Moxie",
-      "symbol": "MOXIE",
-      "decimals": 18,
-      "chainId": 8453,
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/moxie/icon.svg",
-      "tags": [
-        "underlying"
-      ]
-    },
-    {
       "address": "0x8414ab8c70c7b16a46012d49b8111959baf2fc42",
       "name": "Super BUILD",
       "symbol": "BUILDx",
@@ -4698,22 +4581,6 @@
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/build/icon.png",
       "tags": [
         "underlying"
-      ]
-    },
-    {
-      "address": "0xc0fbc4967259786c743361a5885ef49380473dcf",
-      "name": "Aleph.im V2 SuperToken",
-      "symbol": "ALEPH",
-      "decimals": 18,
-      "chainId": 8453,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Pure"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/aleph/icon.svg",
-      "tags": [
-        "supertoken"
       ]
     },
     {
@@ -4802,7 +4669,7 @@
     },
     {
       "address": "0x483c1716b6133cda01237ebbf19c5a92898204b7",
-      "name": "",
+      "name": "Super ETH",
       "symbol": "ETHx",
       "decimals": 18,
       "chainId": 534352,
@@ -4834,7 +4701,7 @@
     },
     {
       "address": "0xda58fa9bfc3d3960df33ddd8d4d762cf8fa6f7ad",
-      "name": "",
+      "name": "Super Degen",
       "symbol": "DEGENx",
       "decimals": 18,
       "chainId": 666666666,
