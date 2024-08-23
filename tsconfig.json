@@ -2,7 +2,8 @@
   "compilerOptions": {
     "target": "es2016",
     "lib": ["es2019"],
-    "module": "CommonJS",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "rootDir": ".",
     "resolveJsonModule": true,
     "outDir": "./bin",
@@ -10,6 +11,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "skipLibCheck": true
   }
 }

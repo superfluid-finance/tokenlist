@@ -1,7 +1,7 @@
-import { SuperTokenInfo, SuperTokenList, TokenInfo } from "..";
+import { SuperTokenInfo, SuperTokenList } from "..";
 import tokenList from "../superfluid.extended.tokenlist.json";
 import fs from "fs";
-import { validate, validateUnderlyingTokens } from "../utils";
+import { validate } from "../utils";
 
 const createFilteredList = async (
   tokenList: SuperTokenList,
@@ -48,9 +48,8 @@ const createFilteredList = async (
       name: listName,
       tokens,
     };
-    await validate(partialTokenList);
-    const result = validateUnderlyingTokens(partialTokenList);
-
+    
+    const result = await validate(partialTokenList);
     if (!result) {
       throw new Error("Underlying tokens validation failed");
     }

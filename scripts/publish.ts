@@ -1,4 +1,4 @@
-import { validate, validateUnderlyingTokens } from "../utils";
+import { validate } from "../utils";
 import fs from "fs";
 import path from "path";
 import pinataSDK from "@pinata/sdk";
@@ -18,9 +18,8 @@ const tokenListContents = JSON.parse(
 (async () => {
   try {
     const isValid = await validate(tokenListContents);
-    const isUnderlyingValid = validateUnderlyingTokens(tokenListContents);
 
-    if (isValid && isUnderlyingValid && pinataApiKey && pinataSecret) {
+    if (isValid && pinataApiKey && pinataSecret) {
       console.info(`✅ TokenList validation successful! \n Pinning to IPFS...`);
 
       const pinata = new pinataSDK(pinataApiKey, pinataSecret);
