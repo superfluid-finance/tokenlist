@@ -14,11 +14,6 @@ export type SuperTokenExtensions = {
           readonly type: "Wrapper";
           readonly underlyingTokenAddress: `0x${string}`;
         };
-    readonly bridgeInfo?: {
-      readonly [x: `${number}`]: {
-        readonly tokenAddress: `0x${string}`;
-      };
-    };
   };
 };
 
@@ -34,7 +29,6 @@ export type SuperTokenList = Omit<TokenList, "tokens"> & {
 };
 
 export const extendedSuperTokenList = extendedTokenListJSON as SuperTokenList;
-
 
 const superTokenList = tokenListJSON as SuperTokenList;
 
