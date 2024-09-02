@@ -17,7 +17,7 @@
   "devDependencies": {
     "@graphprotocol/client-cli": "^2.2.20",
     "@pinata/sdk": "^2.1.0",
-    "@superfluid-finance/metadata": "^1.4.1",
+    "@superfluid-finance/metadata": "^1.5.0",
     "@types/lodash": "^4.17.7",
     "@types/node": "^18.19.46",
     "@types/node-fetch": "^2.6.11",
