@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 5,
-    "patch": 1
+    "minor": 6,
+    "patch": 0
   },
-  "timestamp": "2024-08-27T09:41:45.065Z",
+  "timestamp": "2024-09-02T12:10:21.307Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -2988,6 +2988,34 @@
       ]
     },
     {
+      "address": "0x22389dd0df30487a8feaa4eebf98cc64d3273294",
+      "name": "Super Livepeer Token",
+      "symbol": "LPTx",
+      "decimals": 18,
+      "chainId": 42161,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x289ba1701c2f088cf0faf8b3705246331cb8a839"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/lpt/icon.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x289ba1701c2f088cf0faf8b3705246331cb8a839",
+      "name": "Livepeer Token",
+      "symbol": "LPT",
+      "decimals": 18,
+      "chainId": 42161,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/lpt/icon.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x2bf2ba13735160624a0feae98f6ac8f70885ea61",
       "name": "Own a fraction",
       "symbol": "FRACTION",
@@ -3792,22 +3820,6 @@
       ]
     },
     {
-      "address": "0xc0fbc4967259786c743361a5885ef49380473dcf",
-      "name": "Aleph.im V2 SuperToken",
-      "symbol": "ALEPH",
-      "decimals": 18,
-      "chainId": 8453,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Pure"
-        }
-      },
-      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/aleph/icon.svg",
-      "tags": [
-        "supertoken"
-      ]
-    },
-    {
       "address": "0x04ffb9ce95af003a3aa3611be6c6ca1431151fb5",
       "name": "Super BLEU",
       "symbol": "BLEUx",
@@ -4167,6 +4179,22 @@
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/build/icon.png",
       "tags": [
         "underlying"
+      ]
+    },
+    {
+      "address": "0xc0fbc4967259786c743361a5885ef49380473dcf",
+      "name": "Aleph.im V2 SuperToken",
+      "symbol": "ALEPH",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/aleph/icon.svg",
+      "tags": [
+        "supertoken"
       ]
     },
     {
