@@ -2,7 +2,7 @@ sources:
   - name: protocol-v1
     handler:
       graphql:
-        endpoint: "{context.url:https://api.thegraph.com/subgraphs/name/superfluid-finance/protocol-v1-goerli}"
+        endpoint: "{context.url:https://optimism-mainnet.subgraph.x.superfluid.dev}"
         retry: 5
 documents:
   - "./*.graphql"
