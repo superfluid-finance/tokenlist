@@ -3,9 +3,9 @@
   "version": {
     "major": 5,
     "minor": 6,
-    "patch": 0
+    "patch": 1
   },
-  "timestamp": "2024-09-02T12:10:21.307Z",
+  "timestamp": "2024-09-04T11:18:54.267Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -2753,7 +2753,7 @@
     {
       "address": "0x2791bca1f2de4661ed88a30c99a7a9449aa84174",
       "name": "USD Coin (PoS)",
-      "symbol": "USDC",
+      "symbol": "USDC.e",
       "decimals": 6,
       "chainId": 137,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
@@ -3561,7 +3561,7 @@
     {
       "address": "0xff970a61a04b1ca14834a43f5de4533ebddb5cc8",
       "name": "Bridged USDC",
-      "symbol": "USDC",
+      "symbol": "USDC.e",
       "decimals": 6,
       "chainId": 42161,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
