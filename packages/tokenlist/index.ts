@@ -32,4 +32,59 @@ export const extendedSuperTokenList = extendedTokenListJSON as SuperTokenList;
 
 const superTokenList = tokenListJSON as SuperTokenList;
 
+export const fetchLatestSuperTokenList = async (): Promise<SuperTokenList> => {
+  const data = await fetchTokenList("https://raw.githubusercontent.com/superfluid-finance/tokenlist/main/superfluid.tokenlist.json", {
+    fallbackTokenList: superTokenList
+  });
+  return data;
+};
+
+export const fetchLatestExtendedSuperTokenList = async (): Promise<SuperTokenList> => {
+  const data = await fetchTokenList("https://raw.githubusercontent.com/superfluid-finance/tokenlist/main/superfluid.extended.tokenlist.json", {
+    fallbackTokenList: extendedSuperTokenList
+  });
+  return data;
+};
+
 export default superTokenList;
+
+const inMemoryCache = new Map();
+
+async function fetchTokenList(url: string, options: {
+  timeout?: number;
+  cacheTTL?: number;
+  fallbackTokenList: SuperTokenList;
+}): Promise<SuperTokenList> {
+  const {
+    timeout = 3000,
+    fallbackTokenList
+  } = options;
+
+  // Check cache
+  if (inMemoryCache.has(url)) {
+    return inMemoryCache.get(url).data;
+  }
+
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeout);
+
+  try {
+    const response = await fetch(url, { signal: controller.signal });
+    clearTimeout(timeoutId);
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    
+    // Cache the successful response
+    inMemoryCache.set(url, { data, timestamp: Date.now() });
+    
+    return data as SuperTokenList;
+  } catch (error: unknown) {
+    console.error('Error fetching tokenlist:', error);
+    console.warn('Using fallback token list.');
+    return fallbackTokenList;
+  }
+}
