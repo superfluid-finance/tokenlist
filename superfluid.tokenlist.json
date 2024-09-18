@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 6,
-    "patch": 1
+    "minor": 7,
+    "patch": 0
   },
-  "timestamp": "2024-09-04T11:18:54.267Z",
+  "timestamp": "2024-09-18T08:59:01.051Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -2124,6 +2124,32 @@
       ]
     },
     {
+      "address": "0xc3fa1e27a2a58ee476f04d4f4867f06b6e906cc5",
+      "name": "Super Zurf",
+      "symbol": "ZURFx",
+      "decimals": 18,
+      "chainId": 137,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x8906365c65589e87870040d681e51a69e9c6f91e"
+        }
+      },
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x8906365c65589e87870040d681e51a69e9c6f91e",
+      "name": "ZURF",
+      "symbol": "ZURF",
+      "decimals": 18,
+      "chainId": 137,
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0xc49c15350f001efee91e154f03bddf38cfd0d96e",
       "name": "Super Adept Camp Doge Coin",
       "symbol": "ACDCx",
@@ -2929,6 +2955,32 @@
       ]
     },
     {
+      "address": "0x9f41d0aa24e599fd8d0c180ee3c0f609dc41c622",
+      "name": "Super Glo Dollar",
+      "symbol": "USDGLOx",
+      "decimals": 18,
+      "chainId": 10,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x4f604735c1cf31399c6e711d5962b2b3e0225ad3"
+        }
+      },
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x4f604735c1cf31399c6e711d5962b2b3e0225ad3",
+      "name": "Glo Dollar",
+      "symbol": "USDGLO",
+      "decimals": 18,
+      "chainId": 10,
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0xbd80cfa9d93a87d1bb895f810ea348e496611cd4",
       "name": "Own a fraction",
       "symbol": "FRACTION",
@@ -3399,6 +3451,34 @@
       "decimals": 6,
       "chainId": 43114,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdt/icon.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x0419e1fa3671754f77ec7d5416219a5f9a08b530",
+      "name": "Super Binance-Peg USD coin",
+      "symbol": "USDCx",
+      "decimals": 18,
+      "chainId": 56,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "decimals": 18,
+      "chainId": 56,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
       "tags": [
         "underlying"
       ]
@@ -4249,6 +4329,34 @@
       "decimals": 6,
       "chainId": 8453,
       "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/usdc/icon.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0xedf89f2612a5b07fef051e1a0444342b5410c405",
+      "name": "Super Xocolatl MXN Stablecoin",
+      "symbol": "XOCx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xa411c9aa00e020e4f88bc19996d29c5b7adb4acf"
+        }
+      },
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/xoc/icon.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xa411c9aa00e020e4f88bc19996d29c5b7adb4acf",
+      "name": "Xocolatl MXN Stablecoin",
+      "symbol": "XOC",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://raw.githubusercontent.com/superfluid-finance/assets/master/public/tokens/xoc/icon.png",
       "tags": [
         "underlying"
       ]
