@@ -2146,6 +2146,7 @@
       "symbol": "ZURF",
       "decimals": 18,
       "chainId": 137,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/zurf.svg",
       "tags": [
         "underlying"
       ]
@@ -2978,6 +2979,7 @@
       "symbol": "USDGLO",
       "decimals": 18,
       "chainId": 10,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/usdglo.png",
       "tags": [
         "underlying"
       ]

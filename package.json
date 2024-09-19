@@ -10,7 +10,7 @@
     "3.update:version": "ts-node scripts/update-version.ts $1",
     "X.attach:solvency": "ts-node scripts/attach-solvency-tags.ts",
     "4.split:tags": "ts-node scripts/split-by-tags.ts",
-    "5.copy:gh-pages": "shx cp ./../../superfluid{,.**}.tokenlist.json ./docs",
+    "5.copy:gh-pages": "shx cp ./superfluid{,.**}.tokenlist.json ./docs",
     "editor": "npx ts-node ./editor/server.ts",
     "ipfs:publish": "ts-node scripts/publish.ts $1",
     "superfluid-graphql-codegen": "graphclient build --dir ./subgraph"
