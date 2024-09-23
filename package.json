@@ -10,6 +10,7 @@
     "3.update:version": "ts-node scripts/update-version.ts $1",
     "X.attach:solvency": "ts-node scripts/attach-solvency-tags.ts",
     "4.split:tags": "ts-node scripts/split-by-tags.ts",
+    "5.copy:gh-pages": "shx cp ./superfluid{,.**}.tokenlist.json ./docs",
     "editor": "npx ts-node ./editor/server.ts",
     "ipfs:publish": "ts-node scripts/publish.ts $1",
     "superfluid-graphql-codegen": "graphclient build --dir ./subgraph"
@@ -30,6 +31,7 @@
     "lodash": "^4.17.21",
     "node-fetch": "2.6.3",
     "rimraf": "^5.0.10",
+    "shx": "^0.3.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4",
     "vanilla-jsoneditor": "^0.16.1"

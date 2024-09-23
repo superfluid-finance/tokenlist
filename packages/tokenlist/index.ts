@@ -33,14 +33,14 @@ export const extendedSuperTokenList = extendedTokenListJSON as SuperTokenList;
 const superTokenList = tokenListJSON as SuperTokenList;
 
 export const fetchLatestSuperTokenList = async (): Promise<SuperTokenList> => {
-  const data = await fetchTokenList("https://raw.githubusercontent.com/superfluid-finance/tokenlist/main/superfluid.tokenlist.json", {
+  const data = await fetchTokenList("https://superfluid-finance.github.io/tokenlist/superfluid.tokenlist.json", {
     fallbackTokenList: superTokenList
   });
   return data;
 };
 
 export const fetchLatestExtendedSuperTokenList = async (): Promise<SuperTokenList> => {
-  const data = await fetchTokenList("https://raw.githubusercontent.com/superfluid-finance/tokenlist/main/superfluid.extended.tokenlist.json", {
+  const data = await fetchTokenList("https://superfluid-finance.github.io/tokenlist/superfluid.extended.tokenlist.json", {
     fallbackTokenList: extendedSuperTokenList
   });
   return data;
