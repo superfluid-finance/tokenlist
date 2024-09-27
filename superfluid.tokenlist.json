@@ -3,7 +3,7 @@
   "version": {
     "major": 5,
     "minor": 8,
-    "patch": 0
+    "patch": 1
   },
   "timestamp": "2024-09-27T13:22:37.396Z",
   "tokens": [
@@ -4349,7 +4349,7 @@
           "underlyingTokenAddress": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf"
         }
       },
-      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/cbbtc.png",
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/cbbtc.svg",
       "tags": [
         "supertoken"
       ]
@@ -4360,7 +4360,7 @@
       "symbol": "cbBTC",
       "decimals": 8,
       "chainId": 8453,
-      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/cbbtc.png",
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/cbbtc.svg",
       "tags": [
         "underlying"
       ]
