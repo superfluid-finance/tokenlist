@@ -1645,8 +1645,8 @@
     },
     {
       "address": "0x3ad736904e9e65189c3000c7dd2c8ac8bb7cd4e3",
-      "name": "Super MATIC",
-      "symbol": "MATICx",
+      "name": "Super POL",
+      "symbol": "POLx",
       "decimals": 18,
       "chainId": 137,
       "extensions": {
@@ -1655,7 +1655,7 @@
           "underlyingTokenAddress": "0x0d500b1d8e8ef31e21c99d1db9a6444d3adf1270"
         }
       },
-      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/matic.svg",
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/pol.svg",
       "tags": [
         "supertoken"
       ]
