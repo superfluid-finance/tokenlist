@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 7,
-    "patch": 1
+    "minor": 8,
+    "patch": 0
   },
-  "timestamp": "2024-09-19T17:25:17.823Z",
+  "timestamp": "2024-09-27T13:22:37.396Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -4333,6 +4333,34 @@
       "decimals": 6,
       "chainId": 8453,
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/usdc.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0xdfd428908909cb5e24f5e79e6ad6bde10bdf2327",
+      "name": "Super Coinbase Wrapped BTC",
+      "symbol": "cbBTCx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/cbbtc.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf",
+      "name": "Coinbase Wrapped BTC",
+      "symbol": "cbBTC",
+      "decimals": 8,
+      "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/cbbtc.png",
       "tags": [
         "underlying"
       ]
