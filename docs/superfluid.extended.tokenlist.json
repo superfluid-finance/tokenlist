@@ -2491,7 +2491,7 @@
           "underlyingTokenAddress": "0xe840b73e5287865eec17d250bfb1536704b43b21"
         }
       },
-      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mstable-polygon-pos/icon.png",
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mstable-usd-polygon-pos.png",
       "tags": [
         "supertoken"
       ]
@@ -2502,7 +2502,7 @@
       "symbol": "mStableUSD(PolygonP",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mstable-polygon-pos/icon.png",
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mstable-usd-polygon-pos.png",
       "tags": [
         "underlying"
       ]

@@ -4,4 +4,4 @@ node_modules
 yarn-error.log
 dist
 diff-output/*.json
-packages/tokenlist/**.tokenlist.json
+packages/tokenlist/public/**.tokenlist.json
