@@ -3,9 +3,9 @@
   "version": {
     "major": 5,
     "minor": 8,
-    "patch": 1
+    "patch": 2
   },
-  "timestamp": "2024-09-27T13:22:37.396Z",
+  "timestamp": "2024-10-04T10:11:36.684Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -4408,7 +4408,7 @@
           "type": "Pure"
         }
       },
-      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/gicon.png",
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/g$.png",
       "tags": [
         "supertoken"
       ]
