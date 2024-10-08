@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 8,
-    "patch": 2
+    "minor": 9,
+    "patch": 0
   },
-  "timestamp": "2024-10-04T10:11:36.684Z",
+  "timestamp": "2024-10-08T09:05:51.264Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -4682,6 +4682,34 @@
       ]
     },
     {
+      "address": "0x4e395ec7b71dd87a23dd836edb3efe15a6c2002b",
+      "name": "Super Nounspace",
+      "symbol": "SPACEx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x48c6740bcf807d6c47c864faeea15ed4da3910ab"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/space.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x48c6740bcf807d6c47c864faeea15ed4da3910ab",
+      "name": "Nounspace",
+      "symbol": "SPACE",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/space.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x58122a048878f25c8c5d4b562419500ed74c6f75",
       "name": "Super Wrapped liquid staked Ether 2.0",
       "symbol": "wstETHx",
@@ -4848,6 +4876,34 @@
       ]
     },
     {
+      "address": "0x9097e4a4d75a611b65ab21d98a7d5b1177c050f7",
+      "name": "Super mfercoin",
+      "symbol": "$mferx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xe3086852a4b125803c815a158249ae468a3254ca"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mfer.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xe3086852a4b125803c815a158249ae468a3254ca",
+      "name": "mfercoin",
+      "symbol": "$mfer",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mfer.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0xc0fbc4967259786c743361a5885ef49380473dcf",
       "name": "Aleph.im V2 SuperToken",
       "symbol": "ALEPH",
@@ -4943,6 +4999,34 @@
       "decimals": 8,
       "chainId": 8453,
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/cbbtc.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0xe58267cd7299c29a1b77f4e66cd12dd24a2cd2fd",
+      "name": "Super Ionic",
+      "symbol": "IONx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x3ee5e23eee121094f1cfc0ccc79d6c809ebd22e5"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/ion.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x3ee5e23eee121094f1cfc0ccc79d6c809ebd22e5",
+      "name": "Ionic",
+      "symbol": "ION",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/ion.png",
       "tags": [
         "underlying"
       ]

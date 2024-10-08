@@ -117,34 +117,36 @@ export const createTokenEntry = async (
     };
   }
 
-  try {
-    const manifest = (await (
-      await fetch(`${tokenIconBaseUrl}/tokens/${assetKey}/manifest.json`)
-    ).json()) as Manifest;
+  // # Token Icons
+  // NOTE: We're adding token icons manually now. This used to fetch from the Superfluid assets repository.
+  // try {
+  //   const manifest = (await (
+  //     await fetch(`${tokenIconBaseUrl}/tokens/${assetKey}/manifest.json`)
+  //   ).json()) as Manifest;
 
-    tokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
-    if (underlyingToken) {
-      underlyingTokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
-    }
-  } catch {
-    console.error(`logoURI not found for ${symbol} (${id})`);
+  //   tokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
+  //   if (underlyingToken) {
+  //     underlyingTokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
+  //   }
+  // } catch {
+  //   console.error(`logoURI not found for ${symbol} (${id})`);
 
-    try {
-      if (underlyingToken) {
-        const manifest = (await (
-          await fetch(
-            `${tokenIconBaseUrl}/tokens/${underlyingToken.symbol.toLowerCase()}/manifest.json`
-          )
-        ).json()) as Manifest;
+  //   try {
+  //     if (underlyingToken) {
+  //       const manifest = (await (
+  //         await fetch(
+  //           `${tokenIconBaseUrl}/tokens/${underlyingToken.symbol.toLowerCase()}/manifest.json`
+  //         )
+  //       ).json()) as Manifest;
 
-        tokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
-      }
-    } catch {
-      console.error(
-        `logoURI not found for ${symbol} (${id}) using underlying token ${underlyingToken?.symbol}`
-      );
-    }
-  }
+  //       tokenInfo.logoURI = `${tokenIconBaseUrl}${manifest.svgIconPath}`;
+  //     }
+  //   } catch {
+  //     console.error(
+  //       `logoURI not found for ${symbol} (${id}) using underlying token ${underlyingToken?.symbol}`
+  //     );
+  //   }
+  // }
 
   return [
     tokenInfo,
