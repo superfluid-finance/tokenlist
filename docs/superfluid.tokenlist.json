@@ -4316,6 +4316,7 @@
       "symbol": "$mfer",
       "decimals": 18,
       "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mfer.png",
       "tags": [
         "underlying"
       ]
