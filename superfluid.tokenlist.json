@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 9,
+    "minor": 10,
     "patch": 0
   },
-  "timestamp": "2024-10-08T09:05:51.264Z",
+  "timestamp": "2024-11-06T06:25:15.585Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -1909,18 +1909,18 @@
           "underlyingTokenAddress": "0xe840b73e5287865eec17d250bfb1536704b43b21"
         }
       },
-      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mstable-usd-polygon-pos.png",
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/musd.png",
       "tags": [
         "supertoken"
       ]
     },
     {
       "address": "0xe840b73e5287865eec17d250bfb1536704b43b21",
-      "name": "mUSD",
-      "symbol": "mStableUSD(PolygonP",
+      "name": "mStable USD",
+      "symbol": "mUSD",
       "decimals": 18,
       "chainId": 137,
-      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mstable-usd-polygon-pos.png",
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/musd.png",
       "tags": [
         "underlying"
       ]
@@ -4317,6 +4317,34 @@
       "decimals": 18,
       "chainId": 8453,
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mfer.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0xa3666ccb1c004060bccc4df7c97c7e6c4979bbe4",
+      "name": "Super Astro Fuel",
+      "symbol": "ASTROx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xee30c78d32b8fd5b8eec8e4f08fd88a3f68971d5"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/astro.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xee30c78d32b8fd5b8eec8e4f08fd88a3f68971d5",
+      "name": "Astro Fuel",
+      "symbol": "ASTRO",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/astro.svg",
       "tags": [
         "underlying"
       ]
