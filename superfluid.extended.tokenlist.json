@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 9,
+    "minor": 10,
     "patch": 0
   },
-  "timestamp": "2024-10-08T09:05:51.264Z",
+  "timestamp": "2024-11-06T06:25:15.585Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -4898,7 +4898,34 @@
       "symbol": "$mfer",
       "decimals": 18,
       "chainId": 8453,
-      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mfer.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0xa3666ccb1c004060bccc4df7c97c7e6c4979bbe4",
+      "name": "Super Astro Fuel",
+      "symbol": "ASTROx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xee30c78d32b8fd5b8eec8e4f08fd88a3f68971d5"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/astro.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xee30c78d32b8fd5b8eec8e4f08fd88a3f68971d5",
+      "name": "Astro Fuel",
+      "symbol": "ASTRO",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/astro.svg",
       "tags": [
         "underlying"
       ]
