@@ -73,6 +73,24 @@
       ]
     },
     {
+      "address": "0x70Ffaa663c533fB146EA58cC29C05E7ae2755096",
+      "name": "Super Jarvis Synthetic Euro",
+      "symbol": "jEURx",
+      "decimals": 18,
+      "chainId": 43113,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x56e1aC5cef5Ce7989878eABa24EcAe6AFDD605d6"
+        }
+      },
+      "logoURI": "https://jarvis.network/images/jPHP.svg",
+      "tags": [
+        "supertoken",
+        "testnet"
+      ]
+    },
+    {
       "address": "0x2616c0ab36cac1e6df7f79ae7c3e297d579fe547",
       "name": "fTUSD Fake Token",
       "symbol": "fTUSD",
