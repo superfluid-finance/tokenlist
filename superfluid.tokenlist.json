@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 10,
+    "minor": 11,
     "patch": 0
   },
-  "timestamp": "2024-11-06T06:25:15.585Z",
+  "timestamp": "2024-11-12T09:25:36.230Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -4363,6 +4363,32 @@
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/aleph.svg",
       "tags": [
         "supertoken"
+      ]
+    },
+    {
+      "address": "0xcc6bce523c20f582daaf0ccafaae981df46ceb41",
+      "name": "Super /onchain",
+      "symbol": "ONCHAINx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xfef2d7b013b88fec2bfe4d2fee0aeb719af73481"
+        }
+      },
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xfef2d7b013b88fec2bfe4d2fee0aeb719af73481",
+      "name": "/onchain",
+      "symbol": "ONCHAIN",
+      "decimals": 18,
+      "chainId": 8453,
+      "tags": [
+        "underlying"
       ]
     },
     {

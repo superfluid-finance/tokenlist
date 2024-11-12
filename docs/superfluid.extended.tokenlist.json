@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 10,
+    "minor": 11,
     "patch": 0
   },
-  "timestamp": "2024-11-06T06:25:15.585Z",
+  "timestamp": "2024-11-12T09:25:36.230Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -109,6 +109,36 @@
       "decimals": 18,
       "chainId": 43113,
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/dai.svg",
+      "tags": [
+        "underlying",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x70ffaa663c533fb146ea58cc29c05e7ae2755096",
+      "name": "Super Jarvis Synthetic Euro",
+      "symbol": "jEURx",
+      "decimals": 18,
+      "chainId": 43113,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x56e1ac5cef5ce7989878eaba24ecae6afdd605d6"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/jphp.svg",
+      "tags": [
+        "supertoken",
+        "testnet"
+      ]
+    },
+    {
+      "address": "0x56e1ac5cef5ce7989878eaba24ecae6afdd605d6",
+      "name": "Jarvis Synthetic Euro",
+      "symbol": "jEUR",
+      "decimals": 18,
+      "chainId": 43113,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/jphp.svg",
       "tags": [
         "underlying",
         "testnet"
@@ -4945,6 +4975,32 @@
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/aleph.svg",
       "tags": [
         "supertoken"
+      ]
+    },
+    {
+      "address": "0xcc6bce523c20f582daaf0ccafaae981df46ceb41",
+      "name": "Super /onchain",
+      "symbol": "ONCHAINx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xfef2d7b013b88fec2bfe4d2fee0aeb719af73481"
+        }
+      },
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xfef2d7b013b88fec2bfe4d2fee0aeb719af73481",
+      "name": "/onchain",
+      "symbol": "ONCHAIN",
+      "decimals": 18,
+      "chainId": 8453,
+      "tags": [
+        "underlying"
       ]
     },
     {
