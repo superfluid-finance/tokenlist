@@ -4989,6 +4989,7 @@
           "underlyingTokenAddress": "0xfef2d7b013b88fec2bfe4d2fee0aeb719af73481"
         }
       },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/onchain.jpeg",
       "tags": [
         "supertoken"
       ]
@@ -4999,6 +5000,7 @@
       "symbol": "ONCHAIN",
       "decimals": 18,
       "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/onchain.jpeg",
       "tags": [
         "underlying"
       ]
