@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 13,
+    "minor": 14,
     "patch": 0
   },
-  "timestamp": "2024-11-25T07:33:26.269Z",
+  "timestamp": "2024-12-10T02:28:37.661Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -3660,6 +3660,34 @@
       ]
     },
     {
+      "address": "0x7367ab6df2af082f04298196167f37f1e1629d1e",
+      "name": "Super USDS Stablecoin",
+      "symbol": "USDSx",
+      "decimals": 18,
+      "chainId": 1,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xdc035d45d973e3ec169d2276ddab16f1e407384f"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/usds.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xdc035d45d973e3ec169d2276ddab16f1e407384f",
+      "name": "USDS Stablecoin",
+      "symbol": "USDS",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/usds.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x8f6f22a962899ade3c46627df45d4a05622cebf2",
       "name": "Super Swivel Governance Token",
       "symbol": "SWIVx",
@@ -4233,6 +4261,34 @@
       "decimals": 18,
       "chainId": 8453,
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/dai.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x7d2e87324c9b2cc983804fe53df67f1add3f913c",
+      "name": "Super Savings USDS",
+      "symbol": "sUSDSx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x5875eee11cf8398102fdad704c9e96607675467a"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/usds.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x5875eee11cf8398102fdad704c9e96607675467a",
+      "name": "Savings USDS",
+      "symbol": "sUSDS",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/usds.svg",
       "tags": [
         "underlying"
       ]
