@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 14,
+    "minor": 15,
     "patch": 0
   },
-  "timestamp": "2024-12-10T02:28:37.661Z",
+  "timestamp": "2024-12-11T14:25:19.598Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -4557,6 +4557,34 @@
       "decimals": 18,
       "chainId": 8453,
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/ion.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0xe858fc86df9895dbeb823e01e9dada6d46d444bb",
+      "name": "Super arsalang",
+      "symbol": "ARSALANGx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xa26491f730a5338d2e5941d4cc7ee32d453294ab"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/arsalang.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xa26491f730a5338d2e5941d4cc7ee32d453294ab",
+      "name": "arsalang75523",
+      "symbol": "arsalang75523",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/arsalang.png",
       "tags": [
         "underlying"
       ]
