@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 15,
+    "minor": 16,
     "patch": 0
   },
-  "timestamp": "2024-12-11T14:25:19.598Z",
+  "timestamp": "2024-12-12T13:40:09.202Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -409,6 +409,34 @@
       "decimals": 18,
       "chainId": 100,
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/hny.png",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0xd30aa2f6fc32c4dc8bf3bd5994d89c8f9e81fcd1",
+      "name": "Super Savings xDAI",
+      "symbol": "sDAIx",
+      "decimals": 18,
+      "chainId": 100,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xaf204776c7245bf4147c2612bf6e5972ee483701"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/sdai.webp",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xaf204776c7245bf4147c2612bf6e5972ee483701",
+      "name": "Savings xDAI",
+      "symbol": "sDAI",
+      "decimals": 18,
+      "chainId": 100,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/sdai.webp",
       "tags": [
         "underlying"
       ]
