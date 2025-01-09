@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 16,
+    "minor": 17,
     "patch": 0
   },
-  "timestamp": "2024-12-12T13:40:09.202Z",
+  "timestamp": "2025-01-09T12:56:53.552Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -4013,6 +4013,22 @@
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/aero.png",
       "tags": [
         "underlying"
+      ]
+    },
+    {
+      "address": "0x1a589e9c3eee580f87117c513b2c8282926f1883",
+      "name": "pay16z",
+      "symbol": "pay16z",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/pay16z.svg",
+      "tags": [
+        "supertoken"
       ]
     },
     {
