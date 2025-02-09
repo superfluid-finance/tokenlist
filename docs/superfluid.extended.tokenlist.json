@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 18,
+    "minor": 19,
     "patch": 0
   },
-  "timestamp": "2025-01-16T13:02:01.511Z",
+  "timestamp": "2025-02-09T10:31:01.984Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -4823,6 +4823,22 @@
       "chainId": 8453,
       "tags": [
         "underlying"
+      ]
+    },
+    {
+      "address": "0x3b3cd21242ba44e9865b066e5ef5d1cc1030cc58",
+      "name": "Streme",
+      "symbol": "STREME",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/streme.svg",
+      "tags": [
+        "supertoken"
       ]
     },
     {
