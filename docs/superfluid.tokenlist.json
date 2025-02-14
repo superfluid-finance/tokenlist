@@ -3,9 +3,9 @@
   "version": {
     "major": 5,
     "minor": 19,
-    "patch": 0
+    "patch": 1
   },
-  "timestamp": "2025-02-09T10:31:01.984Z",
+  "timestamp": "2025-02-14T15:59:39.880Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -4563,6 +4563,22 @@
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/astro.svg",
       "tags": [
         "underlying"
+      ]
+    },
+    {
+      "address": "0xa69f80524381275a7ffdb3ae01c54150644c8792",
+      "name": "Superfluid Token",
+      "symbol": "SUP",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/sup.svg",
+      "tags": [
+        "supertoken"
       ]
     },
     {

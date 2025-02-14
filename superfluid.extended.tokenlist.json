@@ -3,9 +3,9 @@
   "version": {
     "major": 5,
     "minor": 19,
-    "patch": 0
+    "patch": 1
   },
-  "timestamp": "2025-02-09T10:31:01.984Z",
+  "timestamp": "2025-02-14T15:59:39.880Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -5178,6 +5178,22 @@
       ]
     },
     {
+      "address": "0xa69f80524381275a7ffdb3ae01c54150644c8792",
+      "name": "Superfluid Token",
+      "symbol": "SUP",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/sup.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
       "address": "0xc0fbc4967259786c743361a5885ef49380473dcf",
       "name": "Aleph.im V2 SuperToken",
       "symbol": "ALEPH",
@@ -5517,22 +5533,6 @@
         }
       },
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/degen.png",
-      "tags": [
-        "supertoken"
-      ]
-    },
-    {
-      "address": "0xa69f80524381275a7ffdb3ae01c54150644c8792",
-      "name": "Superfluid Token",
-      "symbol": "SUP",
-      "decimals": 18,
-      "chainId": 8453,
-      "extensions": {
-        "superTokenInfo": {
-          "type": "Pure"
-        }
-      },
-      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/sup.png",
       "tags": [
         "supertoken"
       ]
