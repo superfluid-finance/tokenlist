@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 19,
-    "patch": 1
+    "minor": 20,
+    "patch": 0
   },
-  "timestamp": "2025-02-14T15:59:39.880Z",
+  "timestamp": "2025-03-03T19:53:19.081Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -3228,6 +3228,34 @@
       ]
     },
     {
+      "address": "0xd49363d23b774fa9602e46a69c19edd8c4ff88b9",
+      "name": "Super Wrapped OETH",
+      "symbol": "WOETHx",
+      "decimals": 18,
+      "chainId": 42161,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xd8724322f44e5c58d7a815f542036fb17dbbf839"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/oeth.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xd8724322f44e5c58d7a815f542036fb17dbbf839",
+      "name": "Wrapped OETH",
+      "symbol": "WOETH",
+      "decimals": 18,
+      "chainId": 42161,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/oeth.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0xe6c8d111337d0052b9d88bf5d7d55b7f8385acd3",
       "name": "Super ETH",
       "symbol": "ETHx",
@@ -3632,6 +3660,34 @@
       ]
     },
     {
+      "address": "0x4400739e153af87fb50a9734300725651d96e076",
+      "name": "Super Wrapped OETH",
+      "symbol": "WOETHx",
+      "decimals": 18,
+      "chainId": 1,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xdcee70654261af21c44c093c300ed3bb97b78192"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/oeth.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xdcee70654261af21c44c093c300ed3bb97b78192",
+      "name": "Wrapped OETH",
+      "symbol": "WOETH",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/oeth.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x479347dfd0be56f2a5f7bb1506bfd7ab24d4ba26",
       "name": "Super Unification",
       "symbol": "FUNDx",
@@ -3757,6 +3813,34 @@
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/eth.svg",
       "tags": [
         "supertoken"
+      ]
+    },
+    {
+      "address": "0xccae82e3fef132ed091a4d5f48d3f3e1b31a8790",
+      "name": "Super Wrapped OUSD",
+      "symbol": "WOUSDx",
+      "decimals": 18,
+      "chainId": 1,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xd2af830e8cbdfed6cc11bab697bb25496ed6fa62"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/ousd.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xd2af830e8cbdfed6cc11bab697bb25496ed6fa62",
+      "name": "Wrapped OUSD",
+      "symbol": "WOUSD",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/ousd.svg",
+      "tags": [
+        "underlying"
       ]
     },
     {
@@ -4129,6 +4213,34 @@
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/boring.svg",
       "tags": [
         "supertoken"
+      ]
+    },
+    {
+      "address": "0x28a4b2bb3ceb599a13c5b294b26c1c49b1252860",
+      "name": "Super Wrapped superOETHb",
+      "symbol": "wsuperOETHbx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x7fcd174e80f264448ebee8c88a7c4476aaf58ea6"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/soeth.png",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x7fcd174e80f264448ebee8c88a7c4476aaf58ea6",
+      "name": "Wrapped Super OETH",
+      "symbol": "wsuperOETHb",
+      "decimals": 18,
+      "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/soeth.png",
+      "tags": [
+        "underlying"
       ]
     },
     {
