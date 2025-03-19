@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 20,
+    "minor": 21,
     "patch": 0
   },
-  "timestamp": "2025-03-03T19:53:19.081Z",
+  "timestamp": "2025-03-19T15:33:12.844Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -2829,6 +2829,34 @@
       ]
     },
     {
+      "address": "0x2461a364e659abb05019ca8a68bb57fabd18821f",
+      "name": "Super ParaSwap",
+      "symbol": "PSPx",
+      "decimals": 18,
+      "chainId": 10,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xd3594e879b358f430e20f82bea61e83562d49d48"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/psp.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xd3594e879b358f430e20f82bea61e83562d49d48",
+      "name": "ParaSwap",
+      "symbol": "PSP",
+      "decimals": 18,
+      "chainId": 10,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/psp.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x35adeb0638eb192755b6e52544650603fe65a006",
       "name": "Super USD Coin",
       "symbol": "USDCx",
@@ -3627,6 +3655,34 @@
       "decimals": 6,
       "chainId": 1,
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/usdc.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x3d352a3db6b0509d3aa8a1f97e8731a36798309a",
+      "name": "Super ParaSwap",
+      "symbol": "PSPx",
+      "decimals": 18,
+      "chainId": 1,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xcafe001067cdef266afb7eb5a286dcfd277f3de5"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/psp.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0xcafe001067cdef266afb7eb5a286dcfd277f3de5",
+      "name": "ParaSwap",
+      "symbol": "PSP",
+      "decimals": 18,
+      "chainId": 1,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/psp.svg",
       "tags": [
         "underlying"
       ]
