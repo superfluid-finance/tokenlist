@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 21,
+    "minor": 22,
     "patch": 0
   },
-  "timestamp": "2025-03-19T15:33:12.844Z",
+  "timestamp": "2025-03-24T16:43:02.625Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -3256,6 +3256,17 @@
       ]
     },
     {
+      "address": "0xf197ffc28c23e0309b5559e7a166f2c6164c80aa",
+      "name": "MXNB",
+      "symbol": "MXNB",
+      "decimals": 6,
+      "chainId": 42161,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mxnb.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0xd49363d23b774fa9602e46a69c19edd8c4ff88b9",
       "name": "Super Wrapped OETH",
       "symbol": "WOETHx",
@@ -3325,6 +3336,23 @@
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/rpl.png",
       "tags": [
         "underlying"
+      ]
+    },
+    {
+      "address": "0xf3e8e45f34220e3c33bd416eb827d0c1088a2aef",
+      "name": "Super MXNB",
+      "symbol": "MXNBx",
+      "decimals": 18,
+      "chainId": 42161,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xf197ffc28c23e0309b5559e7a166f2c6164c80aa"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/mxnb.svg",
+      "tags": [
+        "supertoken"
       ]
     },
     {
