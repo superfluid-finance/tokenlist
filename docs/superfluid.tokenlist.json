@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 22,
+    "minor": 23,
     "patch": 0
   },
-  "timestamp": "2025-03-24T16:43:02.625Z",
+  "timestamp": "2025-03-26T15:14:01.349Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -3688,6 +3688,34 @@
       ]
     },
     {
+      "address": "0x2db017cb7cbfc0846b8bec8a863e28a9913a0a1f",
+      "name": "Super HarryPotterObamaSonic10Inu",
+      "symbol": "BITCOINx",
+      "decimals": 18,
+      "chainId": 1,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x72e4f9f808c49a2a61de9c5896298920dc4eeea9"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/hpos10i.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x72e4f9f808c49a2a61de9c5896298920dc4eeea9",
+      "name": "HarryPotterObamaSonic10Inu",
+      "symbol": "BITCOIN",
+      "decimals": 8,
+      "chainId": 1,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/hpos10i.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
       "address": "0x3d352a3db6b0509d3aa8a1f97e8731a36798309a",
       "name": "Super ParaSwap",
       "symbol": "PSPx",
@@ -4253,6 +4281,34 @@
       "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/pay16z.svg",
       "tags": [
         "supertoken"
+      ]
+    },
+    {
+      "address": "0x1c6d287b8b10f472dbeb84ee262deb1a0e18969c",
+      "name": "Super HarryPotterObamaSonic10Inu",
+      "symbol": "BITCOINx",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x2a06a17cbc6d0032cac2c6696da90f29d39a1a29"
+        }
+      },
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/hpos10i.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x2a06a17cbc6d0032cac2c6696da90f29d39a1a29",
+      "name": "HarryPotterObamaSonic10Inu",
+      "symbol": "BITCOIN",
+      "decimals": 8,
+      "chainId": 8453,
+      "logoURI": "https://superfluid-finance.github.io/tokenlist/icons/hpos10i.svg",
+      "tags": [
+        "underlying"
       ]
     },
     {
