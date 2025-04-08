@@ -10,10 +10,7 @@ This repository contains scripts and utilities for managing the Superfluid token
 
 ```typescript
 import tokenlist, { 
- extendedSuperTokenList, 
- tierATokenListJSON, 
- tierBTokenListJSON, 
- tierCTokenListJSON 
+ extendedSuperTokenList
 } from "@superfluid-finance/tokenlist"
 
 // ...later
@@ -67,24 +64,6 @@ Underlying tokens always get included in the respective lists.
 
 - **`superfluid.tokenlist.json`**: The default Superfluid token list, containing only solvency category A, and B tokens.
 - **`superfluid.extended.tokenlist.json`**: An extended list all of the listed tokens.
-- **`superfluid.tier-a.tokenlist.json`**: List of tokens with solvency category `A`.
-- **`superfluid.tier-b.tokenlist.json`**: List of tokens with solvency category `B`.
-- **`superfluid.tier-c.tokenlist.json`**: List of tokens with solvency category `C`.
-
-### Solvency Categories
-
-Solvency categories are classifications assigned to tokens to represent their perceived financial stability or risk. The categories help users make informed decisions when dealing with tokens, especially in financial contexts. All token issuers are recommended to run their own [Sentinel](https://docs.superfluid.finance/superfluid/sentinels/running-a-sentinel) to make sure their token remains solvent.
-
-#### Categories:
-
-- **Category A (`tier_a`)**: Chain native tokens and well-known stable-coins (e.g. USDCx, ETHx, MATICx etc.).
-    
-- **Category B (`tier_b`)**: A delegate for the token is known by Superfluid who is committed to ensuring the solvency of the token which is used by their platform or service.
-    
-- **Category C (`tier_c`)**: Any token not in the above two categories.
-
-Users are encouraged to perform their due diligence and research before making any financial moves, even with tokens from Category A.
-If you want to know more how you ensure solvency of your token please reach out to us on [Discord](https://discord.com/channels/752490247643725875/889417021220077588).
 
 ### Tags Explanation
 
@@ -92,10 +71,17 @@ Tokens are categorized using tags for quicker identification:
 
 - **`underlying`**: Marks a token as an underlying asset for another token.
 - **`supertoken`**: Marks a token as a supertoken.
-- **`tier_a`**: Indicates tokens of solvency category A.
-- **`tier_b`**: Indicates tokens of solvency category B.
-- **`tier_c`**: Indicates tokens of solvency category C.
 - **`testnet`**: Testnet tokens such as fUSDC & fUSDCx.
+
+## Usage with Next.js
+If you're using the token icons with Next.js' `<Image>` component then you might need to add this to your `next.config.js`:
+```ts
+images: {
+    remotePatterns: [
+        { hostname: "tokenlist.superfluid.org" }
+    ]
+}
+```
 
   
 ## Development
