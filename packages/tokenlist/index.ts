@@ -69,7 +69,10 @@ async function fetchTokenList(url: string, options: {
   const timeoutId = setTimeout(() => controller.abort(), timeout);
 
   try {
-    const response = await fetch(url, { signal: controller.signal });
+    const response = await fetch(url, {
+      signal: controller.signal,
+      redirect: 'follow'
+    });
     clearTimeout(timeoutId);
 
     if (!response.ok) {
