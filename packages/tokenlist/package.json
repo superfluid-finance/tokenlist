@@ -1,6 +1,6 @@
 {
   "name": "@superfluid-finance/tokenlist",
-  "version": "5.25.0",
+  "version": "5.25.1",
   "license": "MIT",
   "type": "module",
   "main": "dist/index.cjs",
@@ -22,5 +22,6 @@
     "shx": "^0.3.4",
     "tsup": "^7.2.0"
   },
-  "packageManager": "pnpm@8.6.1"
+  "packageManager": "pnpm@8.6.1",
+  "sideEffects": false
 }
