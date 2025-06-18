@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 25,
+    "minor": 26,
     "patch": 0
   },
-  "timestamp": "2025-06-09T13:42:01.996Z",
+  "timestamp": "2025-06-18T08:08:08.831Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -3874,6 +3874,34 @@
       "decimals": 6,
       "chainId": 42161,
       "logoURI": "https://tokenlist.superfluid.org/icons/mxnb.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0xbfc83476608c917eb71e5c448de5b27e8bfe6c21",
+      "name": "Super Wrapped BTC",
+      "symbol": "WBTCx",
+      "decimals": 18,
+      "chainId": 42161,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
+        }
+      },
+      "logoURI": "https://tokenlist.superfluid.org/icons/wbtc.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f",
+      "name": "Wrapped BTC",
+      "symbol": "WBTC",
+      "decimals": 8,
+      "chainId": 42161,
+      "logoURI": "https://tokenlist.superfluid.org/icons/wbtc.svg",
       "tags": [
         "underlying"
       ]
