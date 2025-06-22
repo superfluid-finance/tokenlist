@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 26,
+    "minor": 27,
     "patch": 0
   },
-  "timestamp": "2025-06-18T08:08:08.831Z",
+  "timestamp": "2025-06-22T06:48:17.246Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -3407,6 +3407,34 @@
       "decimals": 6,
       "chainId": 42161,
       "logoURI": "https://tokenlist.superfluid.org/icons/usdc.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "address": "0x11c6ad55aad69f4612e374e5237b71d580f38f06",
+      "name": "Super UltravioletaDAO",
+      "symbol": "UVDx",
+      "decimals": 18,
+      "chainId": 43114,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x4ffe7e01832243e03668e090706f17726c26d6b2"
+        }
+      },
+      "logoURI": "https://tokenlist.superfluid.org/icons/uvd.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x4ffe7e01832243e03668e090706f17726c26d6b2",
+      "name": "UltravioletaDAO",
+      "symbol": "UVD",
+      "decimals": 18,
+      "chainId": 43114,
+      "logoURI": "https://tokenlist.superfluid.org/icons/uvd.svg",
       "tags": [
         "underlying"
       ]
