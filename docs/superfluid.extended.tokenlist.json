@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 27,
+    "minor": 28,
     "patch": 0
   },
-  "timestamp": "2025-06-22T06:48:17.246Z",
+  "timestamp": "2025-07-14T09:08:25.664Z",
   "tokens": [
     {
       "address": "0x00d05eed85bad962ba5237dd4afff12004455a8a",
@@ -3751,6 +3751,22 @@
         }
       },
       "logoURI": "https://tokenlist.superfluid.org/icons/fraction.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x4ecf61a6c2fab8a047ceb3b3b263b401763e9d49",
+      "name": "US Nerite Dollar",
+      "symbol": "USND",
+      "decimals": 18,
+      "chainId": 42161,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://tokenlist.superfluid.org/icons/usnd.svg",
       "tags": [
         "supertoken"
       ]
