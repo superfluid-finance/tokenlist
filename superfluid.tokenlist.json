@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 28,
+    "minor": 29,
     "patch": 0
   },
-  "timestamp": "2025-07-14T09:08:25.664Z",
+  "timestamp": "2025-07-16T13:18:49.237Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
