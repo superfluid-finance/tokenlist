@@ -2,10 +2,10 @@
   "name": "Superfluid Token List",
   "version": {
     "major": 5,
-    "minor": 28,
+    "minor": 29,
     "patch": 0
   },
-  "timestamp": "2025-07-14T09:08:25.664Z",
+  "timestamp": "2025-08-20T08:26:14.626Z",
   "tokens": [
     {
       "address": "0x1234756ccf0660e866305289267211823ae86eec",
@@ -4351,6 +4351,22 @@
         }
       },
       "logoURI": "https://tokenlist.superfluid.org/icons/pay16z.svg",
+      "tags": [
+        "supertoken"
+      ]
+    },
+    {
+      "address": "0x1c4f69f14cf754333c302246d25a48a13224118a",
+      "name": "$BUTTHOLE",
+      "symbol": "$BUTTHOLE",
+      "decimals": 18,
+      "chainId": 8453,
+      "extensions": {
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      },
+      "logoURI": "https://tokenlist.superfluid.org/icons/butthole.svg",
       "tags": [
         "supertoken"
       ]
