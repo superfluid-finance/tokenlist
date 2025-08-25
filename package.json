@@ -11,6 +11,7 @@
     "X.attach:solvency": "ts-node scripts/attach-solvency-tags.ts",
     "4.split:tags": "ts-node scripts/split-by-tags.ts",
     "5.copy:gh-pages": "shx cp ./superfluid{,.**}.tokenlist.json ./docs",
+    "fetch:cms": "ts-node scripts/fetch-from-cms.ts",
     "editor": "npx ts-node ./editor/server.ts",
     "ipfs:publish": "ts-node scripts/publish.ts $1",
     "superfluid-graphql-codegen": "graphclient build --dir ./subgraph"
