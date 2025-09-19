@@ -5,7 +5,7 @@ import { schema } from "@uniswap/token-lists";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
 
-const CMS_API_URL = "https://cms.superfluid.pro/tokenlist?isListed=true";
+const CMS_API_BASE_URL = "https://cms.superfluid.pro/tokenlist?isListed=true";
 
 const ajv = new Ajv({
   allErrors: true,
@@ -15,9 +15,13 @@ const validate = ajv.compile(schema);
 
 async function fetchTokenListFromCMS(): Promise<TokenList> {
   console.log("Fetching listed tokens from CMS...");
-  
+
+  // Add cache-busting timestamp to URL
+  const cacheBreaker = `&_t=${Date.now()}`;
+  const cmsApiUrl = CMS_API_BASE_URL + cacheBreaker;
+
   return new Promise((resolve, reject) => {
-    https.get(CMS_API_URL, (res) => {
+    https.get(cmsApiUrl, (res) => {
       if (res.statusCode !== 200) {
         reject(new Error(`Failed to fetch from CMS: ${res.statusCode} ${res.statusMessage}`));
         return;
