@@ -6,6 +6,7 @@ export type { TokenList, Version, Tags }; // Re-export @uniswap/token-lists' mai
 
 export type SuperTokenExtensions = {
   readonly extensions: {
+    readonly orderingScore?: number;
     readonly superTokenInfo:
       | {
           readonly type: "Pure" | "Native Asset";
