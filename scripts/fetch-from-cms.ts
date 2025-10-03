@@ -76,12 +76,30 @@ function validateTokenList(tokenList: TokenList): void {
 
 
 function sortTokensByOrderingScore(tokenList: TokenList): TokenList {
-  const sortedTokens = [...tokenList.tokens].sort((a, b) => {
-    // @ts-ignore - orderingScore is in extensions
-    const scoreA: number = a.extensions?.orderingScore ?? -Infinity;
-    // @ts-ignore - orderingScore is in extensions
-    const scoreB: number = b.extensions?.orderingScore ?? -Infinity;
-    return scoreB - scoreA; // Descending order (highest first)
+  // Group tokens by chainId, preserving the order chains first appear
+  const chainOrder: number[] = [];
+  const tokensByChain = new Map<number, typeof tokenList.tokens>();
+
+  tokenList.tokens.forEach(token => {
+    if (!chainOrder.includes(token.chainId)) {
+      chainOrder.push(token.chainId);
+    }
+    if (!tokensByChain.has(token.chainId)) {
+      tokensByChain.set(token.chainId, []);
+    }
+    tokensByChain.get(token.chainId)!.push(token);
+  });
+
+  // Sort tokens within each chain group by orderingScore
+  const sortedTokens = chainOrder.flatMap(chainId => {
+    const chainTokens = tokensByChain.get(chainId)!;
+    return chainTokens.sort((a, b) => {
+      // @ts-ignore - orderingScore is in extensions
+      const scoreA: number = a.extensions?.orderingScore ?? -Infinity;
+      // @ts-ignore - orderingScore is in extensions
+      const scoreB: number = b.extensions?.orderingScore ?? -Infinity;
+      return scoreB - scoreA; // Descending order (highest first)
+    });
   });
 
   return {
