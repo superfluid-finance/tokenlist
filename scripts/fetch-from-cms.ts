@@ -75,6 +75,21 @@ function validateTokenList(tokenList: TokenList): void {
 }
 
 
+function sortTokensByOrderingScore(tokenList: TokenList): TokenList {
+  const sortedTokens = [...tokenList.tokens].sort((a, b) => {
+    // @ts-ignore - orderingScore is in extensions
+    const scoreA: number = a.extensions?.orderingScore ?? -Infinity;
+    // @ts-ignore - orderingScore is in extensions
+    const scoreB: number = b.extensions?.orderingScore ?? -Infinity;
+    return scoreB - scoreA; // Descending order (highest first)
+  });
+
+  return {
+    ...tokenList,
+    tokens: sortedTokens
+  };
+}
+
 function writeTokenList(filename: string, tokenList: TokenList): void {
   fs.writeFileSync(`./${filename}`, JSON.stringify(tokenList, null, 2));
   console.log(`Written ${tokenList.tokens.length} listed tokens to ${filename}`);
@@ -84,18 +99,24 @@ async function main(): Promise<void> {
   try {
     // Fetch the listed tokens from CMS
     const rawTokenList = await fetchTokenListFromCMS();
-    
+
     // Sanitize the token list (filter out invalid tokens)
     const sanitizedTokenList = sanitizeTokenList(rawTokenList);
-    
+
     // Validate the sanitized token list
     validateTokenList(sanitizedTokenList);
-    
-    // Create the extended token list (all valid listed tokens)
-    writeTokenList("superfluid.extended.tokenlist.json", sanitizedTokenList);
-    
+
+    // Write the unordered token list
+    writeTokenList("superfluid.extended.tokenlist.unordered.json", sanitizedTokenList);
+
+    // Sort tokens by orderingScore
+    const sortedTokenList = sortTokensByOrderingScore(sanitizedTokenList);
+
+    // Write the ordered extended token list
+    writeTokenList("superfluid.extended.tokenlist.json", sortedTokenList);
+
     console.log("✅ Successfully generated token list from CMS");
-    
+
   } catch (error) {
     console.error("❌ Error generating token list:", error);
     process.exit(1);
