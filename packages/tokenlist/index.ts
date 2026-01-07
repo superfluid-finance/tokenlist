@@ -49,6 +49,33 @@ export const fetchLatestExtendedSuperTokenList = async (): Promise<SuperTokenLis
 
 export default superTokenList;
 
+function isValidSuperTokenList(data: unknown): data is SuperTokenList {
+  if (!data || typeof data !== 'object') return false;
+  
+  const list = data as Record<string, unknown>;
+  
+  // Top-level structure checks
+  if (typeof list.name !== 'string') return false;
+  if (typeof list.timestamp !== 'string') return false;
+  if (!list.version || typeof list.version !== 'object') return false;
+  
+  const version = list.version as Record<string, unknown>;
+  if (typeof version.major !== 'number') return false;
+  if (typeof version.minor !== 'number') return false;
+  if (typeof version.patch !== 'number') return false;
+  
+  if (!Array.isArray(list.tokens) || list.tokens.length === 0) return false;
+  
+  // Spot-check first token for basic structure
+  const token = list.tokens[0] as Record<string, unknown>;
+  if (typeof token?.chainId !== 'number') return false;
+  if (typeof token?.address !== 'string') return false;
+  if (typeof token?.symbol !== 'string') return false;
+  if (typeof token?.decimals !== 'number') return false;
+  
+  return true;
+}
+
 const inMemoryCache = new Map();
 
 async function fetchTokenList(url: string, options: {
@@ -81,11 +108,16 @@ async function fetchTokenList(url: string, options: {
     }
 
     const data = await response.json();
+
+    if (!isValidSuperTokenList(data)) {
+      console.warn('Fetched token list failed validation. Using fallback token list.');
+      return fallbackTokenList;
+    }
     
     // Cache the successful response
     inMemoryCache.set(url, { data, timestamp: Date.now() });
     
-    return data as SuperTokenList;
+    return data;
   } catch (error: unknown) {
     console.error('Error fetching tokenlist:', error);
     console.warn('Using fallback token list.');
