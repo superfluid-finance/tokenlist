@@ -1,9 +1,9 @@
 {
   "name": "Superfluid Token List",
-  "timestamp": "2025-12-18T15:11:13.750Z",
+  "timestamp": "2026-01-12T11:43:36.594Z",
   "version": {
     "major": 5,
-    "minor": 37,
+    "minor": 38,
     "patch": 0
   },
   "tokens": [
@@ -133,7 +133,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 211,
+        "orderingScore": 185,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xe9b076b476d8865cdf79d1cf7df420ee397a7f75"
@@ -398,7 +398,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 454,
+        "orderingScore": 456,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
@@ -461,7 +461,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 405,
+        "orderingScore": 402,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x528cdc92eab044e1e39fe43b9514bfdab4412b98"
@@ -577,7 +577,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 476,
+        "orderingScore": 469,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x0b2c639c533813f4aa9d7837caf62653d097ff85"
@@ -606,7 +606,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 302,
+        "orderingScore": 309,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x4f604735c1cf31399c6e711d5962b2b3e0225ad3"
@@ -635,7 +635,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 189,
+        "orderingScore": 196,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x68f180fcce6836688e9084f035309e29bf0a2095"
@@ -653,7 +653,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 187,
+        "orderingScore": 236,
         "superTokenInfo": {
           "type": "Native Asset"
         }
@@ -841,7 +841,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 215,
+        "orderingScore": 214,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x177127622c4a00f3d409b75571e12cb3c8973d3c"
@@ -859,7 +859,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 341,
+        "orderingScore": 334,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x6a023ccd1ff6f2045c3309768ead9e68f978f6e1"
@@ -979,7 +979,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 448,
+        "orderingScore": 447,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -1218,7 +1218,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 187,
+        "orderingScore": 181,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xaf204776c7245bf4147c2612bf6e5972ee483701"
@@ -1300,7 +1300,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 486,
+        "orderingScore": 488,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -1502,7 +1502,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 258,
+        "orderingScore": 257,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x3d2bd0e15829aa5c362a4144fdf4a1112fa29b5c"
@@ -2111,7 +2111,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 234,
+        "orderingScore": 233,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x25856d46748ee959f99a0fbbb5312c73473cb533"
@@ -2205,7 +2205,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 308,
+        "orderingScore": 296,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -2903,7 +2903,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 384,
+        "orderingScore": 389,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359"
@@ -3665,7 +3665,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 343,
+        "orderingScore": 349,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xe3086852a4b125803c815a158249ae468a3254ca"
@@ -3694,7 +3694,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 417,
+        "orderingScore": 413,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x940181a94a35a4569e4529a3cdfb74e38fd98631"
@@ -3729,7 +3729,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 452,
+        "orderingScore": 456,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -3812,7 +3812,7 @@
         "streme"
       ],
       "extensions": {
-        "orderingScore": 302,
+        "orderingScore": 445,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -3944,7 +3944,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 416,
+        "orderingScore": 410,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x3c281a39944a2319aa653d81cfd93ca10983d234"
@@ -4018,7 +4018,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 147,
+        "orderingScore": 171,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x1bc0c42215582d5a085795f4badbac3ff36d1bcb"
@@ -4105,7 +4105,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 339,
+        "orderingScore": 340,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
@@ -4180,7 +4180,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 391,
+        "orderingScore": 384,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x0578d8a44db98b23bf096a382e016e29a5ce0ffe"
@@ -4296,7 +4296,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 100,
+        "orderingScore": 118,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x0327683f5a1af9b23093d7d62d628e4140eeeb07"
@@ -4325,7 +4325,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 371,
+        "orderingScore": 383,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x8c9037d1ef5c6d1f6816278c7aaf5491d24cd527"
@@ -4431,7 +4431,7 @@
         "streme"
       ],
       "extensions": {
-        "orderingScore": 235,
+        "orderingScore": 236,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -4457,7 +4457,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 100,
+        "orderingScore": 118,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x9e13480a81af1dea2f255761810ef8d6cbf21735"
@@ -4486,7 +4486,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 324,
+        "orderingScore": 312,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x48c6740bcf807d6c47c864faeea15ed4da3910ab"
@@ -4664,7 +4664,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 100,
+        "orderingScore": 208,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x820c137fa70c8691f0e44dc420a5e53c168921dc"
@@ -4758,6 +4758,24 @@
     },
     {
       "chainId": 8453,
+      "address": "0x3e5c4fa0caa794516ed0df77f31daa534918d492",
+      "name": "Degen Dogs WOOF",
+      "symbol": "WOOF",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/woof.png",
+      "tags": [
+        "supertoken",
+        "streme"
+      ],
+      "extensions": {
+        "orderingScore": 268,
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      }
+    },
+    {
+      "chainId": 8453,
       "address": "0xa411c9aa00e020e4f88bc19996d29c5b7adb4acf",
       "name": "Xocolatl MXN Stablecoin",
       "symbol": "XOC",
@@ -4778,7 +4796,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 193,
+        "orderingScore": 172,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xa411c9aa00e020e4f88bc19996d29c5b7adb4acf"
@@ -4818,7 +4836,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 415,
+        "orderingScore": 427,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf"
@@ -4847,7 +4865,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 221,
+        "orderingScore": 223,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x4154550f4db74dc38d1fe98e1f3f28ed6dad627d"
@@ -4951,7 +4969,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 423,
+        "orderingScore": 428,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a"
@@ -4980,7 +4998,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 369,
+        "orderingScore": 370,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xc1cba3fcea344f92d9239c08c0568f6f2f0ee452"
@@ -5038,7 +5056,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 381,
+        "orderingScore": 371,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x912ce59144191c1204e64559fe8253a0e49e6548"
@@ -5304,7 +5322,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 477,
+        "orderingScore": 471,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
@@ -5322,7 +5340,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 500,
+        "orderingScore": 485,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -5350,7 +5368,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 360,
+        "orderingScore": 334,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
@@ -5529,7 +5547,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 436,
+        "orderingScore": 435,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x765de816845861e75a25fca122bb6898b8b1282a"
@@ -5576,7 +5594,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 373,
+        "orderingScore": 375,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -5783,7 +5801,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 496,
+        "orderingScore": 342,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x4ffe7e01832243e03668e090706f17726c26d6b2"
@@ -5846,7 +5864,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 324,
+        "orderingScore": 301,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x6d5ecd0509b47a78b750ca85cd1ec96d90f4cb3a"
