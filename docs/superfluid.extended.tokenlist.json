@@ -1,9 +1,9 @@
 {
   "name": "Superfluid Token List",
-  "timestamp": "2026-01-12T11:43:36.594Z",
+  "timestamp": "2026-02-06T15:03:40.307Z",
   "version": {
     "major": 5,
-    "minor": 38,
+    "minor": 39,
     "patch": 0
   },
   "tokens": [
@@ -407,7 +407,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 469,
+        "orderingScore": 463,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x0b2c639c533813f4aa9d7837caf62653d097ff85"
@@ -425,7 +425,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 456,
+        "orderingScore": 455,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
@@ -443,7 +443,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 402,
+        "orderingScore": 400,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x528cdc92eab044e1e39fe43b9514bfdab4412b98"
@@ -478,7 +478,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 309,
+        "orderingScore": 299,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x4f604735c1cf31399c6e711d5962b2b3e0225ad3"
@@ -529,7 +529,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 196,
+        "orderingScore": 198,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x68f180fcce6836688e9084f035309e29bf0a2095"
@@ -653,9 +653,27 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 236,
+        "orderingScore": 238,
         "superTokenInfo": {
           "type": "Native Asset"
+        }
+      }
+    },
+    {
+      "chainId": 56,
+      "address": "0x0419e1fa3671754f77ec7d5416219a5f9a08b530",
+      "name": "Super Binance-Peg USD coin",
+      "symbol": "USDCx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/usdc.svg",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 136,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
         }
       }
     },
@@ -674,24 +692,6 @@
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3"
-        }
-      }
-    },
-    {
-      "chainId": 56,
-      "address": "0x0419e1fa3671754f77ec7d5416219a5f9a08b530",
-      "name": "Super Binance-Peg USD coin",
-      "symbol": "USDCx",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/usdc.svg",
-      "tags": [
-        "supertoken"
-      ],
-      "extensions": {
-        "orderingScore": 129,
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
         }
       }
     },
@@ -808,7 +808,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 447,
+        "orderingScore": 452,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -1029,6 +1029,24 @@
     },
     {
       "chainId": 100,
+      "address": "0xd30aa2f6fc32c4dc8bf3bd5994d89c8f9e81fcd1",
+      "name": "Super Savings xDAI",
+      "symbol": "sDAIx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/sdai.webp",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 196,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xaf204776c7245bf4147c2612bf6e5972ee483701"
+        }
+      }
+    },
+    {
+      "chainId": 100,
       "address": "0x7c78aa599bbaea6e8784880173eb74b2f9c46025",
       "name": "Super STREETBASED Community Token",
       "symbol": "SBCx",
@@ -1042,24 +1060,6 @@
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x3b6a1b76d772a771bf3fce802bead6ff196b84d5"
-        }
-      }
-    },
-    {
-      "chainId": 100,
-      "address": "0xd30aa2f6fc32c4dc8bf3bd5994d89c8f9e81fcd1",
-      "name": "Super Savings xDAI",
-      "symbol": "sDAIx",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/sdai.webp",
-      "tags": [
-        "supertoken"
-      ],
-      "extensions": {
-        "orderingScore": 181,
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0xaf204776c7245bf4147c2612bf6e5972ee483701"
         }
       }
     },
@@ -1315,23 +1315,6 @@
     },
     {
       "chainId": 137,
-      "address": "0x9308a7116106269eb11834df494efd00d244cf8e",
-      "name": "Astro Gold Lite",
-      "symbol": "ALITE",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/alite.svg",
-      "tags": [
-        "supertoken"
-      ],
-      "extensions": {
-        "orderingScore": 488,
-        "superTokenInfo": {
-          "type": "Pure"
-        }
-      }
-    },
-    {
-      "chainId": 137,
       "address": "0x263026e7e53dbfdce5ae55ade22493f828922965",
       "name": "Ricochet",
       "symbol": "RIC",
@@ -1349,6 +1332,23 @@
     },
     {
       "chainId": 137,
+      "address": "0x9308a7116106269eb11834df494efd00d244cf8e",
+      "name": "Astro Gold Lite",
+      "symbol": "ALITE",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/alite.svg",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 483,
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      }
+    },
+    {
+      "chainId": 137,
       "address": "0x27e1e4e6bc79d93032abef01025811b7e4727e85",
       "name": "Super WETH (PoS)",
       "symbol": "ETHx",
@@ -1358,7 +1358,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 475,
+        "orderingScore": 473,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619"
@@ -1411,28 +1411,10 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 389,
+        "orderingScore": 384,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x3c499c542cef5e3811e1192ce70d8cc03d5c3359"
-        }
-      }
-    },
-    {
-      "chainId": 137,
-      "address": "0x00fa3405a6bbd94549f3b4855a9736766c4f237e",
-      "name": "Super USDT",
-      "symbol": "USDTx",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/usdt.png",
-      "tags": [
-        "supertoken"
-      ],
-      "extensions": {
-        "orderingScore": 380,
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f"
         }
       }
     },
@@ -1451,6 +1433,24 @@
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x1bfd67037b42cf73acf2047067bd4f2c47d9bfd6"
+        }
+      }
+    },
+    {
+      "chainId": 137,
+      "address": "0x00fa3405a6bbd94549f3b4855a9736766c4f237e",
+      "name": "Super USDT",
+      "symbol": "USDTx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/usdt.png",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 375,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xc2132d05d31c914a87c6611c10748aeb04b58e8f"
         }
       }
     },
@@ -1540,6 +1540,24 @@
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x600e5f4920f90132725b43412d47a76bc2219f92"
+        }
+      }
+    },
+    {
+      "chainId": 137,
+      "address": "0xeb5748f9798b11af79f892f344f585e3a88aa784",
+      "name": "Super IdleWETH [Best yield]",
+      "symbol": "idleWETHx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/idlewethyield.svg",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 320,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xfda25d931258df948ffecb66b5518299df6527c4"
         }
       }
     },
@@ -1678,7 +1696,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 293,
+        "orderingScore": 292,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x580a84c73811e1839f75d86d75d88cca0c241ff4"
@@ -1754,24 +1772,6 @@
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x70c006878a5a50ed185ac4c87d837633923de296"
-        }
-      }
-    },
-    {
-      "chainId": 137,
-      "address": "0xeb5748f9798b11af79f892f344f585e3a88aa784",
-      "name": "Super IdleWETH [Best yield]",
-      "symbol": "idleWETHx",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/idlewethyield.svg",
-      "tags": [
-        "supertoken"
-      ],
-      "extensions": {
-        "orderingScore": 275,
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0xfda25d931258df948ffecb66b5518299df6527c4"
         }
       }
     },
@@ -3645,24 +3645,6 @@
     },
     {
       "chainId": 8453,
-      "address": "0x2800f7bbdd38e84f38ef0a556705a62b5104e91b",
-      "name": "Bet on Bangers",
-      "symbol": "BANGER",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/banger.png",
-      "tags": [
-        "supertoken",
-        "streme"
-      ],
-      "extensions": {
-        "orderingScore": 500,
-        "superTokenInfo": {
-          "type": "Pure"
-        }
-      }
-    },
-    {
-      "chainId": 8453,
       "address": "0x2112b92a4f6496b7b2f10850857ffa270464d054",
       "name": "SuperBoring",
       "symbol": "BORING",
@@ -3750,23 +3732,6 @@
     },
     {
       "chainId": 8453,
-      "address": "0xc0fbc4967259786c743361a5885ef49380473dcf",
-      "name": "Aleph.im V2 SuperToken",
-      "symbol": "ALEPH",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/aleph.svg",
-      "tags": [
-        "supertoken"
-      ],
-      "extensions": {
-        "orderingScore": 456,
-        "superTokenInfo": {
-          "type": "Pure"
-        }
-      }
-    },
-    {
-      "chainId": 8453,
       "address": "0x22f1cd353441351911691ee4049c7b773abb1ecf",
       "name": "Beamr",
       "symbol": "BEAMR",
@@ -3777,7 +3742,7 @@
         "streme"
       ],
       "extensions": {
-        "orderingScore": 445,
+        "orderingScore": 497,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -3785,19 +3750,36 @@
     },
     {
       "chainId": 8453,
-      "address": "0x304989da2adc80a6568170567d477af5e48dbaae",
-      "name": "Super Wrapped eETH",
-      "symbol": "weETHx",
+      "address": "0x2800f7bbdd38e84f38ef0a556705a62b5104e91b",
+      "name": "Bet on Bangers",
+      "symbol": "BANGER",
       "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/weeth.png",
+      "logoURI": "https://tokenlist.superfluid.org/icons/banger.png",
+      "tags": [
+        "supertoken",
+        "streme"
+      ],
+      "extensions": {
+        "orderingScore": 486,
+        "superTokenInfo": {
+          "type": "Pure"
+        }
+      }
+    },
+    {
+      "chainId": 8453,
+      "address": "0xc0fbc4967259786c743361a5885ef49380473dcf",
+      "name": "Aleph.im V2 SuperToken",
+      "symbol": "ALEPH",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/aleph.svg",
       "tags": [
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 428,
+        "orderingScore": 461,
         "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a"
+          "type": "Pure"
         }
       }
     },
@@ -3812,10 +3794,28 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 427,
+        "orderingScore": 432,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf"
+        }
+      }
+    },
+    {
+      "chainId": 8453,
+      "address": "0x304989da2adc80a6568170567d477af5e48dbaae",
+      "name": "Super Wrapped eETH",
+      "symbol": "weETHx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/weeth.png",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 430,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a"
         }
       }
     },
@@ -3830,7 +3830,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 413,
+        "orderingScore": 414,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x940181a94a35a4569e4529a3cdfb74e38fd98631"
@@ -3848,7 +3848,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 410,
+        "orderingScore": 412,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x3c281a39944a2319aa653d81cfd93ca10983d234"
@@ -3866,10 +3866,28 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 384,
+        "orderingScore": 392,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x0578d8a44db98b23bf096a382e016e29a5ce0ffe"
+        }
+      }
+    },
+    {
+      "chainId": 8453,
+      "address": "0xefbe11336b0008dce3797c515e6457cc4841645c",
+      "name": "Super TN100X",
+      "symbol": "TN100Xx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/tn100x.png",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 387,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x5b5dee44552546ecea05edea01dcd7be7aa6144a"
         }
       }
     },
@@ -3888,24 +3906,6 @@
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x8c9037d1ef5c6d1f6816278c7aaf5491d24cd527"
-        }
-      }
-    },
-    {
-      "chainId": 8453,
-      "address": "0xefbe11336b0008dce3797c515e6457cc4841645c",
-      "name": "Super TN100X",
-      "symbol": "TN100Xx",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/tn100x.png",
-      "tags": [
-        "supertoken"
-      ],
-      "extensions": {
-        "orderingScore": 379,
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x5b5dee44552546ecea05edea01dcd7be7aa6144a"
         }
       }
     },
@@ -3974,7 +3974,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 349,
+        "orderingScore": 350,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xe3086852a4b125803c815a158249ae468a3254ca"
@@ -3992,7 +3992,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 340,
+        "orderingScore": 339,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x50c5725949a6f0c72e6c4a641f24049a917db0cb"
@@ -4036,24 +4036,6 @@
     },
     {
       "chainId": 8453,
-      "address": "0x4e395ec7b71dd87a23dd836edb3efe15a6c2002b",
-      "name": "Super Nounspace",
-      "symbol": "SPACEx",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/space.png",
-      "tags": [
-        "supertoken"
-      ],
-      "extensions": {
-        "orderingScore": 312,
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x48c6740bcf807d6c47c864faeea15ed4da3910ab"
-        }
-      }
-    },
-    {
-      "chainId": 8453,
       "address": "0x04ffb9ce95af003a3aa3611be6c6ca1431151fb5",
       "name": "Super BLEU",
       "symbol": "BLEUx",
@@ -4067,6 +4049,24 @@
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xbf4db8b7a679f89ef38125d5f84dd1446af2ea3b"
+        }
+      }
+    },
+    {
+      "chainId": 8453,
+      "address": "0x3e5c4fa0caa794516ed0df77f31daa534918d492",
+      "name": "Degen Dogs WOOF",
+      "symbol": "WOOF",
+      "decimals": 18,
+      "logoURI": "https://imagedelivery.net/BXluQx4ige9GuW0Ia56BHw/9df656bc-39f5-4d91-75a3-724d578d4200/original",
+      "tags": [
+        "supertoken",
+        "streme"
+      ],
+      "extensions": {
+        "orderingScore": 302,
+        "superTokenInfo": {
+          "type": "Pure"
         }
       }
     },
@@ -4099,10 +4099,28 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 293,
+        "orderingScore": 292,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x3ee5e23eee121094f1cfc0ccc79d6c809ebd22e5"
+        }
+      }
+    },
+    {
+      "chainId": 8453,
+      "address": "0x4e395ec7b71dd87a23dd836edb3efe15a6c2002b",
+      "name": "Super Nounspace",
+      "symbol": "SPACEx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/space.png",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 291,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x48c6740bcf807d6c47c864faeea15ed4da3910ab"
         }
       }
     },
@@ -4116,28 +4134,10 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 291,
+        "orderingScore": 290,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xd9aaec86b65d86f6a7b5b1b0c42ffa531710b6ca"
-        }
-      }
-    },
-    {
-      "chainId": 8453,
-      "address": "0x3e5c4fa0caa794516ed0df77f31daa534918d492",
-      "name": "Degen Dogs WOOF",
-      "symbol": "WOOF",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/woof.png",
-      "tags": [
-        "supertoken",
-        "streme"
-      ],
-      "extensions": {
-        "orderingScore": 268,
-        "superTokenInfo": {
-          "type": "Pure"
         }
       }
     },
@@ -4153,7 +4153,7 @@
         "streme"
       ],
       "extensions": {
-        "orderingScore": 236,
+        "orderingScore": 235,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -4170,7 +4170,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 223,
+        "orderingScore": 227,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x4154550f4db74dc38d1fe98e1f3f28ed6dad627d"
@@ -4188,10 +4188,28 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 208,
+        "orderingScore": 202,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x820c137fa70c8691f0e44dc420a5e53c168921dc"
+        }
+      }
+    },
+    {
+      "chainId": 8453,
+      "address": "0xa4299883d927d751694f5122f288e80db9850b61",
+      "name": "Super tokenbot",
+      "symbol": "CLANKERx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/clanker.png",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 181,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x1bc0c42215582d5a085795f4badbac3ff36d1bcb"
         }
       }
     },
@@ -4215,24 +4233,6 @@
     },
     {
       "chainId": 8453,
-      "address": "0xa4299883d927d751694f5122f288e80db9850b61",
-      "name": "Super tokenbot",
-      "symbol": "CLANKERx",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/clanker.png",
-      "tags": [
-        "supertoken"
-      ],
-      "extensions": {
-        "orderingScore": 171,
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x1bc0c42215582d5a085795f4badbac3ff36d1bcb"
-        }
-      }
-    },
-    {
-      "chainId": 8453,
       "address": "0xa2a2b26d2d630e4dcf51fc909d19b5bbf6b76641",
       "name": "Super noice",
       "symbol": "noicex",
@@ -4242,7 +4242,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 162,
+        "orderingScore": 165,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x9cb41fd9dc6891bae8187029461bfaadf6cc0c69"
@@ -4322,24 +4322,6 @@
     },
     {
       "chainId": 8453,
-      "address": "0xd6ce178751fc6c1d13fa203a0c8162b6ccbd5f14",
-      "name": "Super Procoin",
-      "symbol": "PROx",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/pro.png",
-      "tags": [
-        "supertoken"
-      ],
-      "extensions": {
-        "orderingScore": 151,
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0xf65c3c30dd36b508e29a538b79b21e9b9e504e6c"
-        }
-      }
-    },
-    {
-      "chainId": 8453,
       "address": "0x2576f2c0a5744c5d7d99fd2bc1a51285c8704250",
       "name": "Super Velora",
       "symbol": "VLRx",
@@ -4353,6 +4335,24 @@
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x4e107a0000db66f0e9fd2039288bf811dd1f9c74"
+        }
+      }
+    },
+    {
+      "chainId": 8453,
+      "address": "0xd6ce178751fc6c1d13fa203a0c8162b6ccbd5f14",
+      "name": "Super Procoin",
+      "symbol": "PROx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/pro.png",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 147,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xf65c3c30dd36b508e29a538b79b21e9b9e504e6c"
         }
       }
     },
@@ -4484,24 +4484,6 @@
     },
     {
       "chainId": 8453,
-      "address": "0xfaabef7ec0135b43dc731609b2b9ca4a6fa358e7",
-      "name": "Super Megaphone",
-      "symbol": "MEGAx",
-      "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/mega.svg",
-      "tags": [
-        "supertoken"
-      ],
-      "extensions": {
-        "orderingScore": 118,
-        "superTokenInfo": {
-          "type": "Wrapper",
-          "underlyingTokenAddress": "0x0327683f5a1af9b23093d7d62d628e4140eeeb07"
-        }
-      }
-    },
-    {
-      "chainId": 8453,
       "address": "0x307d8225c6428a1e505f824b1c97cf9127351f0c",
       "name": "Super Rorschach",
       "symbol": "RORx",
@@ -4584,6 +4566,42 @@
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x2014de017f542cd582027c4d3aad75d5ce997ac1"
+        }
+      }
+    },
+    {
+      "chainId": 8453,
+      "address": "0xeed5ec9d209ec800f8a12e595f3538e48866600a",
+      "name": "Super Markee",
+      "symbol": "MARKEEx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/markee.svg",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 100,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xee3027f1e021b09d629922d40436c5dea3c6cb38"
+        }
+      }
+    },
+    {
+      "chainId": 8453,
+      "address": "0xfaabef7ec0135b43dc731609b2b9ca4a6fa358e7",
+      "name": "Super Megaphone",
+      "symbol": "MEGAx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/mega.svg",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 100,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0x0327683f5a1af9b23093d7d62d628e4140eeeb07"
         }
       }
     },
@@ -4769,6 +4787,17 @@
       "symbol": "KING",
       "decimals": 18,
       "logoURI": "https://tokenlist.superfluid.org/icons/king.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "chainId": 8453,
+      "address": "0xee3027f1e021b09d629922d40436c5dea3c6cb38",
+      "name": "Markee",
+      "symbol": "MARKEE",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/markee.svg",
       "tags": [
         "underlying"
       ]
@@ -5080,7 +5109,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 485,
+        "orderingScore": 480,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -5097,7 +5126,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 471,
+        "orderingScore": 467,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
@@ -5133,7 +5162,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 371,
+        "orderingScore": 367,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x912ce59144191c1204e64559fe8253a0e49e6548"
@@ -5151,7 +5180,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 334,
+        "orderingScore": 327,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
@@ -5467,7 +5496,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 247,
+        "orderingScore": 249,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x66803fb87abd4aac3cbb3fad7c3aa01f6f3fb207"
@@ -5611,7 +5640,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 375,
+        "orderingScore": 397,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -5870,7 +5899,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 301,
+        "orderingScore": 279,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x6d5ecd0509b47a78b750ca85cd1ec96d90f4cb3a"
