@@ -1,4 +1,3 @@
-# Inspired by: https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages#publishing-packages-to-the-npm-registry & https://pnpm.io/continuous-integration#github-actions
 name: Publish Superfluid Token List package to NPM
 on:
   workflow_dispatch:
@@ -11,17 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
-      # Setup .npmrc file to publish to npm
       - uses: actions/setup-node@v4
         with:
-          node-version: "18.x"
+          node-version: "24.x"
           registry-url: "https://registry.npmjs.org"
-          scope: "@superfluid-finance"
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Build package
-        run: pnpm --filter @superfluid-finance/tokenlist build 
+        run: pnpm --filter @superfluid-finance/tokenlist build
       - name: Publish package
         run: pnpm --filter @superfluid-finance/tokenlist publish --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPMJS_TOKEN }}
