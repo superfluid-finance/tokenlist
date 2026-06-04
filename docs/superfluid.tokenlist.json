@@ -5098,7 +5098,7 @@
       "name": "Super Mini Banana",
       "symbol": "MINBANX",
       "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/miniban.png",
+      "logoURI": "https://tokenlist.superfluid.org/icons/minban.png",
       "tags": [
         "supertoken"
       ],
@@ -5116,7 +5116,7 @@
       "name": "Mini Banana",
       "symbol": "MINBAN",
       "decimals": 18,
-      "logoURI": "https://tokenlist.superfluid.org/icons/miniban.png",
+      "logoURI": "https://tokenlist.superfluid.org/icons/minban.png",
       "tags": [
         "underlying"
       ]
