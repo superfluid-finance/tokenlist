@@ -48,14 +48,21 @@ async function fetchTokenListFromCMS(): Promise<TokenList> {
 }
 
 function sanitizeTokenList(tokenList: TokenList): TokenList {
-  // Filter out tokens with invalid symbols (empty or containing spaces)
-  const validTokens = tokenList.tokens.filter(token => {
-    if (!token.symbol || token.symbol.trim() === "" || /\s/.test(token.symbol)) {
-      console.warn(`Filtering out token with invalid symbol: "${token.symbol}" (${token.name} at ${token.address})`);
-      return false;
-    }
-    return true;
-  });
+  // Trim leading/trailing whitespace, then filter out tokens whose symbols
+  // are still invalid (empty or containing inner whitespace)
+  const validTokens = tokenList.tokens
+    .map(token => ({
+      ...token,
+      name: (token.name ?? "").trim(),
+      symbol: (token.symbol ?? "").trim()
+    }))
+    .filter(token => {
+      if (token.symbol === "" || /\s/.test(token.symbol)) {
+        console.warn(`Filtering out token with invalid symbol: "${token.symbol}" (${token.name} at ${token.address})`);
+        return false;
+      }
+      return true;
+    });
   
   console.log(`Filtered ${tokenList.tokens.length - validTokens.length} tokens with invalid symbols`);
   
