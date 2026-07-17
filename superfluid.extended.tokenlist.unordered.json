@@ -1,9 +1,9 @@
 {
   "name": "Superfluid Token List",
-  "timestamp": "2026-07-03T18:33:02.754Z",
+  "timestamp": "2026-07-17T00:54:11.096Z",
   "version": {
     "major": 5,
-    "minor": 43,
+    "minor": 44,
     "patch": 0
   },
   "tokens": [
@@ -398,7 +398,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 444,
+        "orderingScore": 436,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xda10009cbd5d07dd0cecc66161fc93d7c9000da1"
@@ -756,7 +756,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 278,
+        "orderingScore": 284,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
@@ -1300,7 +1300,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 457,
+        "orderingScore": 456,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -1751,7 +1751,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 473,
+        "orderingScore": 472,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x7ceb23fd6bc0add59e62ac25578270cff1b9f619"
@@ -3665,7 +3665,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 358,
+        "orderingScore": 353,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xe3086852a4b125803c815a158249ae468a3254ca"
@@ -3694,7 +3694,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 407,
+        "orderingScore": 400,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x940181a94a35a4569e4529a3cdfb74e38fd98631"
@@ -3729,7 +3729,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 467,
+        "orderingScore": 464,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -3775,7 +3775,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 366,
+        "orderingScore": 379,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xee30c78d32b8fd5b8eec8e4f08fd88a3f68971d5"
@@ -3794,7 +3794,7 @@
         "streme"
       ],
       "extensions": {
-        "orderingScore": 371,
+        "orderingScore": 471,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -3812,7 +3812,7 @@
         "streme"
       ],
       "extensions": {
-        "orderingScore": 400,
+        "orderingScore": 500,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -3944,7 +3944,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 413,
+        "orderingScore": 415,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x3c281a39944a2319aa653d81cfd93ca10983d234"
@@ -3963,7 +3963,7 @@
         "streme"
       ],
       "extensions": {
-        "orderingScore": 215,
+        "orderingScore": 315,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -4051,6 +4051,35 @@
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x2014de017f542cd582027c4d3aad75d5ce997ac1"
+        }
+      }
+    },
+    {
+      "chainId": 8453,
+      "address": "0xecb695544a3d2a64d579b3828f3f60f6932f4846",
+      "name": "Creative AI Token",
+      "symbol": "CRTVAI",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/crtvai.svg",
+      "tags": [
+        "underlying"
+      ]
+    },
+    {
+      "chainId": 8453,
+      "address": "0x5cc162bbf2f9d897e66fbba5c50507e8c2621187",
+      "name": "Super Creative AI Token",
+      "symbol": "CRTVAIx",
+      "decimals": 18,
+      "logoURI": "https://tokenlist.superfluid.org/icons/crtvai.svg",
+      "tags": [
+        "supertoken"
+      ],
+      "extensions": {
+        "orderingScore": 100,
+        "superTokenInfo": {
+          "type": "Wrapper",
+          "underlyingTokenAddress": "0xecb695544a3d2a64d579b3828f3f60f6932f4846"
         }
       }
     },
@@ -4180,7 +4209,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 386,
+        "orderingScore": 382,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x0578d8a44db98b23bf096a382e016e29a5ce0ffe"
@@ -4305,7 +4334,7 @@
     },
     {
       "chainId": 8453,
-      "address": "0xee3027f1e021b09d629922d40436c5dea3c6cb38",
+      "address": "0xf6627cf19317c33b457f77452876e6e297c4942f",
       "name": "Markee",
       "symbol": "MARKEE",
       "decimals": 18,
@@ -4316,7 +4345,7 @@
     },
     {
       "chainId": 8453,
-      "address": "0xf6627cf19317c33b457f77452876e6e297c4942f",
+      "address": "0xee3027f1e021b09d629922d40436c5dea3c6cb38",
       "name": "Markee",
       "symbol": "MARKEE",
       "decimals": 18,
@@ -4336,7 +4365,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 237,
+        "orderingScore": 203,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xf6627cf19317c33b457f77452876e6e297c4942f"
@@ -4423,7 +4452,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 249,
+        "orderingScore": 250,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x574e434b54d0298d0abb13737c87004469a5bb07"
@@ -4587,7 +4616,7 @@
         "streme"
       ],
       "extensions": {
-        "orderingScore": 123,
+        "orderingScore": 223,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -4661,7 +4690,7 @@
         "streme"
       ],
       "extensions": {
-        "orderingScore": 271,
+        "orderingScore": 375,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -4724,7 +4753,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 378,
+        "orderingScore": 382,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x5b5dee44552546ecea05edea01dcd7be7aa6144a"
@@ -4820,7 +4849,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 189,
+        "orderingScore": 195,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x820c137fa70c8691f0e44dc420a5e53c168921dc"
@@ -4924,7 +4953,7 @@
         "streme"
       ],
       "extensions": {
-        "orderingScore": 216,
+        "orderingScore": 316,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -4992,7 +5021,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 455,
+        "orderingScore": 457,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf"
@@ -5021,7 +5050,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 231,
+        "orderingScore": 237,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x4154550f4db74dc38d1fe98e1f3f28ed6dad627d"
@@ -5125,7 +5154,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 154,
+        "orderingScore": 169,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x5875eee11cf8398102fdad704c9e96607675467a"
@@ -5154,7 +5183,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 440,
+        "orderingScore": 443,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x04c0599ae5a44757c0af6f9ec3b93da8976c150a"
@@ -5241,7 +5270,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 390,
+        "orderingScore": 388,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x912ce59144191c1204e64559fe8253a0e49e6548"
@@ -5420,7 +5449,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 182,
+        "orderingScore": 185,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xb766039cc6db368759c1e56b79affe831d0cc507"
@@ -5507,7 +5536,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 467,
+        "orderingScore": 468,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0xaf88d065e77c8cc2239327c5edb3a432268e5831"
@@ -5525,7 +5554,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 465,
+        "orderingScore": 461,
         "superTokenInfo": {
           "type": "Pure"
         }
@@ -5553,7 +5582,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 386,
+        "orderingScore": 387,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f"
@@ -5986,7 +6015,7 @@
         "supertoken"
       ],
       "extensions": {
-        "orderingScore": 341,
+        "orderingScore": 340,
         "superTokenInfo": {
           "type": "Wrapper",
           "underlyingTokenAddress": "0x4ffe7e01832243e03668e090706f17726c26d6b2"
