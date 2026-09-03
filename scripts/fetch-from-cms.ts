@@ -4,8 +4,19 @@ import fs from "fs";
 import { schema } from "@uniswap/token-lists";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
+import superfluidMetadata from "@superfluid-finance/metadata";
+import packageJson from "../package.json";
 
 const CMS_API_BASE_URL = "https://cms.superfluid.pro/tokenlist?isListed=true";
+const ACTIVE_CHAIN_IDS = new Set(
+  superfluidMetadata.networks.map((network) => network.chainId)
+);
+const TOKEN_ICON_OVERRIDES = new Map([
+  ["5042002:USDC", "https://tokenlist.superfluid.org/icons/usdc.svg"],
+  ["5042002:USDCx", "https://tokenlist.superfluid.org/icons/usdc.svg"],
+]);
+const [major, minor, patch] = packageJson.version.split(".").map(Number);
+const TOKEN_LIST_VERSION = { major, minor, patch };
 
 const ajv = new Ajv({
   allErrors: true,
@@ -48,14 +59,43 @@ async function fetchTokenListFromCMS(): Promise<TokenList> {
 }
 
 function sanitizeTokenList(tokenList: TokenList): TokenList {
+  // Keep the CMS as the token source while limiting its output to networks
+  // supported by the metadata version installed in this repository.
+  const tokensByInactiveChain = new Map<number, number>();
+  const activeNetworkTokens = tokenList.tokens.filter((token) => {
+    if (ACTIVE_CHAIN_IDS.has(token.chainId)) {
+      return true;
+    }
+
+    tokensByInactiveChain.set(
+      token.chainId,
+      (tokensByInactiveChain.get(token.chainId) ?? 0) + 1
+    );
+    return false;
+  });
+
+  if (tokensByInactiveChain.size > 0) {
+    const summary = Array.from(tokensByInactiveChain.entries())
+      .map(([chainId, count]) => `${chainId} (${count})`)
+      .join(", ");
+    console.warn(`Filtering out tokens from inactive chains: ${summary}`);
+  }
+
   // Trim leading/trailing whitespace, then filter out tokens whose symbols
-  // are still invalid (empty or containing inner whitespace)
-  const validTokens = tokenList.tokens
-    .map(token => ({
-      ...token,
-      name: (token.name ?? "").trim(),
-      symbol: (token.symbol ?? "").trim()
-    }))
+  // are still invalid (empty or containing inner whitespace).
+  const validTokens = activeNetworkTokens
+    .map(token => {
+      const name = (token.name ?? "").trim();
+      const symbol = (token.symbol ?? "").trim();
+      const logoURI = TOKEN_ICON_OVERRIDES.get(`${token.chainId}:${symbol}`);
+
+      return {
+        ...token,
+        name,
+        symbol,
+        ...(logoURI ? { logoURI } : {})
+      };
+    })
     .filter(token => {
       if (token.symbol === "" || /\s/.test(token.symbol)) {
         console.warn(`Filtering out token with invalid symbol: "${token.symbol}" (${token.name} at ${token.address})`);
@@ -64,10 +104,11 @@ function sanitizeTokenList(tokenList: TokenList): TokenList {
       return true;
     });
   
-  console.log(`Filtered ${tokenList.tokens.length - validTokens.length} tokens with invalid symbols`);
+  console.log(`Filtered ${activeNetworkTokens.length - validTokens.length} tokens with invalid symbols`);
   
   return {
     ...tokenList,
+    version: TOKEN_LIST_VERSION,
     tokens: validTokens
   };
 }
