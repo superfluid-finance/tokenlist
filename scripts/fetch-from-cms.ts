@@ -11,10 +11,23 @@ const CMS_API_BASE_URL = "https://cms.superfluid.pro/tokenlist?isListed=true";
 const ACTIVE_CHAIN_IDS = new Set(
   superfluidMetadata.networks.map((network) => network.chainId)
 );
+const ARC_TESTNET_CHAIN_ID = 5042002;
+const ARC_USDC_ADDRESS = "0x3600000000000000000000000000000000000000";
+const ARC_USDCX_ADDRESS = "0x233a5bfd65da07aeb08f2082d2b5b270bc4ea804";
+const USDC_ICON_URI = "https://tokenlist.superfluid.org/icons/usdc.svg";
 const TOKEN_ICON_OVERRIDES = new Map([
-  ["5042002:USDC", "https://tokenlist.superfluid.org/icons/usdc.svg"],
-  ["5042002:USDCx", "https://tokenlist.superfluid.org/icons/usdc.svg"],
+  [`${ARC_TESTNET_CHAIN_ID}:USDC`, USDC_ICON_URI],
+  [`${ARC_TESTNET_CHAIN_ID}:USDCx`, USDC_ICON_URI],
 ]);
+const ARC_USDC_TOKEN: TokenList["tokens"][number] = {
+  chainId: ARC_TESTNET_CHAIN_ID,
+  address: ARC_USDC_ADDRESS,
+  name: "USDC",
+  symbol: "USDC",
+  decimals: 6,
+  logoURI: USDC_ICON_URI,
+  tags: ["underlying", "testnet"],
+};
 const [major, minor, patch] = packageJson.version.split(".").map(Number);
 const TOKEN_LIST_VERSION = { major, minor, patch };
 
@@ -59,10 +72,40 @@ async function fetchTokenListFromCMS(): Promise<TokenList> {
 }
 
 function sanitizeTokenList(tokenList: TokenList): TokenList {
+  const tokensWithRepositoryOverrides = tokenList.tokens.map((token) => {
+    if (
+      token.chainId === ARC_TESTNET_CHAIN_ID &&
+      token.address.toLowerCase() === ARC_USDCX_ADDRESS
+    ) {
+      return {
+        ...token,
+        extensions: {
+          ...token.extensions,
+          superTokenInfo: {
+            type: "Native Asset",
+            underlyingTokenAddress: ARC_USDC_ADDRESS,
+          },
+        },
+      };
+    }
+
+    return token;
+  });
+
+  const hasArcUsdc = tokensWithRepositoryOverrides.some(
+    (token) =>
+      token.chainId === ARC_TESTNET_CHAIN_ID &&
+      token.address.toLowerCase() === ARC_USDC_ADDRESS
+  );
+
+  if (!hasArcUsdc) {
+    tokensWithRepositoryOverrides.push(ARC_USDC_TOKEN);
+  }
+
   // Keep the CMS as the token source while limiting its output to networks
   // supported by the metadata version installed in this repository.
   const tokensByInactiveChain = new Map<number, number>();
-  const activeNetworkTokens = tokenList.tokens.filter((token) => {
+  const activeNetworkTokens = tokensWithRepositoryOverrides.filter((token) => {
     if (ACTIVE_CHAIN_IDS.has(token.chainId)) {
       return true;
     }

@@ -9,7 +9,11 @@ export type SuperTokenExtensions = {
     readonly orderingScore?: number;
     readonly superTokenInfo:
       | {
-          readonly type: "Pure" | "Native Asset";
+          readonly type: "Pure";
+        }
+      | {
+          readonly type: "Native Asset";
+          readonly underlyingTokenAddress?: `0x${string}`;
         }
       | {
           readonly type: "Wrapper";

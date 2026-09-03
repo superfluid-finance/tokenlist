@@ -6381,10 +6381,23 @@
       "extensions": {
         "orderingScore": 0,
         "superTokenInfo": {
-          "type": "Native Asset"
+          "type": "Native Asset",
+          "underlyingTokenAddress": "0x3600000000000000000000000000000000000000"
         }
       },
       "logoURI": "https://tokenlist.superfluid.org/icons/usdc.svg"
+    },
+    {
+      "chainId": 5042002,
+      "address": "0x3600000000000000000000000000000000000000",
+      "name": "USDC",
+      "symbol": "USDC",
+      "decimals": 6,
+      "logoURI": "https://tokenlist.superfluid.org/icons/usdc.svg",
+      "tags": [
+        "underlying",
+        "testnet"
+      ]
     },
     {
       "chainId": 11155111,
